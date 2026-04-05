@@ -153,7 +153,7 @@ const Home = () => {
         </div>
         <div className="stat-item">
           <div className="stat-val">10+</div>
-          <div className="stat-label">Expert Advisers</div>
+          <div className="stat-label">Team of Experts</div>
         </div>
         <div className="stat-item">
           <div className="stat-val">98%</div>
@@ -191,31 +191,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Dark CTA */}
-      <section className="dark-section">
-        <div className="dark-section-content">
-          <div>
-            <div className="section-tag">Your Wealth</div>
-            <h2 className="section-title">
-              You only have one life.<br />
-              <span>Wealth is freedom.</span>
-            </h2>
-            <p className="dark-section-sub">
-              The moment you stop working and start living your meaningful life without money stress starts now. Let us help you get there.
-            </p>
-            <div className="hero-btns">
-              <Button to="/contact" variant="hero-primary" size="large">
-                Get Started →
-              </Button>
-              <Button to="/about" variant="hero-outline" size="large">
-                Our Story
-              </Button>
-            </div>
-          </div>
-          <div className="dark-section-img">💰</div>
-        </div>
-      </section>
-
+      
       {/* File ITR Steps */}
       <section className="section">
         <div className="section-centered">
