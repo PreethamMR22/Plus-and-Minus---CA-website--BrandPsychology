@@ -1,0 +1,121 @@
+.btn {
+  font-family: var(--font-body);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  gap: 8px;
+}
+
+.btn.small {
+  padding: 8px 20px;
+  font-size: 13px;
+}
+
+.btn.medium {
+  padding: 12px 28px;
+  font-size: 14px;
+}
+
+.btn.large {
+  padding: 14px 28px;
+  font-size: 14px;
+}
+
+.btn.primary {
+  background: var(--green);
+  color: var(--white);
+}
+
+.btn.primary:hover {
+  background: var(--green-light);
+}
+
+.btn.outline {
+  border: 1.5px solid var(--dark);
+  color: var(--text);
+  background: none;
+}
+
+.btn.outline:hover {
+  background: var(--dark);
+  color: var(--white);
+}
+
+.btn.hero-primary {
+  background: var(--green);
+  color: var(--white);
+  padding: 14px 28px;
+  font-size: 14px;
+}
+
+.btn.hero-primary:hover {
+  background: var(--green-light);
+  transform: translateY(-1px);
+}
+
+.btn.hero-outline {
+  border: 1.5px solid rgba(255,255,255,0.3);
+  color: var(--white);
+  background: none;
+  padding: 14px 28px;
+  font-size: 14px;
+}
+
+.btn.hero-outline:hover {
+  border-color: var(--white);
+  background: rgba(255,255,255,0.05);
+}
+
+.btn.white {
+  background: var(--white);
+  color: var(--dark);
+  padding: 12px 28px;
+  font-size: 14px;
+}
+
+.btn.white-outline {
+  background: none;
+  color: var(--white);
+  border: 1.5px solid rgba(255,255,255,0.4);
+  padding: 12px 28px;
+  font-size: 14px;
+}
+
+.btn.white-rounded {
+  background: var(--white);
+  color: var(--dark);
+  padding: 12px 28px;
+  font-size: 14px;
+}
+
+.btn.form {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 15px;
+  background: var(--green);
+  color: var(--white);
+}
+
+.btn.form:hover {
+  background: var(--green-light);
+}
+
+.btn.pricing {
+  width: 100%;
+  padding: 12px;
+  border-radius: 50px;
+  font-size: 14px;
+  background: var(--dark);
+  color: var(--white);
+}
+
+.btn.pricing:hover {
+  opacity: 0.85;
+}

@@ -1,0 +1,58 @@
+:root {
+  --dark: #0d1f1a;
+  --darker: #081510;
+  --green: #1a7a4a;
+  --green-light: #22a862;
+  --green-bright: #2ecc71;
+  --cream: #f5f0e8;
+  --cream-light: #faf8f4;
+  --white: #ffffff;
+  --gray: #6b7280;
+  --gray-light: #f3f4f6;
+  --text: #1a1a1a;
+  --text-muted: #6b7280;
+  --border: #e5e7eb;
+  --font-head: 'Playfair Display', serif;
+  --font-body: 'DM Sans', sans-serif;
+  --nav-h: 68px;
+}
+
+*, *::before, *::after { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+html { 
+  scroll-behavior: smooth; 
+}
+
+body { 
+  font-family: var(--font-body); 
+  color: var(--text); 
+  background: var(--white); 
+  overflow-x: hidden; 
+}
+
+/* ANIMATE */
+@keyframes fadeUp { 
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  } 
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  } 
+}
+
+.fade-up {
+  animation: fadeUp 0.5s ease forwards;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  :root {
+    --nav-h: 60px;
+  }
+}

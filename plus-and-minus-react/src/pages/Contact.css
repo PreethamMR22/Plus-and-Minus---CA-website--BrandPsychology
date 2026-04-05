@@ -1,0 +1,245 @@
+/* CONTACT PAGE STYLES */
+.contact-page {
+  padding-top: var(--nav-h);
+}
+
+/* CONTACT HERO */
+.contact-hero {
+  background: var(--darker);
+  padding: calc(var(--nav-h) + 60px) 40px 80px;
+  text-align: center;
+}
+
+.section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-hero .section-tag {
+  color: var(--green-bright);
+}
+
+.contact-hero h1 {
+  font-family: var(--font-head);
+  font-size: clamp(36px, 6vw, 64px);
+  color: var(--white);
+  margin-bottom: 14px;
+}
+
+.contact-hero p {
+  color: rgba(255,255,255,0.6);
+  font-size: 16px;
+}
+
+/* CONTACT GRID */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 60px;
+  padding: 60px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contact-info h2 {
+  font-family: var(--font-head);
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.contact-info p {
+  font-size: 14px;
+  color: var(--gray);
+  margin-bottom: 28px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.contact-item-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--gray-light);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 16px;
+}
+
+.contact-item-label {
+  font-size: 11px;
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contact-item-val {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.contact-hours {
+  background: var(--dark);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 16px;
+}
+
+.contact-hours h4 {
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.contact-hours p {
+  color: rgba(255,255,255,0.6);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.respond {
+  color: var(--green-bright);
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+/* CONTACT FORM */
+.contact-form {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.contact-form h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.form-group label span {
+  color: #ef4444;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: var(--font-body);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--green);
+}
+
+.form-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.btn-form {
+  width: 100%;
+  padding: 14px;
+  background: var(--green);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: all 0.2s;
+  margin-top: 16px;
+}
+
+.btn-form:hover {
+  background: var(--green-light);
+}
+
+.form-note {
+  text-align: center;
+  font-size: 12px;
+  color: var(--gray);
+  margin-top: 10px;
+}
+
+/* GREEN SECTION */
+.green-section {
+  background: var(--green);
+  padding: 60px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.green-section h2 {
+  font-family: var(--font-head);
+  font-size: clamp(22px, 3vw, 32px);
+  color: var(--white);
+  max-width: 500px;
+}
+
+.green-section p {
+  color: rgba(255,255,255,0.8);
+  font-size: 15px;
+  margin-top: 8px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-hero, .green-section {
+    padding: 50px 20px;
+  }
+  
+  .contact-grid {
+    padding: 50px 20px;
+  }
+}

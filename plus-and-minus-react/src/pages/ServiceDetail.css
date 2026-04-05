@@ -1,0 +1,250 @@
+/* SERVICE DETAIL PAGE STYLES */
+.service-detail-page {
+  padding-top: var(--nav-h);
+}
+
+/* SERVICE HERO */
+.service-hero {
+  background: var(--darker);
+  padding: calc(var(--nav-h) + 50px) 40px 60px;
+}
+
+.section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.service-hero-tag {
+  color: var(--green-bright);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.service-hero-tag:hover {
+  text-decoration: underline;
+}
+
+.service-hero-icon {
+  width: 52px;
+  height: 52px;
+  background: rgba(26,122,74,0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.service-hero h1 {
+  font-family: var(--font-head);
+  font-size: clamp(30px, 4vw, 48px);
+  color: var(--white);
+  margin-bottom: 14px;
+}
+
+.service-hero p {
+  font-size: 16px;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 28px;
+}
+
+.service-hero-img {
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* SERVICE CONTENT */
+.service-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-overview-tag {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--green);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.service-overview h2,
+.capabilities h2 {
+  font-family: var(--font-head);
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.overview-paragraph {
+  font-size: 15px;
+  color: var(--gray);
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+.capabilities ul {
+  list-style: none;
+}
+
+.capabilities ul li {
+  font-size: 15px;
+  color: var(--gray);
+  padding: 8px 0;
+  padding-left: 24px;
+  position: relative;
+  border-bottom: 1px solid var(--border);
+}
+
+.capabilities ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--green);
+  font-weight: 700;
+}
+
+.capabilities ul li:last-child {
+  border-bottom: none;
+}
+
+/* INSIGHTS */
+.section {
+  padding: 0 40px 60px;
+}
+
+.section .section-content h2 {
+  font-family: var(--font-head);
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 28px;
+}
+
+.insight-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.insight-card:hover {
+  border-color: var(--green);
+}
+
+.insight-tag {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--green);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.insight-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.insight-read {
+  font-size: 13px;
+  color: var(--green);
+  font-weight: 500;
+}
+
+/* SERVICE CTA */
+.service-cta {
+  background: var(--darker);
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.service-cta h2 {
+  font-family: var(--font-head);
+  font-size: 28px;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.service-cta p {
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 28px;
+}
+
+.service-cta-btns {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* GREEN SECTION */
+.green-section {
+  background: var(--green);
+  padding: 60px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.green-section h2 {
+  font-family: var(--font-head);
+  font-size: clamp(22px, 3vw, 32px);
+  color: var(--white);
+  max-width: 500px;
+}
+
+.green-section p {
+  color: rgba(255,255,255,0.8);
+  font-size: 15px;
+  margin-top: 8px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .service-hero-content,
+  .service-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section, .service-cta, .green-section {
+    padding: 50px 20px;
+  }
+}
