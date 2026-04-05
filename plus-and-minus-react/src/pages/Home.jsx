@@ -100,28 +100,25 @@ const Home = () => {
           </p>
           <div className="hero-btns">
             <Button to="/contact" variant="hero-primary" size="large">
-              Get Started →
+              Start Your Journey →
             </Button>
             <Button to="/services" variant="hero-outline" size="large">
-              Our Services
+              Explore Our Services
             </Button>
           </div>
-          <div className="hero-stats">
-            <div>
-              <div className="hero-stat-val">500+</div>
-              <div className="hero-stat-label">Happy Clients</div>
+
+          <div className="hero-features">
+            <div className="hero-feature">
+              <span className="hero-feature-icon">✓</span>
+              <span>500+ Happy Clients</span>
             </div>
-            <div>
-              <div className="hero-stat-val">10+</div>
-              <div className="hero-stat-label">Expert Advisers</div>
+            <div className="hero-feature">
+              <span className="hero-feature-icon">★</span>
+              <span>100% Satisfaction</span>
             </div>
-            <div>
-              <div className="hero-stat-val">98%</div>
-              <div className="hero-stat-label">Repeat Engagement</div>
-            </div>
-            <div>
-              <div className="hero-stat-val">100%</div>
-              <div className="hero-stat-label">Satisfaction Rate</div>
+            <div className="hero-feature">
+              <span className="hero-feature-icon">§</span>
+              <span>ICAI Registered</span>
             </div>
           </div>
         </div>

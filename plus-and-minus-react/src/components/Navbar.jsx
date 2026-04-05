@@ -1,21 +1,33 @@
 import { Link, useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import './Navbar.css';
 
 const Navbar = () => {
   const location = useLocation();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 50;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const isActive = (path) => {
     return location.pathname === path;
   };
 
   return (
-    <nav>
+    <nav className={scrolled ? 'scrolled' : ''}>
       <Link to="/" className="nav-logo">
         <div className="nav-logo-icon">
           <span>±</span>
         </div>
         <div className="nav-logo-text">
-          Plus & Minus
+          Plus <span>&</span> Minus
           <small>ACCOUNTANTS & ADVISERS</small>
         </div>
       </Link>
