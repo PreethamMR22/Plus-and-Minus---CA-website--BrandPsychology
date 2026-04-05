@@ -6,40 +6,28 @@ import './Home.css';
 const Home = () => {
   const servicesData = [
     {
-      icon: '📊',
-      title: 'Accounts & Business Advisory',
-      description: 'Making sense of your numbers for individuals and businesses.',
-      linkTo: '/services/accounts'
+      icon: '�',
+      title: 'Startup',
+      description: 'Complete business setup assistance',
+      services: ['Private Limited Company', 'Limited Liability Partnership', 'One Person Company', 'Partnership Firm', 'Proprietorship']
     },
     {
-      icon: '🛡️',
-      title: 'Audit',
-      description: 'Independent, thorough audits to ensure compliance.',
-      linkTo: '/services/audit'
+      icon: '💰',
+      title: 'Income Tax',
+      description: 'Expert tax services for individuals and businesses',
+      services: ['Individual tax Filing', 'Business tax Filing', 'Corporate tax returns', 'Tax Audit', 'Notice management']
     },
     {
-      icon: '🏛️',
-      title: 'Corporate Finance',
-      description: 'Mergers, acquisitions, and financial structuring.',
-      linkTo: '/services/corporate-finance'
+      icon: '�',
+      title: 'Accounting Services',
+      description: 'Comprehensive financial record management',
+      services: ['Bookkeeping services', 'Monthly financial statements', 'Expense tracking', 'Invoicing and payments', 'TDS Filing']
     },
     {
-      icon: '📄',
-      title: 'Corporate Tax',
-      description: 'Strategic tax planning to minimise liabilities.',
-      linkTo: '/services/corporate-tax'
-    },
-    {
-      icon: '📈',
-      title: 'Personal Tax',
-      description: 'Personal tax services for individuals, families, and HNWIs.',
-      linkTo: '/services/personal-tax'
-    },
-    {
-      icon: '🔬',
-      title: 'R&D Tax',
-      description: 'Maximise your R&D tax credits and reliefs.',
-      linkTo: '/services/rd-tax'
+      icon: '🧾',
+      title: 'Goods and Service tax - GST',
+      description: 'Comprehensive financial record management',
+      services: ['GST Registration', 'GST Revocation and Amendment', 'GST Letter of Undertaking', 'GST Monthly filing', 'GST Annual Filing']
     }
   ];
 
@@ -166,28 +154,49 @@ const Home = () => {
       </section>
 
       {/* Our Services */}
-      <section className="section">
+      <section className="services-section">
         <div className="section-tag">What We Do</div>
-        <h2 className="section-title">Our Services</h2>
+        <h2 className="section-title">Bunch of things we can do for you</h2>
         <p className="section-sub">
-          Comprehensive accounting and advisory services built around your specific needs.
+          Comprehensive accounting and tax services tailored to your needs.
         </p>
-        <div className="cards-grid">
+        <div className="services-grid">
           {servicesData.map((service, index) => (
-            <Card
-              key={index}
-              icon={service.icon}
-              title={service.title}
-              description={service.description}
-              linkText="Learn more"
-              linkTo={service.linkTo}
-            />
+            <div key={index} className="service-card">
+              <div className="service-icon">{service.icon}</div>
+              <h3 className="service-title">{service.title}</h3>
+              <p className="service-description">{service.description}</p>
+              <ul className="service-list">
+                {service.services.map((item, idx) => (
+                  <li key={idx}>{item}</li>
+                ))}
+              </ul>
+            </div>
           ))}
         </div>
-        <div style={{marginTop: '32px'}}>
-          <Button to="/services" variant="primary">
-            View All Services →
-          </Button>
+      </section>
+
+      {/* Mission Section */}
+      <section className="mission-section">
+        <div className="section-content">
+          <div className="section-tag">OUR MISSION</div>
+          <h2 className="section-title">
+            You only have one life.<br />
+            <span>Wealth is freedom.</span>
+          </h2>
+          <p className="section-sub">
+            It's often filled with long work days and stress about money. It doesn't have to be that way. We created Plus And Minus to help you reach financial freedom — the moment when you can stop working and start living your meaningful life without money stress.
+            <br /><br />
+            Plus And Minus is your friendly guide so you can pay less in taxes (the legal way!) and put your money in the right places. Money stuff can feel hard, but we're here to help you along the way.
+          </p>
+          <div className="mission-buttons">
+            <Button to="/contact" variant="hero-primary" size="large">
+              Start Your Journey →
+            </Button>
+            <Button to="/about" variant="hero-outline" size="large">
+              Our Story
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -226,22 +235,62 @@ const Home = () => {
       </section>
 
       {/* Tax Planning Section */}
-      <section className="dark-section">
-        <div className="dark-section-content reverse">
-          <div className="dark-section-img">🌐</div>
-          <div>
-            <div className="section-tag">Advisory</div>
+      <section className="tax-planning-section">
+        <div className="tax-planning-content">
+          <div className="tax-planning-left">
+            <div className="section-tag">BEYOND FILING</div>
             <h2 className="section-title">
               Tax Planning & <span>Advisory Services</span>
             </h2>
-            <ul className="advisory-list">
-              <li>✓ &nbsp;Personal Planning</li>
-              <li>✓ &nbsp;Tax Free Expert</li>
-              <li>✓ &nbsp;Business Advisory</li>
-            </ul>
-            <Button to="/contact" variant="hero-primary" size="large">
-              Learn More →
-            </Button>
+            <p className="section-sub">
+              Reduce your tax liabilities by strategically planning your taxes, Good tax planning ensures all your financial goals work together smoothly, boosting your long-term savings.
+            </p>
+            
+            <div className="tax-features">
+              <div className="tax-feature">
+                <div className="tax-feature-icon">⚡</div>
+                <div className="tax-feature-content">
+                  <h4>Highly Optimised</h4>
+                  <p>We help you file your ITR the right way — maximising your income and claiming every possible deduction.</p>
+                </div>
+              </div>
+              
+              <div className="tax-feature">
+                <div className="tax-feature-icon">💰</div>
+                <div className="tax-feature-content">
+                  <h4>Transparent Pricing</h4>
+                  <p>No surprises — just clear, upfront pricing so you know exactly what you're paying for.</p>
+                </div>
+              </div>
+              
+              <div className="tax-feature">
+                <div className="tax-feature-icon">📊</div>
+                <div className="tax-feature-content">
+                  <h4>Post-Filing Support</h4>
+                  <p>Reports and support for all things ITR even after filing. Keep your finances organised all year, every year.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="tax-buttons">
+              <Button to="/pricing" variant="hero-primary" size="large">
+                View Pricing
+              </Button>
+              <Button to="/services/tax-planning" variant="hero-outline" size="large">
+                Learn More
+              </Button>
+            </div>
+          </div>
+          
+          <div className="tax-planning-right">
+            <div className="tax-image">
+              <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Tax planning" />
+            </div>
+            
+            <div className="tax-callout">
+              <h4>Never Miss a Tax Deadline</h4>
+              <p>We keep you on track so you file on time, every time.</p>
+            </div>
           </div>
         </div>
       </section>

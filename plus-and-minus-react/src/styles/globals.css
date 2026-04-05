@@ -1,9 +1,9 @@
 :root {
   --dark: #0d1f1a;
   --darker: #081510;
-  --green: #1a7a4a;
-  --green-light: #22a862;
-  --green-bright: #2ecc71;
+  --green: rgb(0, 109, 90);
+  --green-light: rgb(0, 139, 115);
+  --green-bright: rgb(0, 169, 140);
   --cream: #f5f0e8;
   --cream-light: #faf8f4;
   --white: #ffffff;
