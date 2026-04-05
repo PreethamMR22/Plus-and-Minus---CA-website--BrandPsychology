@@ -33,6 +33,9 @@ const Navbar = () => {
       </Link>
       
       <div className="nav-links">
+        <Link to="/" className={`nav-link ${isActive('/') ? 'active' : ''}`}>
+          Home
+        </Link>
         <div className="nav-dropdown">
           <button className="nav-link" id="nav-services">
             Our Services ▾
@@ -53,12 +56,6 @@ const Navbar = () => {
         </div>
         <Link to="/about" className={`nav-link ${isActive('/about') ? 'active' : ''}`}>
           About Us
-        </Link>
-        <Link to="/pricing" className={`nav-link ${isActive('/pricing') ? 'active' : ''}`}>
-          Pricing
-        </Link>
-        <Link to="/careers" className={`nav-link ${isActive('/careers') ? 'active' : ''}`}>
-          Careers
         </Link>
       </div>
       

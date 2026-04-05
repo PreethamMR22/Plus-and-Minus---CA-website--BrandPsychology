@@ -125,7 +125,7 @@ const Home = () => {
       </section>
 
       {/* Why Plus & Minus */}
-      <section className="section">
+      <section className="section section-expanded">
         <div className="two-col">
           <div>
             <div className="section-tag">Why Plus & Minus</div>
@@ -133,14 +133,14 @@ const Home = () => {
               We're experts. <span>Let us help you.</span>
             </h2>
             <p className="section-sub">
-              With a proven track record spanning 10+ years, we bring chartered expertise and genuine human care to every client relationship. We work with numbers. But for people.
+              We bring clarity, brevity, and human insight to our work with you. At Plus And Minus Accountants and Advisers, we work with numbers - but for people. Our chartered accountants provide end-to-end strategic accounting with reliable, professional guidance to help achieve business success. <br />In a world where anyone can call themselves an accountant, we stand apart through deep expertise, transparent pricing, and genuine care for your financial wellbeing -in the Age of Al, 2026-2028 and beyond.
             </p>
-            <Button to="/about" variant="primary" style={{marginTop: '8px'}}>
-              Learn More →
-            </Button>
+            <Link to="/about" className="section-link">
+              See how we can help →
+            </Link>
           </div>
           <div className="col-img">
-            <div className="col-img-placeholder">👩‍💼</div>
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Professional receptionist" className="col-img-content" />
           </div>
         </div>
       </section>

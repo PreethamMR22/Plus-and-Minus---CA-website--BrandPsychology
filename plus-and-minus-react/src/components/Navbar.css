@@ -119,7 +119,11 @@ nav.scrolled .nav-logo-text span {
 }
 
 .nav-link.active {
-  color: var(--green);
+  color: var(--white);
+}
+
+nav.scrolled .nav-link.active {
+  color: var(--text);
 }
 
 .nav-dropdown {
