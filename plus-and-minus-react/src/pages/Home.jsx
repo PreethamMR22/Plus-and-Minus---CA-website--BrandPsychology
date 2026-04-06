@@ -51,24 +51,34 @@ const Home = () => {
 
   const taxIssuesData = [
     {
-      icon: '💡',
+      color: 'yellow',
       title: 'No Tax Strategy',
       description: 'Without a plan, you pay maximum tax every year without realising it.'
     },
     {
-      icon: '📋',
+      color: 'pink',
       title: 'Missing Deductions',
       description: 'HUF, 80C, NPS, capital gains — most deductions go unclaimed.'
     },
     {
-      icon: '⚡',
+      color: 'blue',
       title: 'Wrong Regime',
       description: 'Old vs New regime — most people pick the wrong one and lose thousands.'
     },
     {
-      icon: '🔒',
+      color: 'purple',
       title: 'No Expert Review',
       description: 'A CA review can save you 10x what it costs. Every single year.'
+    },
+    {
+      color: 'light-green',
+      title: 'Bad Investments',
+      description: 'Tax-inefficient investments drain your wealth silently.'
+    },
+    {
+      color: 'orange',
+      title: 'Late Planning',
+      description: 'Waiting until March means losing months of tax-saving opportunities.'
     }
   ];
 
@@ -234,6 +244,39 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Why Smart Earners Overpay */}
+      <section className="tax-overpay-section">
+        <div className="tax-overpay-content">
+          <div className="tax-overpay-left">
+            <div className="section-tag">THE PROBLEM</div>
+            <h2 className="section-title">Why even smart earners <span className="highlight">overpay taxes</span></h2>
+            <p className="section-sub">
+              Each year, thousands of high-earning professionals pay more tax than they legally need to. The reason? Lack of strategy, not lack of income. Each number is backed by years of focused tax expertise and real outcomes.
+            </p>
+            
+            <div className="tax-overpay-cta">
+              <h3>Overpaying your taxes? Let's fix that!</h3>
+              <p>Tax planning is a smart way to reduce the taxes you pay. It helps you use exemptions, deductions, and benefits to lower your tax bill effectively.</p>
+            </div>
+
+            <Link to="/services/tax-planning" className="tax-planning-link">
+              Explore Tax Planning Services →
+            </Link>
+          </div>
+          
+          <div className="tax-overpay-right">
+            <div className="tax-overpay-grid">
+              {taxIssuesData.map((issue, index) => (
+                <div key={index} className={`tax-issue-card ${issue.color}`}>
+                  <h4>{issue.title}</h4>
+                  <p>{issue.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Tax Planning Section */}
       <section className="tax-planning-section">
         <div className="tax-planning-content">
@@ -251,7 +294,7 @@ const Home = () => {
                 <div className="tax-feature-icon">⚡</div>
                 <div className="tax-feature-content">
                   <h4>Highly Optimised</h4>
-                  <p>We help you file your ITR the right way — maximising your income and claiming every possible deduction.</p>
+                  <p>We help you file your ITR right way — maximising your income and claiming every possible deduction.</p>
                 </div>
               </div>
               
@@ -295,55 +338,39 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Why Smart Earners Overpay */}
-      <section className="section">
-        <div className="section-centered">
-          <div className="section-tag">Insights</div>
-          <h2 className="section-title">Why even smart earners overpay taxes</h2>
-          <p className="section-sub">
-            Most people don't know what they're missing. Let's change that.
-          </p>
-        </div>
-        <div className="cards-grid">
-          {taxIssuesData.map((issue, index) => (
-            <Card
-              key={index}
-              icon={issue.icon}
-              title={issue.title}
-              description={issue.description}
-            />
-          ))}
-        </div>
-      </section>
-
-      {/* Tech Section */}
-      <section className="tech-section">
-        <div className="tech-content">
-          <div className="tech-img">🤖</div>
-          <div>
-            <div className="section-tag">Technology</div>
+      {/* Technology Section */}
+      <section className="technology-section">
+        <div className="technology-content">
+          <div className="technology-left">
+            <div className="technology-image-container">
+              <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Technology" className="technology-main-image" />
+            </div>
+            <div className="technology-tag">Competitive edge through <br /> <b>AI + Deep Expertise</b></div>
+          </div>
+          <div className="technology-right">
+            <div className="section-tag">THE PLUS AND MINUS ADVANTAGE</div>
             <h2 className="section-title">
-              We unite expertise and tech so you can <span>outthink, outpace and outperform</span>
+              We unite expertise <br /> and tech so you can <br /> <span className="highlight-green">outthink, outpace and <br /> outperform</span>
             </h2>
-            <p className="tech-sub">
-              Our platform combines deep chartered expertise with modern technology to deliver outcomes that no single approach can match.
+            <p className="section-sub">
+              AI, climate change and geopolitical shifts are reconfiguring global economy. We bring the sharpest minds in tax and finance. Deep expertise that industries are built on. And we roll up our sleeves to deliver results — alongside you, start to finish.
             </p>
-            <div className="tech-features">
-              <div className="tech-feature">
-                <p className="tech-feature-title">AI-Assisted Analysis</p>
-                <p className="tech-feature-desc">Smarter insights, faster</p>
+            <div className="technology-features-grid">
+              <div className="feature-card">
+                <h3>AI-Tailored Advice</h3>
+                <p>We know how your business works so you can put AI to work for your business</p>
               </div>
-              <div className="tech-feature">
-                <p className="tech-feature-title">Secure Document Portal</p>
-                <p className="tech-feature-desc">Bank-level security</p>
+              <div className="feature-card">
+                <h3>Industry-Leading Expertise</h3>
+                <p>Deep sector knowledge so you can make decisions your future can stand on</p>
               </div>
-              <div className="tech-feature">
-                <p className="tech-feature-title">Real-time Reporting</p>
-                <p className="tech-feature-desc">Always up to date</p>
+              <div className="feature-card">
+                <h3>Strategic Alliances</h3>
+                <p>We work with tech's titans and trailblazers so you can think like a startup</p>
               </div>
-              <div className="tech-feature">
-                <p className="tech-feature-title">Expert CA Review</p>
-                <p className="tech-feature-desc">Human oversight always</p>
+              <div className="feature-card">
+                <h3>Sustainability Built In</h3>
+                <p>We enhance strategy with sustainability to strengthen your resilience and returns</p>
               </div>
             </div>
           </div>
