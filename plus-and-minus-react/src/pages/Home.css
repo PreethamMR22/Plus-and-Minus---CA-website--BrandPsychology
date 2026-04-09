@@ -425,64 +425,54 @@
   margin-top: 4px;
 }
 
-/* INSIGHTS */
-.insights-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* CLIENTS */
+.clients-section {
+  background: #f9f5f0;
+  padding: 56px 166px;
+  max-width: none;
+  margin: 0;
+  height: 179px;
+}
+
+.clients-header {
+  text-align: center;
   margin-bottom: 32px;
 }
 
-.insights-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+.clients-tag {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight:600;
+  color: #99a1af;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  line-height: 16px;
 }
 
-.insight-card {
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: all 0.2s;
+.clients-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.insight-card:hover {
-  border-color: var(--green);
-}
-
-.insight-img {
-  background: var(--gray-light);
-  height: 160px;
+.client-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 40px;
 }
 
-.insight-content {
-  padding: 20px;
-}
+.client-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
 
-.insight-tag {
-  font-size: 11px;
-  color: var(--green);
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
-.insight-card h3 {
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1.4;
-  margin-bottom: 10px;
-}
-
-.insight-read {
-  font-size: 13px;
-  color: var(--green);
+  color: #99a1af;
+  line-height: 20px;
+  letter-spacing: 0.35px;
+  white-space: nowrap;
 }
 
 /* BOTTOM CTA */
@@ -1093,6 +1083,14 @@
   .service-card {
     padding: 28px 24px;
   }
+  
+  .clients-section {
+    padding: 56px 40px 80px;
+  }
+  
+  .clients-grid {
+    gap: 24px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1103,6 +1101,18 @@
   
   .service-card {
     padding: 24px 20px;
+  }
+  
+  .clients-section {
+    padding: 40px 20px 60px;
+  }
+  
+  .clients-grid {
+    gap: 20px;
+  }
+  
+  .client-name {
+    font-size: 13px;
   }
   
   .mission-section {

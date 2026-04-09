@@ -31,22 +31,17 @@ const Home = () => {
     }
   ];
 
-  const insightsData = [
-    {
-      icon: '💼',
-      tag: 'Corporate Tax',
-      title: 'VAT on company cars: Hire Purchase vs Finance Lease'
-    },
-    {
-      icon: '📊',
-      tag: 'Personal Tax',
-      title: 'Old vs New Tax Regime: Which saves you more in 2026?'
-    },
-    {
-      icon: '🏠',
-      tag: 'Tax Planning',
-      title: 'HUF setup: Is it right for your family?'
-    }
+  const clientsData = [
+    'Wipro',
+    'Unilever',
+    'TCS',
+    'Oracle',
+    'Mercedes-Benz',
+    'DB Schenker',
+    'Infosys',
+    'IBM',
+    'Honeywell',
+    'Fidelity'
   ];
 
   const taxIssuesData = [
@@ -377,24 +372,15 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Insights */}
-      <section className="section">
-        <div className="insights-header">
-          <div>
-            <div className="section-tag">Blog</div>
-            <h2 className="section-title">Insights & Updates</h2>
-          </div>
-          <Button variant="outline">View All →</Button>
+      {/* Clients */}
+      <section className="clients-section">
+        <div className="clients-header">
+          <p className="clients-tag">Our clients work at top global companies</p>
         </div>
-        <div className="insights-grid">
-          {insightsData.map((insight, index) => (
-            <div key={index} className="insight-card">
-              <div className="insight-img">{insight.icon}</div>
-              <div className="insight-content">
-                <div className="insight-tag">{insight.tag}</div>
-                <h3>{insight.title}</h3>
-                <div className="insight-read">Read More →</div>
-              </div>
+        <div className="clients-grid">
+          {clientsData.map((client, index) => (
+            <div key={index} className="client-item">
+              <span className="client-name">{client}</span>
             </div>
           ))}
         </div>
