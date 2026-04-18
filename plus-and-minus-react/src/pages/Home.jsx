@@ -179,6 +179,11 @@ const Home = () => {
             </div>
           ))}
         </div>
+        <div className="services-cta">
+          <Button to="/services" variant="primary">
+            Explore Services →
+          </Button>
+        </div>
       </section>
 
       {/* Mission Section */}
