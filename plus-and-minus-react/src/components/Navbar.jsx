@@ -5,6 +5,7 @@ import './Navbar.css';
 const Navbar = () => {
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,17 +42,17 @@ const Navbar = () => {
             Our Services ▾
           </button>
           <div className="nav-dropdown-menu">
-            <Link to="/services" className="nav-dropdown-item">All Services</Link>
-            <Link to="/services/accounts" className="nav-dropdown-item">Accounts & Business Advisory</Link>
-            <Link to="/services/audit" className="nav-dropdown-item">Audit</Link>
-            <Link to="/services/corporate-finance" className="nav-dropdown-item">Corporate Finance</Link>
-            <Link to="/services/corporporate-tax" className="nav-dropdown-item">Corporate Tax</Link>
-            <Link to="/services/employment-tax" className="nav-dropdown-item">Employment Tax</Link>
-            <Link to="/services/entrepreneurial-tax" className="nav-dropdown-item">Entrepreneurial Tax</Link>
-            <Link to="/services/payroll" className="nav-dropdown-item">Payroll</Link>
-            <Link to="/services/personal-tax" className="nav-dropdown-item">Personal Tax</Link>
-            <Link to="/services/rd-tax" className="nav-dropdown-item">R&D Tax</Link>
-            <Link to="/services/vat" className="nav-dropdown-item">VAT</Link>
+            <Link to="/services/startup" className="nav-dropdown-item">Startup</Link>
+            <Link to="/services/income-tax" className="nav-dropdown-item">Income tax filing</Link>
+            <Link to="/services/gst" className="nav-dropdown-item">GST</Link>
+            <Link to="/services/registrations" className="nav-dropdown-item">Registrations</Link>
+            <Link to="/services/accounting" className="nav-dropdown-item">Accounting</Link>
+            <div className="nav-dropdown-spacer"></div>
+            <div className="nav-dropdown-spacer"></div>
+            <div className="nav-dropdown-spacer"></div>
+            <div className="nav-dropdown-spacer"></div>
+            <div className="nav-dropdown-spacer"></div>
+            <div className="nav-dropdown-spacer"></div>
           </div>
         </div>
         <Link to="/about" className={`nav-link ${isActive('/about') ? 'active' : ''}`}>
@@ -59,9 +60,41 @@ const Navbar = () => {
         </Link>
       </div>
       
+      <button className="mobile-menu-toggle" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
       <div className="nav-actions">
         <Link to="/contact" className="btn-outline">Let's Talk</Link>
         <Link to="/contact" className="btn-primary">Get Started</Link>
+      </div>
+      
+      {/* Mobile Menu */}
+      <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
+        <div className="mobile-menu-content">
+          <Link to="/" className={`mobile-nav-link ${isActive('/') ? 'active' : ''}`} onClick={() => setMobileMenuOpen(false)}>
+            Home
+          </Link>
+          <div className="mobile-nav-dropdown">
+            <div className="mobile-nav-link">Our Services</div>
+            <div className="mobile-nav-submenu">
+              <Link to="/services/startup" className="mobile-nav-sublink" onClick={() => setMobileMenuOpen(false)}>Startup</Link>
+              <Link to="/services/income-tax" className="mobile-nav-sublink" onClick={() => setMobileMenuOpen(false)}>Income tax filing</Link>
+              <Link to="/services/gst" className="mobile-nav-sublink" onClick={() => setMobileMenuOpen(false)}>GST</Link>
+              <Link to="/services/registrations" className="mobile-nav-sublink" onClick={() => setMobileMenuOpen(false)}>Registrations</Link>
+              <Link to="/services/accounting" className="mobile-nav-sublink" onClick={() => setMobileMenuOpen(false)}>Accounting</Link>
+            </div>
+          </div>
+          <Link to="/about" className={`mobile-nav-link ${isActive('/about') ? 'active' : ''}`} onClick={() => setMobileMenuOpen(false)}>
+            About Us
+          </Link>
+          <div className="mobile-nav-actions">
+            <Link to="/contact" className="btn-outline" onClick={() => setMobileMenuOpen(false)}>Let's Talk</Link>
+            <Link to="/contact" className="btn-primary" onClick={() => setMobileMenuOpen(false)}>Get Started</Link>
+          </div>
+        </div>
       </div>
     </nav>
   );
