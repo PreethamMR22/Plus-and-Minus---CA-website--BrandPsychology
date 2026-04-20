@@ -1,0 +1,206 @@
+/* TAX OVERPAY SECTION */
+.tax-overpay-section {
+  background: var(--cream);
+  padding: 80px 40px;
+}
+
+.tax-overpay-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.tax-overpay-left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.tax-overpay-left .section-tag {
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.tax-overpay-left .section-title {
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.tax-overpay-left .section-title .highlight {
+  color: var(--green);
+}
+
+.tax-overpay-left .section-sub {
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 500px;
+  margin-bottom: 0;
+}
+
+.tax-overpay-cta {
+  background: rgb(232, 245, 232);
+  border: 0.909px solid rgba(0, 109, 91, 0.2);
+  border-radius: 16px;
+  padding: 20.909px 20.909px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 7.997px;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tax-overpay-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tax-overpay-cta h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #006d5b;
+  margin: 0;
+  position: relative;
+  top: 0.36px;
+}
+
+.tax-overpay-cta p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #4a5565;
+  margin: 0;
+  position: relative;
+  top: 0.36px;
+  width: 483px;
+}
+
+.tax-overpay-right {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.tax-overpay-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.tax-issue-card {
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tax-issue-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tax-issue-card h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.tax-issue-card p {
+  font-size: 13px;
+  color: var(--gray);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.tax-issue-card.yellow {
+  background: #FFF3CD;
+  border: 1px solid #FFE69C;
+}
+
+.tax-issue-card.pink {
+  background: #FFE0EC;
+  border: 1px solid #FFB3D1;
+}
+
+.tax-issue-card.blue {
+  background: #E3F2FD;
+  border: 1px solid #90CAF9;
+}
+
+.tax-issue-card.purple {
+  background: #F3E5F5;
+  border: 1px solid #CE93D8;
+}
+
+.tax-issue-card.light-green {
+  background: #E8F5E8;
+  border: 1px solid #A5D6A7;
+}
+
+.tax-issue-card.orange {
+  background: #FFF3E0;
+  border: 1px solid #FFCC80;
+}
+
+.tax-planning-link {
+  color: var(--green);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.2s ease;
+  align-self: flex-start;
+}
+
+.tax-planning-link:hover {
+  color: var(--green-light);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tax-overpay-section {
+    padding: 60px 20px;
+  }
+
+  .tax-overpay-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .tax-overpay-left .section-title {
+    font-size: clamp(28px, 6vw, 36px);
+  }
+
+  .tax-overpay-left .section-sub {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .tax-overpay-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .tax-issue-card {
+    padding: 16px;
+  }
+
+  .tax-issue-card h4 {
+    font-size: 14px;
+  }
+
+  .tax-issue-card p {
+    font-size: 12px;
+  }
+}

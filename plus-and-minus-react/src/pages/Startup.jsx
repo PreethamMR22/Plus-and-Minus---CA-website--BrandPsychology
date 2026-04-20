@@ -252,7 +252,7 @@ const Startup = () => {
                 {companyTypes[selectedType].features.map((feature, index) => (
                   <li key={index} className={`feature-item ${feature.type}`}>
                     <span className="feature-icon">
-                      {feature.type === 'check' ? '×' : '×'}
+                      {feature.type === 'check' ? '✓' : '×'}
                     </span>
                     <span className="feature-text">{feature.text}</span>
                   </li>
@@ -263,7 +263,7 @@ const Startup = () => {
                   {companyTypes[selectedType].excludedFeatures.map((feature, index) => (
                     <li key={index} className={`feature-item ${feature.type}`}>
                       <span className="feature-icon">
-                        {feature.type === 'check' ? '×' : '×'}
+                        {feature.type === 'check' ? '✓' : '×'}
                       </span>
                       <span className="feature-text">{feature.text}</span>
                     </li>
