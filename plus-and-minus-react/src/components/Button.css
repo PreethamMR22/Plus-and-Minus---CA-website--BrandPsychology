@@ -4,12 +4,19 @@
   cursor: pointer;
   transition: all 0.2s;
   border: none;
-  border-radius: 50px;
+  border-radius: 50px !important;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   gap: 8px;
+}
+
+/* Higher specificity to override page-specific styles */
+body .btn,
+section .btn,
+div .btn {
+  border-radius: 50px !important;
 }
 
 .btn.small {

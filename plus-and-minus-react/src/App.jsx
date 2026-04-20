@@ -9,6 +9,7 @@ import Careers from './pages/Careers';
 import Services from './pages/Services';
 import ServiceDetail from './pages/ServiceDetail';
 import Startup from './pages/Startup';
+import IncomeTax from './pages/IncomeTax';
 import './styles/globals.css';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/services/:serviceId" element={<ServiceDetail />} />
             <Route path="/services/startup" element={<Startup />} />
+            <Route path="/services/income-tax" element={<IncomeTax />} />
           </Routes>
         </main>
         <Footer />

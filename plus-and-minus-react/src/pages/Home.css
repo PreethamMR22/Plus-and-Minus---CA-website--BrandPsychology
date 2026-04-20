@@ -1372,7 +1372,7 @@
   background: rgb(242, 242, 242);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 24px;
+  padding: 18px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   width: 100%;
 }
@@ -1383,14 +1383,38 @@
 }
 
 .feature-card h3 {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   color: var(--text);
 }
 
 .feature-card p {
-  font-size: 13px;
+  font-size: 10px;
+  color: var(--gray);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* More specific selectors for technology section */
+.technology-section .feature-card {
+  background: rgb(242, 242, 242);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+}
+
+.technology-section .feature-card h3 {
+  font-size: 12px !important;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.technology-section .feature-card p {
+  font-size: 10px !important;
   color: var(--gray);
   line-height: 1.5;
   margin-bottom: 0;
@@ -1612,11 +1636,11 @@
   }
   
   .feature-card h3 {
-    font-size: 15px;
+    font-size: 12px;
   }
   
   .feature-card p {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 
