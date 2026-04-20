@@ -1,0 +1,145 @@
+/* FAQs SECTION */
+.faqs-section {
+  padding: 80px 40px;
+  background: #f8f9fa;
+}
+
+.faqs-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faqs-container h2 {
+  font-family: var(--font-head);
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 700;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.faqs-container h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--green);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.faqs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  background: var(--white);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+  background: #f8f9fa;
+}
+
+.faq-question span:first-child {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.5;
+  flex: 1;
+  padding-right: 20px;
+}
+
+.faq-toggle {
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--green);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(26, 122, 74, 0.1);
+  line-height: 1;
+  text-align: center;
+}
+
+.faq-toggle.expanded {
+  transform: rotate(45deg);
+  background: var(--green);
+  color: var(--white);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 24px;
+  font-size: 15px;
+  color: var(--gray);
+  line-height: 1.7;
+  border-top: 1px solid transparent;
+}
+
+.faq-answer.expanded {
+  max-height: 500px;
+  padding: 0 24px 20px 24px;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Responsive for FAQs */
+@media (max-width: 768px) {
+  .faqs-section {
+    padding: 60px 20px;
+  }
+  
+  .faqs-container h2 {
+    font-size: 28px;
+  }
+  
+  .faqs-container h3 {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  
+  .faq-question {
+    padding: 16px 20px;
+  }
+  
+  .faq-question span:first-child {
+    font-size: 15px;
+  }
+  
+  .faq-toggle {
+    font-size: 20px;
+    width: 28px;
+    height: 28px;
+    line-height: 1;
+    text-align: center;
+  }
+  
+  .faq-answer.expanded {
+    padding: 0 20px 16px 20px;
+    font-size: 14px;
+  }
+}

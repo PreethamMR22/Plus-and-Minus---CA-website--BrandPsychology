@@ -8,6 +8,7 @@ import Contact from './pages/Contact';
 import Careers from './pages/Careers';
 import Services from './pages/Services';
 import ServiceDetail from './pages/ServiceDetail';
+import Startup from './pages/Startup';
 import './styles/globals.css';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Route path="/careers" element={<Careers />} />
             <Route path="/services" element={<Services />} />
             <Route path="/services/:serviceId" element={<ServiceDetail />} />
+            <Route path="/services/startup" element={<Startup />} />
           </Routes>
         </main>
         <Footer />

@@ -1,0 +1,86 @@
+/* Company Types Section */
+.company-types-section {
+  background: var(--cream);
+  padding: 80px 40px;
+  max-width: none;
+  margin: 0;
+}
+
+.company-types-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.company-type-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: none;
+  transition: none;
+}
+
+.company-type-card h2 {
+  font-family: var(--font-head);
+  font-size: 28px;
+  color: var(--text);
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.company-type-card .services-card {
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.company-type-card .services-card h3 {
+  font-family: var(--font-head);
+  font-size: 18px;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.company-type-card .services-list {
+  margin-bottom: 20px;
+}
+
+.company-type-card .services-list li {
+  font-size: 14px;
+  padding: 6px 0;
+  padding-left: 24px;
+}
+
+.company-type-card .ideal-for-section {
+  margin-top: 20px;
+}
+
+.company-type-card .ideal-for-section h4 {
+  font-family: var(--font-head);
+  font-size: 16px;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.company-type-card .ideal-for-list li {
+  font-size: 14px;
+  padding: 4px 0;
+  padding-left: 24px;
+}
+
+/* Responsive for Company Types */
+@media (max-width: 900px) {
+  .company-types-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .company-type-card {
+    padding: 32px;
+  }
+}
