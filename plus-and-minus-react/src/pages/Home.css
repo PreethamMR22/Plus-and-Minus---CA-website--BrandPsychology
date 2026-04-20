@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 140px 40px 160px 120px;
+  padding: 140px 40px 160px min(120px, 10vw);
   position: relative;
   overflow: hidden;
 }
@@ -123,6 +123,21 @@
 .section-centered {
   text-align: center;
   margin-bottom: 40px;
+}
+
+/* Simple Process Section Fixes */
+.section.simple-process {
+  background: var(--white);
+  padding: 80px 40px;
+}
+
+.section.simple-process .section-centered {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.pricing-button-container {
+  margin-top: 40px !important;
 }
 
 .section-tag {
@@ -271,8 +286,8 @@
   position: absolute;
   top: -50%;
   right: -20%;
-  width: 600px;
-  height: 600px;
+  width: min(600px, 50vw);
+  height: min(600px, 50vw);
   border-radius: 50%;
   background: radial-gradient(circle, rgba(26,122,74,0.15) 0%, transparent 70%);
 }
@@ -967,6 +982,7 @@
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+  margin-top: 16px;
 }
 
 /* TAX PLANNING SECTION */
@@ -1081,7 +1097,7 @@
   position: absolute;
   bottom: -15px;
   left: -20px;
-  max-width: 300px;
+  max-width: min(300px, 80vw);
   z-index: 10;
   box-shadow: 0 8px 32px rgba(0,0,0,0.2);
 }
@@ -1304,6 +1320,7 @@
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   z-index: 10;
+  max-width: min(200px, 40vw);
 }
 
 .technology-tag b {
@@ -1352,7 +1369,7 @@
 }
 
 .feature-card {
-  background: var(--white);
+  background: rgb(242, 242, 242);
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 24px;
@@ -1639,11 +1656,34 @@
   }
   
   .services-grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: 16px;
   }
   
   .service-card {
     padding: 24px 20px;
+    flex: 1 1 auto;
+    width: 100%;
+  }
+  
+  /* File ITR Steps Mobile Fix */
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  /* Tax Overpay Section Mobile Fix */
+  .tax-overpay-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .tax-overpay-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .tax-overpay-right {
+    margin-top: 30px;
   }
 }

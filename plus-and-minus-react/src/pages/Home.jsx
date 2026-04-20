@@ -233,7 +233,7 @@ const Home = () => {
 
       
       {/* File ITR Steps */}
-      <section className="section">
+      <section className="section simple-process">
         <div className="section-centered">
           <div className="section-tag">Simple Process</div>
           <h2 className="section-title">File your ITR in three easy steps</h2>
@@ -258,7 +258,7 @@ const Home = () => {
             <p>Review, approve and we file your return. You get the acknowledgement instantly.</p>
           </div>
         </div>
-        <div className="section-centered">
+        <div className="section-centered pricing-button-container">
           <Button to="/pricing" variant="primary">
             See Our Pricing →
           </Button>
