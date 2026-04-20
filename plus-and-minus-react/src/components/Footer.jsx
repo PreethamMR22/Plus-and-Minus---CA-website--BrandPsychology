@@ -59,11 +59,19 @@ const Footer = () => {
             <span>📍</span>
             <span>Mumbai | Bangalore | Delhi NCR</span>
           </div>
-          <p style={{fontSize: '12px', color: 'rgba(255,255,255,0.4)', margin: '12px 0 8px'}}>Available via</p>
-          <div className="footer-badges">
-            <div className="footer-badge wa">WhatsApp</div>
-            <div className="footer-badge em">Email</div>
-            <div className="footer-badge cb">Callback</div>
+          <div className="footer-available-via">
+            <p>Available via</p>
+            <div className="available-via-buttons">
+              <div className="available-via-button whatsapp">
+                <span>WhatsApp</span>
+              </div>
+              <div className="available-via-button email">
+                <span>Email</span>
+              </div>
+              <div className="available-via-button callback">
+                <span>Callback</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

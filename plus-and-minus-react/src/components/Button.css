@@ -119,3 +119,21 @@
 .btn.pricing:hover {
   opacity: 0.85;
 }
+
+.btn.light {
+  background: var(--white);
+  color: #006d5b;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 50px;
+  width: 137px;
+  height: 44px;
+  justify-content: center;
+  gap: 4px;
+}
+
+.btn.light:hover {
+  background: #f0f0f0;
+  transform: translateY(-1px);
+}

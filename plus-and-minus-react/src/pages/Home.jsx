@@ -44,6 +44,27 @@ const Home = () => {
     'Fidelity'
   ];
 
+  const blogData = [
+    {
+      category: 'Corporate Tax',
+      title: 'VAT implications on company cars: Hire Purchase vs Finance Lease',
+      description: 'Make sure you don\'t stall — understand which financing option works best for your business tax position.',
+      image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      category: 'Personal Tax',
+      title: 'Leading through uncertainty in the age of AI',
+      description: 'CEOs are reinventing their companies with technology and seeking growth opportunities in new sectors.',
+      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      category: 'R&D Tax',
+      title: 'Maximising R&D credits for tech startups in 2026',
+      description: 'New HMRC guidance means many more businesses now qualify — but claims require precision.',
+      image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'
+    }
+  ];
+
   const taxIssuesData = [
     {
       color: 'yellow',
@@ -391,38 +412,99 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Bottom CTA */}
-      <section className="section">
-        <div className="two-col">
-          <div>
-            <h2 className="bottom-cta-title">
+      {/* Blog Section */}
+      <section className="blog-section">
+        <div className="blog-header">
+          <div className="blog-header-left">
+            <div className="section-tag">Latest</div>
+            <h2 className="section-title">Insights & Updates</h2>
+          </div>
+          <div className="blog-header-right">
+            <Link to="/blog" className="blog-view-all-link">
+              View All →
+            </Link>
+          </div>
+        </div>
+        <div className="blog-grid">
+          {blogData.map((blog, index) => (
+            <div key={index} className="blog-card">
+              <div className="blog-image-container">
+                <img src={blog.image} alt={blog.title} className="blog-image" />
+              </div>
+              <div className="blog-category">{blog.category}</div>
+              <h3 className="blog-title">{blog.title}</h3>
+              <p className="blog-description">{blog.description}</p>
+              <div className="blog-read-more">
+                <Link to={`/blog/${index}`} className="blog-read-more-link">
+                  Read more →
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Our People Section */}
+      <section className="our-people-section">
+        <div className="our-people-content">
+          <div className="our-people-left">
+            <div className="section-tag">Our People</div>
+            <h2 className="section-title">
               In this increasingly regulated and legislation-heavy world, we know more is needed.
             </h2>
             <p className="section-sub">
-              Plus And Minus is your strategic partner — not just your accountant. Real advice. Real outcomes. Real trust.
+              All our team work for yours. Chartered Accountants with deep sector expertise, committed to your success. We combine technical knowledge with genuine care — because behind every number, there's a person.
             </p>
-            <Button to="/contact" variant="primary" style={{marginTop: '20px'}}>
-              Get In Touch →
-            </Button>
+            <Link to="/team" className="our-people-link">
+              Meet the team →
+            </Link>
           </div>
-          <div className="col-img">
-            <div className="col-img-placeholder">🤝</div>
+          <div className="our-people-right">
+            <div className="our-people-image-container">
+              <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Our team" className="our-people-image" />
+            </div>
           </div>
         </div>
       </section>
 
+      {/* Careers Section */}
+      <section className="careers-section">
+        <div className="careers-content">
+          <div className="careers-left">
+            <div className="section-tag">Careers</div>
+            <h2 className="section-title">
+              Plus And Minus is all about you.
+              <br />
+              <span className="green-text">Your future starts here.</span>
+            </h2>
+            <p className="section-sub">
+              Interested in joining our award-winning team? At Plus And Minus, we work with numbers. But it should never mean that you be one. Whether you're just starting out or an experienced professional — join us.
+            </p>
+            <Button to="/careers" variant="primary" className="careers-button">
+              Join Us →
+            </Button>
+          </div>
+          <div className="careers-right">
+            <div className="careers-image-container">
+              <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Careers" className="careers-image" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
       {/* Final Dark Strip */}
-      <section className="dark-section final-cta">
+      <section className="final-cta">
         <div className="final-cta-content">
-          <h2>
-            Plus And Minus is all about you. Your future starts here.
-          </h2>
-          <p>
-            We work with numbers. But it should never mean that you be one. We want to hear from you.
-          </p>
-          <Button to="/contact" variant="hero-primary" size="large">
-            Get In Touch →
-          </Button>
+          <div className="final-cta-left">
+            <h2>Ready to take control of your finances?</h2>
+            <p>Talk to our experts today. No obligation, just clarity.</p>
+          </div>
+          <div className="final-cta-right">
+            <Button to="/contact" variant="light" className="lets-talk-button">
+              Let's Talk →
+            </Button>
+          </div>
         </div>
       </section>
     </div>

@@ -479,6 +479,279 @@
   white-space: nowrap;
 }
 
+/* BLOG SECTION */
+.blog-section {
+  background: var(--white);
+  padding: 112px 166px 48px;
+  max-width: none;
+  margin: 0;
+}
+
+.blog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 48px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.blog-header-right {
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.blog-view-all-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--green);
+  text-decoration: none;
+  line-height: 20px;
+  transition: color 0.2s ease;
+}
+
+.blog-view-all-link:hover {
+  color: var(--green-light);
+}
+
+.blog-grid {
+  display: flex;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blog-card {
+  flex: 0 0 384px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.blog-image-container {
+  width: 100%;
+  height: 208px;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 19px;
+}
+
+.blog-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-category {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--green);
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  margin-bottom: 29px;
+  line-height: 16px;
+}
+
+.blog-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 22px;
+  margin-bottom: 12px;
+  height: 44px;
+  overflow: hidden;
+}
+
+.blog-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #6a7282;
+  line-height: 22.75px;
+  margin-bottom: 22px;
+  height: 45px;
+  overflow: hidden;
+}
+
+.blog-read-more {
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.blog-read-more-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--green);
+  text-decoration: none;
+  line-height: 20px;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.blog-read-more-link:hover {
+  color: var(--green-light);
+}
+
+/* OUR PEOPLE SECTION */
+.our-people-section {
+  background: #f9f5f0;
+  padding: 112px 166px;
+  max-width: none;
+  margin: 0;
+}
+
+.our-people-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.our-people-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.our-people-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.our-people-image-container {
+  width: 100%;
+  height: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0px 20px 25px -5px rgba(0,0,0,0.1), 0px 8px 10px -6px rgba(0,0,0,0.1);
+}
+
+.our-people-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.our-people-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--green);
+  text-decoration: none;
+  line-height: 20px;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 16px;
+}
+
+.our-people-link:hover {
+  color: var(--green-light);
+}
+
+/* CAREERS SECTION */
+.careers-section {
+  background: rgb(10, 22, 40);
+  padding: 112px 166px;
+  max-width: none;
+  margin: 0;
+}
+
+.careers-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.careers-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.careers-section .section-tag {
+  color: #4ade80;
+}
+
+.careers-section .section-title {
+  color: var(--white);
+  line-height: 48px;
+  font-size: 40px;
+}
+
+.careers-section .green-text {
+  color: #4ade80;
+}
+
+.careers-section .section-sub {
+  color: #99a1af;
+  line-height: 26px;
+  font-size: 16px;
+}
+
+.careers-button {
+  background: var(--green);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: background-color 0.2s ease;
+  border: none;
+  cursor: pointer;
+  margin-top: 16px;
+  width: fit-content;
+}
+
+.careers-button:hover {
+  background: var(--green-light);
+}
+
+.careers-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.careers-image-container {
+  width: 100%;
+  height: 256px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.careers-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* BOTTOM CTA */
 .bottom-cta-title {
   font-family: var(--font-head);
@@ -489,29 +762,51 @@
 
 /* FINAL CTA */
 .final-cta {
-  text-align: center;
-  padding: 60px 40px;
+  background: #006d5b;
+  padding: 60px 134px;
+  position: relative;
+  overflow: hidden;
 }
 
 .final-cta-content {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
   z-index: 1;
 }
 
+.final-cta-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.final-cta-right {
+  flex-shrink: 0;
+}
+
 .final-cta h2 {
-  font-family: var(--font-head);
-  font-size: 28px;
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
   color: var(--white);
-  margin-bottom: 8px;
+  margin-bottom: 0;
+  line-height: 32px;
 }
 
 .final-cta p {
-  color: rgba(255,255,255,0.6);
-  font-size: 15px;
-  margin-bottom: 24px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 0;
+  line-height: 24px;
 }
+
 
 /* SERVICES SECTION */
 .services-section {
@@ -962,7 +1257,7 @@
 
 /* TECHNOLOGY SECTION */
 .technology-section {
-  background: var(--cream);
+  background: var(--white);
   padding: 80px 40px;
 }
 
@@ -1101,6 +1396,44 @@
   .clients-grid {
     gap: 24px;
   }
+  
+  .blog-section {
+    padding: 80px 40px 48px;
+  }
+  
+  .blog-grid {
+    gap: 24px;
+  }
+  
+  .blog-card {
+    flex: 0 0 320px;
+  }
+  
+  .our-people-section {
+    padding: 80px 40px;
+  }
+  
+  .our-people-content {
+    gap: 40px;
+  }
+  
+  .careers-section {
+    padding: 80px 40px;
+  }
+  
+  .careers-content {
+    gap: 40px;
+  }
+  
+  .final-cta {
+    padding: 60px 40px;
+  }
+  
+  .final-cta-content {
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1125,6 +1458,87 @@
     font-size: 13px;
   }
   
+  .blog-section {
+    padding: 60px 20px 48px;
+  }
+  
+  .blog-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  
+  .blog-grid {
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .blog-card {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+  
+  .blog-image-container {
+    height: 200px;
+  }
+  
+  .blog-title {
+    height: auto;
+    margin-bottom: 8px;
+  }
+  
+  .blog-description {
+    height: auto;
+    margin-bottom: 16px;
+  }
+  
+  .our-people-section {
+    padding: 60px 20px;
+  }
+  
+  .our-people-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .our-people-image-container {
+    height: 280px;
+  }
+  
+  .careers-section {
+    padding: 60px 20px;
+  }
+  
+  .careers-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .careers-image-container {
+    height: 220px;
+  }
+  
+  .careers-section .section-title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  
+  .final-cta {
+    padding: 60px 20px;
+  }
+  
+  .final-cta h2 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  
+  .final-cta p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+    
   .mission-section {
     padding: 60px 20px;
   }
@@ -1186,17 +1600,6 @@
   
   .feature-card p {
     font-size: 12px;
-  }
-}
-
-@media (max-width: 768px) {
-  .services-grid {
-    flex-direction: column;
-    gap: 16px;
-  }
-  
-  .service-card {
-    padding: 24px 20px;
   }
 }
 
