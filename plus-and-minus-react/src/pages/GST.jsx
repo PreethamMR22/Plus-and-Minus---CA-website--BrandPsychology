@@ -16,13 +16,13 @@ const GST = () => {
           </p>
           <div className="gst-hero-features">
             <div className="feature-item">
-              <span className="feature-text">{'->'} 100% Compliance</span>
+              <span className="feature-text">100% Compliance</span>
             </div>
             <div className="feature-item">
-              <span className="feature-text">{'->'} On-Time Filing</span>
+              <span className="feature-text">On-Time Filing</span>
             </div>
             <div className="feature-item">
-              <span className="feature-text">{'->'} GST Expert Support</span>
+              <span className="feature-text">GST Expert Support</span>
             </div>
           </div>
           <div className="gst-hero-buttons">

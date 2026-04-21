@@ -51,25 +51,33 @@
   color: rgba(255,255,255,0.65);
   line-height: 1.8;
   margin-bottom: 36px;
-  max-width: 440px;
+  max-width: 600px;
 }
 
 .gst-hero-features {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  flex-direction: row;
+  gap: 24px;
   margin-bottom: 40px;
+  align-items: center;
 }
 
 .feature-item {
-  margin-bottom: 12px;
+  margin-bottom: 0;
 }
 
 .feature-text {
-  font-size: 18px;
+  font-size: 14px;
   color: rgba(255,255,255,0.9);
   font-weight: 500;
   display: block;
+}
+
+.feature-text::before {
+  content: '✓';
+  color: var(--green-bright);
+  font-weight: 700;
+  margin-right: 8px;
 }
 
 .gst-hero-buttons {
@@ -79,12 +87,14 @@
 }
 
 .gst-hero-image {
-  flex: 1.2;
+  flex: 0.8;
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  aspect-ratio: 4/3;
-  max-width: 600px;
+  aspect-ratio: 3/4;
+  max-width: 400px;
+  max-height: 533px;
+  margin-right: 60px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
 
@@ -311,7 +321,7 @@
 }
 
 .gst-card {
-  background: --white;
+  background: rgb(245, 240, 232);
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 30px;
@@ -329,7 +339,7 @@
   font-family: var(--font-head);
   font-size: 20px;
   font-weight: 600;
-  color: var(--text);
+  color: rgb(0, 109, 90);
   margin-bottom: 20px;
   line-height: 1.3;
 }
