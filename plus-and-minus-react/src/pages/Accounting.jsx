@@ -15,10 +15,6 @@ const Accounting = () => {
             Professional accounting services for startups and small businesses. 
             Focus on growing your business while we handle your numbers with precision and care.
           </p>
-          <p>
-            Get the peace of mind that comes from partnering with our experienced finance team.
-            Everything you need to launch, operate, and grow your business, in one place.
-          </p>
           <div className="hero-buttons">
             <Link to="/contact" className="btn btn-primary">
               Talk to an Expert
@@ -77,11 +73,11 @@ const Accounting = () => {
               </div>
             </div>
           </div>
-          <div className="speech-bubble">
-            <div className="bubble-content">
-              <span className="bubble-brand">PLUS & MINUS</span>
-              <span className="bubble-text">Your monthly financial statements are ready.</span>
-            </div>
+        </div>
+        <div className="speech-bubble">
+          <div className="bubble-content">
+            <span className="bubble-brand">PLUS & MINUS</span>
+            <span className="bubble-text">Your monthly financial statements are ready.</span>
           </div>
         </div>
       </section>
@@ -95,7 +91,7 @@ const Accounting = () => {
           <div className="services-grid">
             <div className="service-card">
               <div className="service-icon">
-                <span>👥</span>
+                <span>�</span>
               </div>
               <h3>Accounting & Bookkeeping Services</h3>
               <p>We keep your books clean and your mind clear. Say goodbye to the stress of balancing the numbers.</p>
@@ -103,7 +99,7 @@ const Accounting = () => {
             
             <div className="service-card">
               <div className="service-icon">
-                <span>🎯</span>
+                <span>📋</span>
               </div>
               <h3>GST Filing & Monthly Reconciliation</h3>
               <p>Stay on the right side of compliance with hassle-free GST filing and reconciliation - no headaches, just results.</p>
@@ -111,7 +107,7 @@ const Accounting = () => {
             
             <div className="service-card">
               <div className="service-icon">
-                <span>🎧</span>
+                <span>📝</span>
               </div>
               <h3>TDS Filing</h3>
               <p>TDS filing that's seamless, stress-free, and penalty-proof. We've got it covered.</p>
@@ -119,7 +115,7 @@ const Accounting = () => {
             
             <div className="service-card">
               <div className="service-icon">
-                <span>🎧</span>
+                <span>📈</span>
               </div>
               <h3>Monthly MIS Report</h3>
               <p>Get sharp, actionable insights every month. Our MIS reports cut through the noise to show you what matters.</p>
