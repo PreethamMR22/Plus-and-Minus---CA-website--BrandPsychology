@@ -17,15 +17,9 @@ const IncomeTax = () => {
           <p>
             Whether you are a salaried employee, freelancer, business owner, or have multiple incomes, filing your ITR on time is important to follow India's tax laws and avoid penalties.
           </p>
-          <p>
-            E-file your Income Tax Return (ITR) online quickly and affordably with expert support every step of the way.
-          </p>
           <div className="hero-buttons">
             <Link to="/contact" className="btn btn-primary">
               File Your Taxes Now
-            </Link>
-            <Link to="/contact" className="btn btn-secondary">
-              Consult Tax Expert
             </Link>
           </div>
           

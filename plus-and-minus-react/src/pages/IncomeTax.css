@@ -53,7 +53,7 @@
 
 .income-tax-hero-content h2 {
   font-family: var(--font-head);
-  font-size: clamp(24px, 4vw, 36px);
+  font-size: clamp(18px, 3vw, 28px);
   color: var(--white);
   line-height: 1.3;
   margin-bottom: 20px;
@@ -87,6 +87,7 @@
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .hero-feature {
@@ -104,12 +105,14 @@
 }
 
 .income-tax-hero-image {
-  flex: 1;
+  flex: 0.8;
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  aspect-ratio: 4/3;
-  max-width: 500px;
+  aspect-ratio: 3/4;
+  max-width: 400px;
+  max-height: 533px;
+  margin-right: 60px;
 }
 
 .income-tax-hero-image img {
@@ -408,16 +411,16 @@
 
 .deadline-image-container {
   position: relative;
-  max-width: 700px;
+  max-width: 1000px;
   border-radius: 20px;
-  width: 500px;
+  width: 850px;
   overflow: hidden;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
 
 .deadline-image {
   width: 100%;
-  height: 450px;
+  height: 550px;
   object-fit: cover;
   display: block;
 }
@@ -430,7 +433,7 @@
   background: rgba(255, 255, 255, 0.95);
   padding: 25px 20px;
   backdrop-filter: blur(10px);
-  border-radius: 0 0 20px 20px;
+  border-radius: 20px 20px 20px 20px;
   max-width: 500px;
   margin: 0 auto;
 }
@@ -460,9 +463,10 @@
 .deadline-card {
   background: var(--white);
   border-radius: 16px;
-  padding: 25px;
+  padding: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 320px;
 }
 
 .deadline-card:hover {
@@ -472,9 +476,10 @@
 
 .card-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
   margin-bottom: 20px;
+  gap: 20px;
 }
 
 .card-header h3 {
@@ -486,7 +491,8 @@
 }
 
 .deadline-date {
-  text-align: right;
+  text-align: left;
+  margin-left: auto;
 }
 
 .date-label {
@@ -510,6 +516,7 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  text-align: left;
 }
 
 .detail-item {
@@ -800,9 +807,8 @@
   }
   
   .hero-features {
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
+    justify-content: center;
+    gap: 24px;
   }
   
   .income-tax-hero-image {
