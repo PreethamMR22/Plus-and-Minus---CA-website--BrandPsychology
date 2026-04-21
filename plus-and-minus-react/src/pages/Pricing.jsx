@@ -95,8 +95,9 @@ const Pricing = () => {
       </section>
 
       {/* Pricing Cards */}
-      <section className="section">
-        <div className="pricing-grid">
+      <div className="pricing-section-wrapper">
+        <section className="section">
+          <div className="pricing-grid">
           {pricingPlans.map((plan, index) => (
             <div key={index} className={`pricing-card ${plan.featured ? 'featured' : ''}`}>
               {plan.badge && <div className="pricing-badge">{plan.badge}</div>}
@@ -127,6 +128,7 @@ const Pricing = () => {
           All prices exclusive of GST. Pay only after successful filing. Zero upfront charges.
         </p>
       </section>
+      </div>
 
       {/* Add-ons */}
       <section className="section">

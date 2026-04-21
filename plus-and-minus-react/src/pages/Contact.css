@@ -1,13 +1,14 @@
 /* CONTACT PAGE STYLES */
 .contact-page {
-  padding-top: var(--nav-h);
+  padding-top: 0;
 }
 
 /* CONTACT HERO */
 .contact-hero {
   background: var(--darker);
-  padding: calc(var(--nav-h) + 60px) 40px 80px;
+  padding: calc(var(--nav-h) + 120px) 40px 80px;
   text-align: center;
+  margin-top: calc(-1 * var(--nav-h));
 }
 
 .section-content {

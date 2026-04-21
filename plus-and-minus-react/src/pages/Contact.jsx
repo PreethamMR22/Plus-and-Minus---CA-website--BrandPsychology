@@ -31,7 +31,7 @@ const Contact = () => {
       <section className="contact-hero">
         <div className="section-content">
           <div className="section-tag">Get In Touch</div>
-          <h1>Let's Talk</h1>
+          <h1>Let's Plus and Minus</h1>
           <p>Whether you have a question or need expert advice — we're here to help.</p>
         </div>
       </section>
@@ -43,44 +43,27 @@ const Contact = () => {
           <p>Connect with us via WhatsApp, email, or request a callback. Our team will get in touch quickly.</p>
           
           <div className="contact-item">
-            <div className="contact-item-icon">✉️</div>
-            <div>
-              <div className="contact-item-label">Email Us</div>
-              <div className="contact-item-val">hello@yearend.in</div>
-            </div>
-          </div>
-          
-          <div className="contact-item">
             <div className="contact-item-icon">📞</div>
             <div>
               <div className="contact-item-label">Call Us</div>
-              <div className="contact-item-val">+91 98765 43210</div>
+              <div className="contact-item-val">+91 7204403746</div>
             </div>
           </div>
           
           <div className="contact-item">
-            <div className="contact-item-icon">💬</div>
+            <div className="contact-item-icon">✉️</div>
             <div>
-              <div className="contact-item-label">WhatsApp</div>
-              <div className="contact-item-val">Chat on WhatsApp</div>
+              <div className="contact-item-label">Email Us</div>
+              <div className="contact-item-val">support@plusandminus.in</div>
             </div>
           </div>
           
           <div className="contact-item">
             <div className="contact-item-icon">📍</div>
             <div>
-              <div className="contact-item-label">Our Offices</div>
-              <div className="contact-item-val">Mumbai · Bangalore · Delhi NCR</div>
+              <div className="contact-item-label">Location</div>
+              <div className="contact-item-val">Bengaluru</div>
             </div>
-          </div>
-          
-          <div className="contact-hours">
-            <h4>Office Hours</h4>
-            <p>
-              Mon – Fri: 9:00 AM – 6:00 PM IST<br />
-              Sat: 10:00 AM – 2:00 PM IST
-            </p>
-            <div className="respond">✓ Typically respond within 2 hours on business days</div>
           </div>
         </div>
 
@@ -165,7 +148,7 @@ const Contact = () => {
             </div>
             
             <Button type="submit" variant="form" className="btn-form">
-              Send Message ✉️
+              Send Message
             </Button>
           </form>
           <div className="form-note">We respect your privacy. Your information is never shared.</div>
