@@ -107,14 +107,6 @@
   text-decoration: none;
 }
 
-.gst-hero-buttons .btn-talk-expert::after {
-  content: '→';
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: right 0.3s ease;
-}
 
 .gst-hero-buttons .btn-talk-expert:hover {
   background: var(--text);
@@ -123,9 +115,6 @@
   box-shadow: 0 8px 25px rgba(0,0,0,0.2);
 }
 
-.gst-hero-buttons .btn-talk-expert:hover::after {
-  right: 16px;
-}
 
 /* CONTENT SECTION */
 .gst-content-section {
@@ -246,14 +235,6 @@
   display: inline-block;
 }
 
-.btn-start-business::after {
-  content: '->';
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: right 0.3s ease;
-}
 
 .btn-start-business:hover {
   background: var(--green);
@@ -262,9 +243,6 @@
   box-shadow: 0 8px 25px rgba(26,122,74,0.2);
 }
 
-.btn-start-business:hover::after {
-  right: 24px;
-}
 
 /* Responsive */
 @media (max-width: 900px) {

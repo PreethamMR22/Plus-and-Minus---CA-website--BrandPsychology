@@ -7,9 +7,7 @@ const Contact = () => {
     fullName: '',
     email: '',
     phone: '',
-    subject: '',
-    service: '',
-    message: ''
+    service: ''
   });
 
   const handleChange = (e) => {
@@ -95,28 +93,15 @@ const Contact = () => {
               </div>
             </div>
             
-            <div className="form-row">
-              <div className="form-group">
-                <label>Phone</label>
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="+91 98765 43210"
-                  value={formData.phone}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="form-group">
-                <label>Subject <span>*</span></label>
-                <input
-                  type="text"
-                  name="subject"
-                  placeholder="How can we help?"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
+            <div className="form-group">
+              <label>Phone</label>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="+91 98765 43210"
+                value={formData.phone}
+                onChange={handleChange}
+              />
             </div>
             
             <div className="form-group">
@@ -136,16 +121,6 @@ const Contact = () => {
               </select>
             </div>
             
-            <div className="form-group">
-              <label>Message <span>*</span></label>
-              <textarea
-                name="message"
-                placeholder="Tell us about your situation and what you need help with..."
-                value={formData.message}
-                onChange={handleChange}
-                required
-              />
-            </div>
             
             <Button type="submit" variant="form" className="btn-form">
               Send Message
@@ -155,16 +130,6 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Green Section */}
-      <section className="green-section">
-        <div>
-          <h2>Ready to take control of your finances?</h2>
-          <p>Talk to our experts today. No obligation, just clarity.</p>
-        </div>
-        <Button variant="white-rounded">
-          Let's Talk →
-        </Button>
-      </section>
     </div>
   );
 };

@@ -7,10 +7,73 @@ import './Startup-FAQ.css';
 
 const Startup = () => {
   const [selectedType, setSelectedType] = useState('PLC');
+  const [selectedEntity, setSelectedEntity] = useState('private');
   const [expandedFAQ, setExpandedFAQ] = useState(null);
 
   const toggleFAQ = (index) => {
     setExpandedFAQ(expandedFAQ === index ? null : index);
+  };
+
+  const entityData = {
+    private: {
+      name: 'Private Limited Company registration',
+      services: [
+        'Advisory on structure of entity',
+        'Company name reservation - Form Spice+ A',
+        '(1 application with resubmission)',
+        'Filing of E-forms with the Registrar of Companies (ROC)',
+        'Digital Signature Certificates (2 DSC applications)',
+        'Finalising of Memorandum of Association (MOA) & Articles of Association (AOA)',
+        'Follow-up until issue of Certificate of Incorporation',
+        'PAN Application',
+        'TAN Application'
+      ],
+      idealFor: [
+        'Small businesses that intend to expand',
+        'Startups looking to raise funds',
+        'Businesses interested in implementing Employee Stock Option Plans (ESOPs)'
+      ]
+    },
+    onePerson: {
+      name: 'One Person Company registration',
+      services: [
+        'Advisory on structure of entity',
+        'Company name reservation - Form Spice+ A',
+        '(1 application with resubmission)',
+        'Filing of E-forms with the Registrar of Companies (ROC)',
+        'Director Identification Numbers ( DIN )',
+        'Digital Signature Certificates',
+        'Finalising of Memorandum of Association (MOA) & Articles of Association (AOA)',
+        'Follow-up until issue of Certificate of Incorporation',
+        'PAN Application',
+        'TAN Application'
+      ],
+      idealFor: [
+        'Solo founder looking for a formal business structure',
+        'Solo founder interested in converting to a Private Limited Company',
+        'to raise funds/ to issue stock options in the future'
+      ]
+    },
+    llp: {
+      name: 'Limited Liability Partnership',
+      services: [
+        'Advisory on structure of entity',
+        'LLP name reservation - RUN (1 application with resubmission)',
+        'Filing of E-form Fill Up with the Registrar of Companies (ROC)',
+        'Designated Partner Identification Numbers',
+        'Digital Signature Certificates',
+        'Follow-up until issue of Certificate of Incorporation',
+        'PAN Application',
+        'TAN Application',
+        'Excludes LLP agreement and Form 3 filing',
+        'Excludes Government Fees & Stamp duty'
+      ],
+      idealFor: [
+        'Business partners who want to create a formal legal structure',
+        'Business partners interested in converting to a Private',
+        'Limited Company to raise funds/ to issue stock options in the future'
+      ]
+    }
   };
 
   const companyTypes = {
@@ -75,14 +138,9 @@ const Startup = () => {
             registration process for you online so you can focus on your business.
             Your big idea deserves a bold execution.
           </p>
-          <p>
-            Say goodbye to stress and hello to your new business. We handle your
-            company registration, documentation, and compliance - so you can focus
-            on building your business.
-          </p>
-          <div className="startup-hero-buttons">
+                    <div className="startup-hero-buttons">
             <Link to="/contact" className="btn btn-start-business">
-              Start my business
+              Start my business {'->'}
             </Link>
             <Link to="/contact" className="btn btn-talk-expert">
               Talk to an Expert
@@ -100,31 +158,40 @@ const Startup = () => {
 
       {/* Content Section */}
       <section className="startup-content-section">
+        <h3 className="content-section-title">Dream It. File It. Build It.</h3>
         <div className="startup-content-grid">
           <div className="startup-content-left">
-            <h3>Select type of legal entity</h3>
             <p>
               Choose the right business structure for your startup. We help you
               register different types of legal entities in India with complete
               documentation support.
             </p>
             <div className="entity-buttons">
-              <div className="entity-option">
+              <button 
+                className={`entity-option ${selectedEntity === 'private' ? 'active' : ''}`}
+                onClick={() => setSelectedEntity('private')}
+              >
                 Private Limited Company registration
-              </div>
-              <div className="entity-option">
+              </button>
+              <button 
+                className={`entity-option ${selectedEntity === 'onePerson' ? 'active' : ''}`}
+                onClick={() => setSelectedEntity('onePerson')}
+              >
                 One Person Company registration
-              </div>
-              <div className="entity-option">
+              </button>
+              <button 
+                className={`entity-option ${selectedEntity === 'llp' ? 'active' : ''}`}
+                onClick={() => setSelectedEntity('llp')}
+              >
                 Limited Liability Partnership
-              </div>
+              </button>
             </div>
             <div className="ideal-for-section">
               <h4>Ideal for</h4>
               <ul className="ideal-for-list">
-                <li>Small businesses that intend to expand</li>
-                <li>Startups looking to raise funds</li>
-                <li>Businesses interested in implementing Employee Stock Option Plans (ESOPs)</li>
+                {entityData[selectedEntity].idealFor.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
               </ul>
             </div>
           </div>
@@ -132,83 +199,19 @@ const Startup = () => {
             <div className="services-card">
               <h3>Services Included</h3>
               <ul className="services-list">
-                <li>Company Registration with ROC</li>
-                <li>PAN & TAN Application</li>
-                <li>GST Registration</li>
-                <li>Professional Tax Advisory</li>
-                <li>Annual Compliance Filing</li>
-                <li>Legal Documentation Support</li>
+                {entityData[selectedEntity].services.map((service, index) => (
+                  <li key={index}>{service}</li>
+                ))}
               </ul>
               <Link to="/contact" className="btn btn-start-business">
-                Start my business
+                Start my business {'->'}
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Company Types Section */}
-      <section className="company-types-section">
-        <div className="company-types-grid">
-          <div className="company-type-card">
-            <h2>One person company</h2>
-            <div className="services-card">
-              <h3>Services Included</h3>
-              <ul className="services-list">
-                <li>Advisory on structure of entity</li>
-                <li>Company name reservation - Form Spice+ A (1 application with resubmission)</li>
-                <li>Filing of E-forms with the Registrar of Companies (ROC)</li>
-                <li>Director Identification Numbers (DIN)</li>
-                <li>Digital Signature Certificates</li>
-                <li>Finalising of Memorandum of Association (MOA) & Articles of Association (AOA)</li>
-                <li>Follow-up until issue of Certificate of Incorporation</li>
-                <li>PAN Application</li>
-                <li>TAN Application</li>
-              </ul>
-              <Link to="/contact" className="btn btn-start-business">
-                Start my business
-              </Link>
-            </div>
-            <div className="ideal-for-section">
-              <h4>Ideal for</h4>
-              <ul className="ideal-for-list">
-                <li>Solo founder looking for a formal business structure</li>
-                <li>Solo founder interested in converting to a Private Limited Company to raise funds/ to issue stock options in the future</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="company-type-card">
-            <h2>Limited Liability Partnership</h2>
-            <div className="services-card">
-              <h3>Services Included</h3>
-              <ul className="services-list">
-                <li>Advisory on structure of entity</li>
-                <li>Partnership name reservation - Form RUN-1 (1 application with resubmission)</li>
-                <li>Filing of E-forms with the Registrar of Companies (ROC)</li>
-                <li>Partner Identification Numbers (PIN)</li>
-                <li>Digital Signature Certificates</li>
-                <li>Finalising of Partnership Deed</li>
-                <li>Follow-up until issue of Certificate of Incorporation</li>
-                <li>PAN Application</li>
-                <li>TAN Application</li>
-              </ul>
-              <Link to="/contact" className="btn btn-start-business">
-                Start my business
-              </Link>
-            </div>
-            <div className="ideal-for-section">
-              <h4>Ideal for</h4>
-              <ul className="ideal-for-list">
-                <li>Professional services firms</li>
-                <li>Small to medium businesses looking for limited liability</li>
-                <li>Businesses with multiple partners wanting formal structure</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      
       {/* Company Type Selection Section */}
       <section className="company-selection-section">
         <div className="company-selection-container">
@@ -271,7 +274,7 @@ const Startup = () => {
                 </ul>
               )}
               <Link to="/contact" className="btn btn-start-business">
-                Get Started
+                Get Started {'->'}
               </Link>
             </div>
           </div>
@@ -308,7 +311,7 @@ const Startup = () => {
             <h2>Start your dream business with Plus & Minus</h2>
             <p>From idea to incorporation, we guide you through every step. Our expert team ensures your business journey starts smoothly and successfully.</p>
             <Link to="/contact" className="btn btn-start-business">
-              Start my business
+              Start my business {'->'}
             </Link>
             <p className="dream-business-bottom-text">Join thousands of entrepreneurs who trust us with their business registration needs</p>
           </div>

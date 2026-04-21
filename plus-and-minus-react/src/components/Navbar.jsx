@@ -39,7 +39,7 @@ const Navbar = () => {
         </Link>
         <div className="nav-dropdown">
           <button className="nav-link" id="nav-services">
-            Our Services ▾
+            Services ▾
           </button>
           <div className="nav-dropdown-menu">
             <Link to="/services/startup" className="nav-dropdown-item">Startup</Link>
@@ -56,7 +56,13 @@ const Navbar = () => {
           </div>
         </div>
         <Link to="/about" className={`nav-link ${isActive('/about') ? 'active' : ''}`}>
-          About Us
+          About
+        </Link>
+        <Link to="/learn" className={`nav-link ${isActive('/learn') ? 'active' : ''}`}>
+          Learn
+        </Link>
+        <Link to="/contact" className={`nav-link ${isActive('/contact') ? 'active' : ''}`}>
+          Contact
         </Link>
       </div>
       
@@ -67,7 +73,6 @@ const Navbar = () => {
       </button>
       
       <div className="nav-actions">
-        <Link to="/contact" className="btn-outline">Let's Talk</Link>
         <Link to="/contact" className="btn-primary">Get Started</Link>
       </div>
       
@@ -78,7 +83,7 @@ const Navbar = () => {
             Home
           </Link>
           <div className="mobile-nav-dropdown">
-            <div className="mobile-nav-link">Our Services</div>
+            <div className="mobile-nav-link">Services</div>
             <div className="mobile-nav-submenu">
               <Link to="/services/startup" className="mobile-nav-sublink" onClick={() => setMobileMenuOpen(false)}>Startup</Link>
               <Link to="/services/income-tax" className="mobile-nav-sublink" onClick={() => setMobileMenuOpen(false)}>Income tax filing</Link>
@@ -88,10 +93,15 @@ const Navbar = () => {
             </div>
           </div>
           <Link to="/about" className={`mobile-nav-link ${isActive('/about') ? 'active' : ''}`} onClick={() => setMobileMenuOpen(false)}>
-            About Us
+            About
+          </Link>
+          <Link to="/learn" className={`mobile-nav-link ${isActive('/learn') ? 'active' : ''}`} onClick={() => setMobileMenuOpen(false)}>
+            Learn
+          </Link>
+          <Link to="/contact" className={`mobile-nav-link ${isActive('/contact') ? 'active' : ''}`} onClick={() => setMobileMenuOpen(false)}>
+            Contact
           </Link>
           <div className="mobile-nav-actions">
-            <Link to="/contact" className="btn-outline" onClick={() => setMobileMenuOpen(false)}>Let's Talk</Link>
             <Link to="/contact" className="btn-primary" onClick={() => setMobileMenuOpen(false)}>Get Started</Link>
           </div>
         </div>
