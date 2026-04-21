@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../components/Button';
 import TaxOverpaySection from '../components/TaxOverpaySection';
@@ -6,6 +6,22 @@ import Card from '../components/Card';
 import './Home.css';
 
 const Home = () => {
+  const [expandedBlogs, setExpandedBlogs] = useState({});
+
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById('services');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  const toggleBlogExpansion = (index) => {
+    setExpandedBlogs(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
   const servicesData = [
     {
       icon: '',
@@ -49,21 +65,21 @@ const Home = () => {
 
   const blogData = [
     {
-      category: 'Corporate Tax',
-      title: 'VAT implications on company cars: Hire Purchase vs Finance Lease',
-      description: 'Make sure you don\'t stall — understand which financing option works best for your business tax position.',
+      category: 'PLC',
+      title: 'Setting up a Private Limited Company (PLC) in India : A comprehensive guide',
+      description: 'A private limited company is the most flexible and credible structure of businesses. It is a type of structure wherein investors can be separate and the people managing the company that is directors can be different.',
       image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'
     },
     {
-      category: 'Personal Tax',
-      title: 'Leading through uncertainty in the age of AI',
-      description: 'CEOs are reinventing their companies with technology and seeking growth opportunities in new sectors.',
+      category: 'LLP',
+      title: 'Setting up a Limited Liability Partnership (LLP) in India : A comprehensive guide',
+      description: 'A Limited Liability Partnership (LLP) is a partnership in which some or all partners have limited liabilities. It therefore can exhibit elements of a partnership firm and a private limited company, where the business is carried out in a corporate framework, guided by terms of the mutually adopted partnership deed.',
       image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'
     },
     {
-      category: 'R&D Tax',
-      title: 'Maximising R&D credits for tech startups in 2026',
-      description: 'New HMRC guidance means many more businesses now qualify — but claims require precision.',
+      category: 'LLP- Form 11',
+      title: 'Annual return of a Limited Liability Partnership (LLP) - Form 11',
+      description: 'Form 11 is an annual return required for Limited Liability Partnerships (LLPs) in India, to be filed with the Registrar of Companies (RoC) via the Ministry of Corporate Affairs (MCA) website.',
       image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'
     }
   ];
@@ -119,7 +135,7 @@ const Home = () => {
             <Button to="/contact" variant="hero-primary" size="large">
               Start Your Journey →
             </Button>
-            <Button to="/services" variant="hero-outline" size="large">
+            <Button onClick={scrollToServices} variant="hero-outline" size="large">
               Explore Our Services
             </Button>
           </div>
@@ -150,7 +166,13 @@ const Home = () => {
               We're experts. <span>Let us help you.</span>
             </h2>
             <p className="section-sub">
-              We bring clarity, brevity, and human insight to our work with you. At Plus And Minus Accountants and Advisers, we work with numbers - but for people. Our chartered accountants provide end-to-end strategic accounting with reliable, professional guidance to help achieve business success. <br />In a world where anyone can call themselves an accountant, we stand apart through deep expertise, transparent pricing, and genuine care for your financial wellbeing -in the Age of Al, 2026-2028 and beyond.
+             A modern accounting and tax firm providing full service to Startups and small businesses. 
+
+We believe that entrepreneurs are society's problem solvers. They see opportunities in complexities and drive us towards progress. Plus and Minus is the advisor, guide, and facilitator to every entrepreneur looking to start and manage a business in India. 
+
+We are the first point of contact for startups whom we handhold from the day they start their business and at every step of the way throughout their entrepreneurship journey.
+
+We work with Individuals, Professionals, startups and small businesses, ranging from two founders to hundred-person teams.
             </p>
             <Link to="/about" className="section-link">
               See how we can help →
@@ -183,7 +205,7 @@ const Home = () => {
       </section>
 
       {/* Our Services */}
-      <section className="services-section">
+      <section id="services" className="services-section">
         <div className="section-tag">What We Do</div>
         <h2 className="section-title">Bunch of things we can do for you</h2>
         <p className="section-sub">
@@ -373,11 +395,16 @@ const Home = () => {
               </div>
               <div className="blog-category">{blog.category}</div>
               <h3 className="blog-title">{blog.title}</h3>
-              <p className="blog-description">{blog.description}</p>
+              <p className={`blog-description ${expandedBlogs[index] ? 'expanded' : ''}`}>
+                {blog.description}
+              </p>
               <div className="blog-read-more">
-                <Link to={`/blog/${index}`} className="blog-read-more-link">
-                  Read more →
-                </Link>
+                <button 
+                  onClick={() => toggleBlogExpansion(index)} 
+                  className="blog-read-more-link"
+                >
+                  {expandedBlogs[index] ? 'Read less ←' : 'Read more →'}
+                </button>
               </div>
             </div>
           ))}

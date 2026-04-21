@@ -43,6 +43,8 @@
   line-height: 1.7;
   max-width: 500px;
   margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .tax-overpay-cta {
