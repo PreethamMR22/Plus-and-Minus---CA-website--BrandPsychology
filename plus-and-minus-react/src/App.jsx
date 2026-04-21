@@ -12,6 +12,7 @@ import ServiceDetail from './pages/ServiceDetail';
 import Startup from './pages/Startup';
 import IncomeTax from './pages/IncomeTax';
 import Accounting from './pages/Accounting';
+import GST from './pages/GST';
 import './styles/globals.css';
 
 // ScrollToTop component
@@ -42,6 +43,7 @@ function App() {
             <Route path="/services/:serviceId" element={<ServiceDetail />} />
             <Route path="/services/startup" element={<Startup />} />
             <Route path="/services/income-tax" element={<IncomeTax />} />
+            <Route path="/services/gst" element={<GST />} />
             <Route path="/services/accounting" element={<Accounting />} />
           </Routes>
         </main>
