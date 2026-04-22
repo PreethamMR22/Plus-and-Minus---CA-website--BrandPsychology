@@ -303,9 +303,9 @@ We are the first point of contact for startups whom we handhold from the day the
 
 We work with Individuals, Professionals, startups and small businesses, ranging from two founders to hundred-person teams.
             </p>
-            <Link to="/about" className="section-link">
+            <button onClick={scrollToServices} className="section-link">
               See how we can help →
-            </Link>
+            </button>
           </div>
           <div className="col-img animate-slide-right" data-animate="slide-right">
             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Professional receptionist" className="col-img-content" />
@@ -348,7 +348,7 @@ We work with Individuals, Professionals, startups and small businesses, ranging 
     
           <h2 className="section-title animate-slide-up" data-animate="slide-up">
             We know you're busy growing your business. So,<br />
-            <span>we keep it simple with 4 easy steps.</span>
+            <span>we keep it simple with <span style={{color: 'white'}}>4</span> easy steps.</span>
           </h2>
           <div className="mission-steps">
             <div className="mission-step animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.1s'}}>
@@ -379,9 +379,6 @@ We work with Individuals, Professionals, startups and small businesses, ranging 
           <div className="mission-buttons animate-slide-up" data-animate="slide-up" style={{animationDelay: '0.5s'}}>
             <Button to="/contact" variant="hero-primary" size="large">
               Start Your Journey →
-            </Button>
-            <Button to="/about" variant="hero-outline" size="large">
-              Our Story
             </Button>
           </div>
         </div>
@@ -420,7 +417,7 @@ We work with Individuals, Professionals, startups and small businesses, ranging 
       {/* Why we're Different Section */}
       <section className="why-different-section">
         <div className="section-content">
-          <div className="section-tag animate-fade-in" data-animate="fade-in">Why we're Different</div>
+          <div className="section-tag animate-fade-in" data-animate="fade-in" style={{color: 'white'}}>Why we're Different</div>
           <h2 className="section-title animate-slide-up" data-animate="slide-up">
             Faster, Cheaper, Easier is Possible With<br />
             <span>One Platform</span>
