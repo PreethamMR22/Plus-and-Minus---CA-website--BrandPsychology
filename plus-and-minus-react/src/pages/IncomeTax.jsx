@@ -118,7 +118,7 @@ const IncomeTax = () => {
             <div className="deadline-image-section">
               <div className="deadline-image-container">
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
                   alt="Person relaxing with laptop" 
                   className="deadline-image"
                 />
@@ -171,77 +171,46 @@ const IncomeTax = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Tax Deadline Section */}
-      <section className="tax-deadline-section">
-        <div className="tax-deadline-content">
-          <div className="tax-deadline-cards">
-            <div className="tax-deadline-card">
-              <h3>Partnership Firms / LLPs</h3>
-              <div className="deadline-date">
-                <span className="date-label">Deadline</span>
-                <span className="date-value">August 31st, 2026</span>
-              </div>
-              <div className="card-details">
-                <div className="detail-item">
-                  <span className="detail-label">ITR-5</span>
+              
+              <div className="deadline-card">
+                <div className="card-header">
+                  <h3>Partnership Firms / LLPs</h3>
+                  <div className="deadline-date">
+                    <span className="date-label">Deadline</span>
+                    <span className="date-value">August 31st, 2026</span>
+                  </div>
                 </div>
-                <div className="detail-item">
-                  <span className="detail-label">Freelancers, small business owners</span>
-                </div>
-                <div className="detail-item">
-                  <span className="detail-label">No Audit</span>
+                <div className="card-details">
+                  <div className="detail-item">
+                    <span className="detail-label">ITR-5</span>
+                  </div>
+                  <div className="detail-item">
+                    <span className="detail-label">Freelancers, small business owners</span>
+                  </div>
+                  <div className="detail-item">
+                    <span className="detail-label">No Audit</span>
+                  </div>
                 </div>
               </div>
-            </div>
-            
-            <div className="tax-deadline-card">
-              <h3>Companies & Audit Cases</h3>
-              <div className="deadline-date">
-                <span className="date-label">Deadline</span>
-                <span className="date-value">October 31st, 2026</span>
-              </div>
-              <div className="card-details">
-                <div className="detail-item">
-                  <span className="detail-label">ITR-6</span>
+              
+              <div className="deadline-card">
+                <div className="card-header">
+                  <h3>Companies & Audit Cases</h3>
+                  <div className="deadline-date">
+                    <span className="date-label">Deadline</span>
+                    <span className="date-value">October 31st, 2026</span>
+                  </div>
                 </div>
-                <div className="detail-item">
-                  <span className="detail-label">Private Limited companies</span>
-                </div>
-                <div className="detail-item">
-                  <span className="detail-label">Tax Audit (Section 44AB)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="tax-deadline-image-section">
-            <div className="tax-deadline-image-container">
-              <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                alt="Tax professional working" 
-                className="tax-deadline-image"
-              />
-              <div className="document-overlay">
-                <div className="document-item">
-                  <div className="document-checkbox checked"></div>
-                  <span>Balance Sheet</span>
-                </div>
-                <div className="document-item">
-                  <div className="document-checkbox checked"></div>
-                  <span>Income Statement</span>
-                </div>
-                <div className="document-item">
-                  <div className="document-checkbox checked"></div>
-                  <span>Audit Report</span>
-                </div>
-                <div className="document-item">
-                  <div className="document-checkbox checked"></div>
-                  <span>Ledger Statement</span>
+                <div className="card-details">
+                  <div className="detail-item">
+                    <span className="detail-label">ITR-6</span>
+                  </div>
+                  <div className="detail-item">
+                    <span className="detail-label">Private Limited companies</span>
+                  </div>
+                  <div className="detail-item">
+                    <span className="detail-label">Tax Audit ( Section 44AB )</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -249,6 +218,7 @@ const IncomeTax = () => {
         </div>
       </section>
 
+      
       <BeyondFiling />
       <TaxOverpaySection />
       
