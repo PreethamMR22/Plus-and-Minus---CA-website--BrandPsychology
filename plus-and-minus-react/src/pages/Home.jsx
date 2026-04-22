@@ -1,12 +1,65 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../components/Button';
-import TaxOverpaySection from '../components/TaxOverpaySection';
 import Card from '../components/Card';
 import './Home.css';
 
+const useCounter = (end, duration = 2000, startOnView = false) => {
+  const [count, setCount] = useState(0);
+  const countRef = useRef(null);
+  const hasStarted = useRef(false);
+
+  useEffect(() => {
+    if (!startOnView) {
+      hasStarted.current = true;
+      const startTime = Date.now();
+      const endValue = typeof end === 'string' ? parseInt(end) : end;
+      
+      const animate = () => {
+        const now = Date.now();
+        const progress = Math.min((now - startTime) / duration, 1);
+        
+        setCount(Math.floor(progress * endValue));
+        
+        if (progress < 1) {
+          requestAnimationFrame(animate);
+        }
+      };
+      
+      requestAnimationFrame(animate);
+    }
+  }, [end, duration, startOnView]);
+
+  const startCounting = () => {
+    if (!hasStarted.current && startOnView) {
+      hasStarted.current = true;
+      const startTime = Date.now();
+      const endValue = typeof end === 'string' ? parseInt(end) : end;
+      
+      const animate = () => {
+        const now = Date.now();
+        const progress = Math.min((now - startTime) / duration, 1);
+        
+        setCount(Math.floor(progress * endValue));
+        
+        if (progress < 1) {
+          requestAnimationFrame(animate);
+        }
+      };
+      
+      requestAnimationFrame(animate);
+    }
+  };
+
+  return { count, ref: countRef, startCounting };
+};
+
 const Home = () => {
   const [expandedBlogs, setExpandedBlogs] = useState({});
+  const [visibleSections, setVisibleSections] = useState(new Set());
+  const heroStatsRef = useRef(null);
+  const hasAnimated = useRef(false);
+  const observerRefs = useRef(new Map());
 
   const scrollToServices = () => {
     const servicesSection = document.getElementById('services');
@@ -15,12 +68,84 @@ const Home = () => {
     }
   };
 
+  const openWhatsApp = () => {
+    const phoneNumber = '917204403746'; // Business WhatsApp number
+    const message = encodeURIComponent('Hi! I would like to know more about your services.');
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+  };
+
   const toggleBlogExpansion = (index) => {
     setExpandedBlogs(prev => ({
       ...prev,
       [index]: !prev[index]
     }));
   };
+
+  // Initialize counters with different durations to reach target at same time
+  const clientsCounter = useCounter(500, 2500, true);
+  const teamCounter = useCounter(10, 2500, true);
+  const engagementCounter = useCounter(98, 2500, true);
+  const satisfactionCounter = useCounter(100, 2500, true);
+
+  // Intersection observer for animations
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animated');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    // Observe all animated elements
+    const animatedElements = document.querySelectorAll('[data-animate]');
+    animatedElements.forEach((el) => {
+      observer.observe(el);
+      observerRefs.current.set(el, observer);
+    });
+
+    return () => {
+      observerRefs.current.forEach((obs, el) => {
+        obs.unobserve(el);
+      });
+    };
+  }, []);
+
+  const getAnimationClass = (animationType, delay = 0) => {
+    return `animate-${animationType} ${visibleSections.size > 0 ? 'animated' : ''}`;
+  };
+
+  // Intersection observer to start animation when stats are visible
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated.current) {
+            hasAnimated.current = true;
+            clientsCounter.startCounting();
+            teamCounter.startCounting();
+            engagementCounter.startCounting();
+            satisfactionCounter.startCounting();
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    if (heroStatsRef.current) {
+      observer.observe(heroStatsRef.current);
+    }
+
+    return () => {
+      if (heroStatsRef.current) {
+        observer.unobserve(heroStatsRef.current);
+      }
+    };
+  }, [clientsCounter, teamCounter, engagementCounter, satisfactionCounter]);
 
   const servicesData = [
     {
@@ -121,37 +246,41 @@ const Home = () => {
     <div className="home-page">
       {/* Hero Section */}
       <section className="hero">
-        <div className="hero-content fade-up">
-          <div className="hero-tag">Chartered Accountants & Advisers</div>
-          <h1>
-            Plus And Minus<br />
-            <span>Accountants</span><br />
-            & Advisers
+        <div className="hero-content">
+          <div className="hero-tag animate-fade-in" data-animate="fade-in">Plus And Minus Accountants & Advisers</div>
+          <h1 className="animate-slide-up" data-animate="slide-up" style={{animationDelay: '0.2s'}}>
+            One team for all your<br />
+            <span>accounting <span style={{color: 'white'}}>and</span> Tax needs</span>
           </h1>
-          <p>
-            The only firm you'll ever need. We unite expertise and technology so you can outthink, outpace and outperform.
+          <p className="animate-fade-in" data-animate="fade-in" style={{animationDelay: '0.4s'}}>
+            We provide quality Accounting, payroll and tax services to startups and small businesses.
           </p>
-          <div className="hero-btns">
+          <div className="hero-btns animate-slide-up" data-animate="slide-up" style={{animationDelay: '0.6s'}}>
             <Button to="/contact" variant="hero-primary" size="large">
-              Start Your Journey →
+              Get Started  {' ->'}
             </Button>
-            <Button onClick={scrollToServices} variant="hero-outline" size="large">
-              Explore Our Services
+            <Button onClick={openWhatsApp} variant="hero-outline" size="large">
+              Let's Talk 
             </Button>
           </div>
 
-          <div className="hero-features">
-            <div className="hero-feature">
-              <span className="hero-feature-icon">✓</span>
-              <span>500+ Happy Clients</span>
+          
+          <div className="hero-stats-box" ref={heroStatsRef}>
+            <div className="hero-stat-item">
+              <div className="hero-stat-number">{clientsCounter.count}+</div>
+              <div className="hero-stat-label">Happy Clients</div>
             </div>
-            <div className="hero-feature">
-              <span className="hero-feature-icon">★</span>
-              <span>100% Satisfaction</span>
+            <div className="hero-stat-item">
+              <div className="hero-stat-number">{teamCounter.count}+</div>
+              <div className="hero-stat-label">Team of Experts</div>
             </div>
-            <div className="hero-feature">
-              <span className="hero-feature-icon">§</span>
-              <span>ICAI Registered</span>
+            <div className="hero-stat-item">
+              <div className="hero-stat-number">{engagementCounter.count}%</div>
+              <div className="hero-stat-label">Repeat Engagement</div>
+            </div>
+            <div className="hero-stat-item">
+              <div className="hero-stat-number">{satisfactionCounter.count}%</div>
+              <div className="hero-stat-label">Satisfaction Rate</div>
             </div>
           </div>
         </div>
@@ -160,10 +289,10 @@ const Home = () => {
       {/* Why Plus & Minus */}
       <section className="section section-expanded">
         <div className="two-col">
-          <div>
+          <div className="animate-slide-left" data-animate="slide-left">
             <div className="section-tag">Why Plus & Minus</div>
             <h2 className="section-title">
-              We're experts. <span>Let us help you.</span>
+              Who we are
             </h2>
             <p className="section-sub">
              A modern accounting and tax firm providing full service to Startups and small businesses. 
@@ -178,42 +307,23 @@ We work with Individuals, Professionals, startups and small businesses, ranging 
               See how we can help →
             </Link>
           </div>
-          <div className="col-img">
+          <div className="col-img animate-slide-right" data-animate="slide-right">
             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Professional receptionist" className="col-img-content" />
           </div>
         </div>
       </section>
 
-      {/* Stats Bar */}
-      <section className="stats-bar">
-        <div className="stat-item">
-          <div className="stat-val">500+</div>
-          <div className="stat-label">Happy Clients</div>
-        </div>
-        <div className="stat-item">
-          <div className="stat-val">10+</div>
-          <div className="stat-label">Team of Experts</div>
-        </div>
-        <div className="stat-item">
-          <div className="stat-val">98%</div>
-          <div className="stat-label">Repeat Engagement</div>
-        </div>
-        <div className="stat-item">
-          <div className="stat-val">100%</div>
-          <div className="stat-label">Satisfaction Rate</div>
-        </div>
-      </section>
-
+      
       {/* Our Services */}
       <section id="services" className="services-section">
-        <div className="section-tag">What We Do</div>
-        <h2 className="section-title">Bunch of things we can do for you</h2>
-        <p className="section-sub">
+        <div className="section-tag animate-fade-in" data-animate="fade-in">What We Do</div>
+        <h2 className="section-title animate-slide-up" data-animate="slide-up">Bunch of things we can do for you</h2>
+        <p className="section-sub animate-fade-in" data-animate="fade-in">
           Comprehensive accounting and tax services tailored to your needs.
         </p>
         <div className="services-grid">
           {servicesData.map((service, index) => (
-            <div key={index} className="service-card">
+            <div key={index} className="service-card animate-scale-up" data-animate="scale-up" style={{animationDelay: `${index * 0.1}s`}}>
               <div className="service-icon">{service.icon}</div>
               <h3 className="service-title">{service.title}</h3>
               <p className="service-description">{service.description}</p>
@@ -235,17 +345,38 @@ We work with Individuals, Professionals, startups and small businesses, ranging 
       {/* Mission Section */}
       <section className="mission-section">
         <div className="section-content">
-          <div className="section-tag">OUR MISSION</div>
-          <h2 className="section-title">
-            You only have one life.<br />
-            <span>Wealth is freedom.</span>
+    
+          <h2 className="section-title animate-slide-up" data-animate="slide-up">
+            We know you're busy growing your business. So,<br />
+            <span>we keep it simple with 4 easy steps.</span>
           </h2>
-          <p className="section-sub">
-            It's often filled with long work days and stress about money. It doesn't have to be that way. We created Plus And Minus to help you reach financial freedom — the moment when you can stop working and start living your meaningful life without money stress.
-            <br /><br />
-            Plus And Minus is your friendly guide so you can pay less in taxes (the legal way!) and put your money in the right places. Money stuff can feel hard, but we're here to help you along the way.
-          </p>
-          <div className="mission-buttons">
+          <div className="mission-steps">
+            <div className="mission-step animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.1s'}}>
+              <div className="step-content">
+                <h3>1. Consultation</h3>
+                <p>Share your requirements with our experts for a free consultation.</p>
+              </div>
+            </div>
+            <div className="mission-step animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.2s'}}>
+              <div className="step-content">
+                <h3>2. Documentation</h3>
+                <p>We help prepare and review all necessary documents.</p>
+              </div>
+            </div>
+            <div className="mission-step animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.3s'}}>
+              <div className="step-content">
+                <h3>3. Application</h3>
+                <p>We submit your application and follow up with authorities.</p>
+              </div>
+            </div>
+            <div className="mission-step animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.4s'}}>
+              <div className="step-content">
+                <h3>4. Approval</h3>
+                <p>Receive your certificate/license with our ongoing support.</p>
+              </div>
+            </div>
+          </div>
+          <div className="mission-buttons animate-slide-up" data-animate="slide-up" style={{animationDelay: '0.5s'}}>
             <Button to="/contact" variant="hero-primary" size="large">
               Start Your Journey →
             </Button>
@@ -257,80 +388,88 @@ We work with Individuals, Professionals, startups and small businesses, ranging 
       </section>
 
       
-      {/* Why Smart Earners Overpay */}
-      <TaxOverpaySection />
 
-      {/* Tax Planning Section */}
-      <section className="tax-planning-section">
-        <div className="tax-planning-content">
-          <div className="tax-planning-left">
-            <div className="section-tag">BEYOND FILING</div>
-            <h2 className="section-title">
-              Tax Planning & <span>Advisory Services</span>
-            </h2>
-            <p className="section-sub">
-              Reduce your tax liabilities by strategically planning your taxes, Good tax planning ensures all your financial goals work together smoothly, boosting your long-term savings.
+      {/* Startup Finance Experts Section */}
+      <section className="startup-finance-experts-section">
+        <div className="startup-finance-experts-content">
+          <div className="startup-finance-card animate-slide-left" data-animate="slide-left">
+            <h2>Startup Finance Experts</h2>
+            <p>
+              Whether you're bootstrapping or backed by venture capital, we support startups at
+              every stage of growth. From bookkeeping and tax compliance to Audit, we take care
+              of your financial operations so you can focus on building and scaling your
+              business.
             </p>
-            
-            <div className="tax-features">
-              <div className="tax-feature">
-                <div className="tax-feature-icon">⚡</div>
-                <div className="tax-feature-content">
-                  <h4>Highly Optimised</h4>
-                  <p>We help you file your ITR right way — maximising your income and claiming every possible deduction.</p>
-                </div>
-              </div>
-              
-              <div className="tax-feature">
-                <div className="tax-feature-icon">💰</div>
-                <div className="tax-feature-content">
-                  <h4>Transparent Pricing</h4>
-                  <p>No surprises — just clear, upfront pricing so you know exactly what you're paying for.</p>
-                </div>
-              </div>
-              
-              <div className="tax-feature">
-                <div className="tax-feature-icon">📊</div>
-                <div className="tax-feature-content">
-                  <h4>Post-Filing Support</h4>
-                  <p>Reports and support for all things ITR even after filing. Keep your finances organised all year, every year.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="tax-buttons">
-              <Button to="/pricing" variant="hero-primary" size="large">
-                View Pricing
-              </Button>
-              <Button to="/services/tax-planning" variant="hero-outline" size="large">
-                Learn More
-              </Button>
-            </div>
           </div>
-          
-          <div className="tax-planning-right">
-            <div className="tax-image">
-              <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Tax planning" />
-            </div>
-            
-            <div className="tax-callout">
-              <h4>Never Miss a Tax Deadline</h4>
-              <p>We keep you on track so you file on time, every time.</p>
-            </div>
+          <div className="who-we-work-with animate-slide-right" data-animate="slide-right">
+            <h2>Who We Work With</h2>
+            <ul>
+              <li>Startups</li>
+              <li>Small Businesses</li>
+              <li>Professionals</li>
+              <li>Creative Agencies</li>
+              <li>Food Industry</li>
+              <li>Real Estate</li>
+              <li>Hospitality</li>
+              <li>Consumer Goods & Retail</li>
+            </ul>
           </div>
         </div>
       </section>
 
+      {/* Why we're Different Section */}
+      <section className="why-different-section">
+        <div className="section-content">
+          <div className="section-tag animate-fade-in" data-animate="fade-in">Why we're Different</div>
+          <h2 className="section-title animate-slide-up" data-animate="slide-up">
+            Faster, Cheaper, Easier is Possible With<br />
+            <span>One Platform</span>
+          </h2>
+          <p className="section-sub animate-fade-in" data-animate="fade-in">
+            When your Incorporation, taxes, and accounting are all managed separately, you lose time and money. 
+            We bring everything together, so you can focus on what matters.
+          </p>
+          
+          <div className="why-different-grid">
+            <div className="why-different-card animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.1s'}}>
+              <h3>We Guide You at Every Step</h3>
+              <p>Expert guidance from start to finish, ensuring you make the right decisions for your business.</p>
+            </div>
+            <div className="why-different-card animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.2s'}}>
+              <h3>No More Running Around</h3>
+              <p>Everything you need in one place. No more coordinating between multiple service providers.</p>
+            </div>
+            <div className="why-different-card animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.3s'}}>
+              <h3>Save More, Stress Less</h3>
+              <p>Cost-effective solutions that reduce your expenses while providing comprehensive services.</p>
+            </div>
+            <div className="why-different-card animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.4s'}}>
+              <h3>Trusted Tools & Partners</h3>
+              <p>Industry-leading technology and partnerships that ensure reliability and accuracy.</p>
+            </div>
+          </div>
+          
+          <div className="guarantee-section animate-scale-up" data-animate="scale-up">
+            <h2 className="guarantee-title">Flawless Company Formation or Your Money Back</h2>
+            <p className="guarantee-sub">
+              Your business deserves a perfect start.<br />
+              If there's any error from our side, we'll refund the relevant amount - no questions asked.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      
       {/* Technology Section */}
       <section className="technology-section">
         <div className="technology-content">
-          <div className="technology-left">
+          <div className="technology-left animate-slide-left" data-animate="slide-left">
             <div className="technology-image-container">
               <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Technology" className="technology-main-image" />
             </div>
             <div className="technology-tag">Competitive edge through <br /> <b>AI + Deep Expertise</b></div>
           </div>
-          <div className="technology-right">
+          <div className="technology-right animate-slide-right" data-animate="slide-right">
             <div className="section-tag">THE PLUS AND MINUS ADVANTAGE</div>
             <h2 className="section-title">
               We unite expertise <br /> and tech so you can <br /> <span className="highlight-green">outthink, outpace and <br /> outperform</span>
@@ -339,19 +478,19 @@ We work with Individuals, Professionals, startups and small businesses, ranging 
               AI, climate change and geopolitical shifts are reconfiguring global economy. We bring the sharpest minds in tax and finance. Deep expertise that industries are built on. And we roll up our sleeves to deliver results — alongside you, start to finish.
             </p>
             <div className="technology-features-grid">
-              <div className="feature-card">
+              <div className="feature-card animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.1s'}}>
                 <h3>AI-Tailored Advice</h3>
                 <p>We know how your business works so you can put AI to work for your business</p>
               </div>
-              <div className="feature-card">
+              <div className="feature-card animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.2s'}}>
                 <h3>Industry-Leading Expertise</h3>
                 <p>Deep sector knowledge so you can make decisions your future can stand on</p>
               </div>
-              <div className="feature-card">
+              <div className="feature-card animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.3s'}}>
                 <h3>Strategic Alliances</h3>
                 <p>We work with tech's titans and trailblazers so you can think like a startup</p>
               </div>
-              <div className="feature-card">
+              <div className="feature-card animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.4s'}}>
                 <h3>Sustainability Built In</h3>
                 <p>We enhance strategy with sustainability to strengthen your resilience and returns</p>
               </div>
@@ -362,12 +501,12 @@ We work with Individuals, Professionals, startups and small businesses, ranging 
 
       {/* Clients */}
       <section className="clients-section">
-        <div className="clients-header">
+        <div className="clients-header animate-fade-in" data-animate="fade-in">
           <p className="clients-tag">Our clients work at top global companies</p>
         </div>
         <div className="clients-grid">
           {clientsData.map((client, index) => (
-            <div key={index} className="client-item">
+            <div key={index} className="client-item animate-scale-up" data-animate="scale-up" style={{animationDelay: `${index * 0.05}s`}}>
               <span className="client-name">{client}</span>
             </div>
           ))}
@@ -377,11 +516,15 @@ We work with Individuals, Professionals, startups and small businesses, ranging 
       {/* Blog Section */}
       <section className="blog-section">
         <div className="blog-header">
-          <div className="blog-header-left">
+          <div className="blog-header-left animate-slide-left" data-animate="slide-left">
             <div className="section-tag">Latest</div>
-            <h2 className="section-title">Insights & Updates</h2>
+            <h2 className="section-title">Read our Blog</h2>
+            <p className="section-sub">
+              Our articles help you manage your business in India with ease. From GST and income tax to registrations and compliance, 
+              we provide simple guides, checklists, and clear explanations to keep you on track.
+            </p>
           </div>
-          <div className="blog-header-right">
+          <div className="blog-header-right animate-slide-right" data-animate="slide-right">
             <Link to="/blog" className="blog-view-all-link">
               View All →
             </Link>
@@ -389,7 +532,7 @@ We work with Individuals, Professionals, startups and small businesses, ranging 
         </div>
         <div className="blog-grid">
           {blogData.map((blog, index) => (
-            <div key={index} className="blog-card">
+            <div key={index} className="blog-card animate-scale-up" data-animate="scale-up" style={{animationDelay: `${index * 0.1}s`}}>
               <div className="blog-image-container">
                 <img src={blog.image} alt={blog.title} className="blog-image" />
               </div>
@@ -411,58 +554,11 @@ We work with Individuals, Professionals, startups and small businesses, ranging 
         </div>
       </section>
 
-      {/* Our People Section */}
-      <section className="our-people-section">
-        <div className="our-people-content">
-          <div className="our-people-left">
-            <div className="section-tag">Our People</div>
-            <h2 className="section-title">
-              In this increasingly regulated and legislation-heavy world, we know more is needed.
-            </h2>
-            <p className="section-sub">
-              All our team work for yours. Chartered Accountants with deep sector expertise, committed to your success. We combine technical knowledge with genuine care — because behind every number, there's a person.
-            </p>
-            <Link to="/team" className="our-people-link">
-              Meet the team →
-            </Link>
-          </div>
-          <div className="our-people-right">
-            <div className="our-people-image-container">
-              <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Our team" className="our-people-image" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Careers Section */}
-      <section className="careers-section">
-        <div className="careers-content">
-          <div className="careers-left">
-            <div className="section-tag">Careers</div>
-            <h2 className="section-title">
-              Plus And Minus is all about you.
-              <br />
-              <span className="green-text">Your future starts here.</span>
-            </h2>
-            <p className="section-sub">
-              Interested in joining our award-winning team? At Plus And Minus, we work with numbers. But it should never mean that you be one. Whether you're just starting out or an experienced professional — join us.
-            </p>
-            <Button to="/careers" variant="primary" className="careers-button">
-              Join Us →
-            </Button>
-          </div>
-          <div className="careers-right">
-            <div className="careers-image-container">
-              <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Careers" className="careers-image" />
-            </div>
-          </div>
-        </div>
-      </section>
-
+      
       
       {/* Final Dark Strip */}
       <section className="final-cta">
-        <div className="final-cta-content">
+        <div className="final-cta-content animate-slide-up" data-animate="slide-up">
           <div className="final-cta-left">
             <h2>Ready to take control of your finances?</h2>
             <p>Talk to our experts today. No obligation, just clarity.</p>
