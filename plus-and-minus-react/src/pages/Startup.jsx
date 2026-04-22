@@ -84,10 +84,10 @@ const Startup = () => {
       features: [
         { text: 'Limited liability protection for owners', type: 'check' },
         { text: 'Easy to raise funds from investors', type: 'check' },
-        { text: 'Separate legal entity', type: 'check' },
-        { text: 'Better credibility with clients & investors', type: 'check' }
+        { text: 'Separate legal entity', type: 'check' }
       ],
       excludedFeatures: [
+        { text: 'Better credibility with clients & investors', type: 'cross' },
         { text: 'More compliance and filings', type: 'cross' },
         { text: 'Higher setup and maintenance cost', type: 'cross' },
         { text: 'Mandatory audit (in most cases)', type: 'cross' }
@@ -142,9 +142,14 @@ const Startup = () => {
             <Link to="/contact" className="btn btn-start-business">
               Start my business {'->'}
             </Link>
-            <Link to="/contact" className="btn btn-talk-expert">
+            <a 
+              href="https://wa.me/917204403746" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn btn-talk-expert"
+            >
               Talk to an Expert
-            </Link>
+            </a>
           </div>
         </div>
         <div className="startup-hero-image">
@@ -280,6 +285,53 @@ const Startup = () => {
           </div>
         </div>
       </section>
+
+      {/* Idea to Entity Section */}
+      <section className="idea-to-entity-section">
+        <h2>From Idea to Entity in just a few steps</h2>
+        <div className="idea-to-entity-content">
+          <div className="idea-to-entity-steps">
+            <div className="step-item">
+              <div className="step-number">1</div>
+              <div className="step-text">
+                <h3>Name reservation of the entity</h3>
+                <p>An application for name reservation will be made to the Ministry of Corporate Affairs (MCA)</p>
+              </div>
+            </div>
+            <div className="step-item">
+              <div className="step-number">2</div>
+              <div className="step-text">
+                <h3>Digital Signature DSC application</h3>
+                <p>A Digital Signature Certificate (DSC) will be created for the proposed directors/partners</p>
+              </div>
+            </div>
+            <div className="step-item">
+              <div className="step-number">3</div>
+              <div className="step-text">
+                <h3>Finalisation of MoA and AoA</h3>
+                <p>Your Account Manager will draft the Memorandum of Association and Articles of Association</p>
+              </div>
+            </div>
+            <div className="step-item">
+              <div className="step-number">4</div>
+              <div className="step-text">
+                <h3>Submission of forms with the RoC</h3>
+                <p>Your Account Manager will prepare and certify the business incorporation forms</p>
+              </div>
+            </div>
+            <div className="step-item">
+              <div className="step-number">5</div>
+              <div className="step-text">
+                <h3>Issuance of Certificate of Incorporation</h3>
+                <p>Upon approval of the forms by the MCA, a Certificate of Incorporation will be issued</p>
+              </div>
+            </div>
+          </div>
+          <div className="idea-to-entity-image">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Business professional" />
+          </div>
+        </div>
+              </section>
 
       {/* Learn Before You Incorporate Section */}
       <section className="learn-incorporate-section">

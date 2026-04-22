@@ -2695,3 +2695,239 @@
     height: 250px;
   }
 }
+/* IDEA TO ENTITY SECTION */
+.idea-to-entity-section {
+  padding: 80px 40px;
+  background: rgb(245, 240, 232);
+}
+
+.idea-to-entity-section h2 {
+  text-align: center;
+  font-size: clamp(32px, 4vw, 48px);
+  color: var(--text);
+  margin-bottom: 60px;
+  font-weight: 600;
+}
+
+.idea-to-entity-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.idea-to-entity-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.step-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 109, 91, 0.1);
+}
+
+.step-number {
+  background: var(--green);
+  color: var(--white);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.step-text h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.step-text p {
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.idea-to-entity-image {
+  flex: 0.8;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-left: 60px;
+}
+
+.idea-to-entity-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.boom-section {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.boom-content {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.boom-icon {
+  background: var(--green);
+  color: var(--white);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.boom-content h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0;
+}
+
+.boom-content p {
+  font-size: 16px;
+  color: var(--gray);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Responsive for Idea to Entity Section */
+@media (max-width: 768px) {
+  .idea-to-entity-section {
+    padding: 60px 20px;
+  }
+
+  .idea-to-entity-section h2 {
+    font-size: clamp(28px, 6vw, 36px);
+    margin-bottom: 40px;
+  }
+
+  .idea-to-entity-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .idea-to-entity-steps {
+    gap: 16px;
+  }
+
+  .step-item {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .step-number {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .step-text h3 {
+    font-size: 15px;
+  }
+
+  .step-text p {
+    font-size: 13px;
+  }
+
+  .idea-to-entity-image {
+    flex: 0.9;
+    max-width: 350px;
+    max-height: 467px;
+    margin: 0 auto;
+  }
+
+  .boom-section {
+    margin-top: 40px;
+  }
+
+  .boom-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 11px;
+  }
+
+  .boom-content h3 {
+    font-size: 20px;
+  }
+
+  .boom-content p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .idea-to-entity-section {
+    padding: 40px 16px;
+  }
+
+  .idea-to-entity-section h2 {
+    margin-bottom: 30px;
+  }
+
+  .idea-to-entity-content {
+    gap: 30px;
+  }
+
+  .step-item {
+    padding: 12px;
+  }
+
+  .step-text h3 {
+    font-size: 14px;
+  }
+
+  .step-text p {
+    font-size: 12px;
+  }
+
+  .idea-to-entity-image {
+    margin: 40px auto 0;
+    max-width: 300px;
+    max-height: 400px;
+  }
+
+  .boom-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 10px;
+  }
+
+  .boom-content h3 {
+    font-size: 18px;
+  }
+
+  .boom-content p {
+    font-size: 13px;
+  }
+}

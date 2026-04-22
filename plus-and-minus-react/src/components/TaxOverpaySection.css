@@ -86,7 +86,7 @@
   margin: 0;
   position: relative;
   top: 0.36px;
-  width: 483px;
+  max-width: 100%;
 }
 
 .tax-overpay-right {
@@ -189,6 +189,20 @@
     line-height: 1.6;
   }
 
+  .tax-overpay-cta {
+    padding: 16px;
+  }
+
+  .tax-overpay-cta h3 {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .tax-overpay-cta p {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
   .tax-overpay-grid {
     grid-template-columns: 1fr;
     gap: 12px;
@@ -204,5 +218,40 @@
 
   .tax-issue-card p {
     font-size: 12px;
+  }
+
+  .tax-planning-link {
+    font-size: 14px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .tax-overpay-section {
+    padding: 40px 16px;
+  }
+
+  .tax-overpay-content {
+    gap: 30px;
+  }
+
+  .tax-overpay-left .section-title {
+    font-size: clamp(24px, 7vw, 32px);
+  }
+
+  .tax-overpay-left .section-sub {
+    font-size: 14px;
+  }
+
+  .tax-overpay-cta {
+    padding: 12px;
+  }
+
+  .tax-issue-card {
+    padding: 12px;
+  }
+
+  .tax-planning-link {
+    font-size: 13px;
   }
 }
