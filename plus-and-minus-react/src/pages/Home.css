@@ -98,11 +98,6 @@
   animation-delay: 0.2s;
 }
 
-/* Stagger animations for grids */
-.services-grid .service-card:nth-child(1) { animation-delay: 0.1s; }
-.services-grid .service-card:nth-child(2) { animation-delay: 0.2s; }
-.services-grid .service-card:nth-child(3) { animation-delay: 0.3s; }
-.services-grid .service-card:nth-child(4) { animation-delay: 0.4s; }
 
 .why-different-grid .why-different-card:nth-child(1) { animation-delay: 0.1s; }
 .why-different-grid .why-different-card:nth-child(2) { animation-delay: 0.2s; }
@@ -1154,7 +1149,6 @@
   background: #e8e2d5;
   border-radius: 16px;
   padding: 18px 14px;
-  transition: all 0.3s ease;
   flex: 0 0 280px;
   min-width: 0;
   text-align: left;
@@ -1170,11 +1164,6 @@
   text-align: center;
 }
 
-.service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 48px rgba(0,0,0,0.12);
-  border-color: rgba(41,80,218,0.2);
-}
 
 .service-icon {
   width: 40px;
@@ -1775,13 +1764,8 @@
   background: rgb(241, 245, 250);
   border-radius: 16px;
   padding: 40px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.startup-finance-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
-}
 
 .startup-finance-card h2 {
   font-family: var(--font-head);
@@ -1908,13 +1892,8 @@
   border-radius: 16px;
   padding: 30px;
   text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.why-different-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
-}
 
 .why-different-card h3 {
   font-size: 18px;

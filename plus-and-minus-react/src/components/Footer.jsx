@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faXTwitter, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import './Footer.css';
 
 const Footer = () => {
@@ -6,70 +8,53 @@ const Footer = () => {
     <footer>
       <div className="footer-grid">
         <div className="footer-brand">
-          <Link to="/" className="nav-logo">
-            <div className="nav-logo-icon">
-              <span>±</span>
-            </div>
-            <div className="nav-logo-text" style={{color: 'var(--white)'}}>
-              Plus & Minus
-              <small style={{color: 'rgba(255,255,255,0.4)'}}>ACCOUNTANTS & ADVISERS</small>
-            </div>
-          </Link>
+          <div className="footer-brand-text">
+            Let's Plus and Minus
+          </div>
           <p>We work with numbers. But for people. Innovation with experience on its side — helping you achieve financial freedom in the age of AI.</p>
           <div className="footer-socials">
-            <div className="social-btn">in</div>
-            <div className="social-btn">𝕏</div>
-            <div className="social-btn">f</div>
-            <div className="social-btn">📷</div>
+            <FontAwesomeIcon icon={faLinkedin} className="social-icon" />
+            <FontAwesomeIcon icon={faXTwitter} className="social-icon" />
+            <FontAwesomeIcon icon={faFacebook} className="social-icon" />
+            <FontAwesomeIcon icon={faInstagram} className="social-icon" />
           </div>
         </div>
         
         <div className="footer-col">
           <h4>Our Services</h4>
-          <Link to="/services/accounts">Accounts & Business Advisory</Link>
-          <Link to="/services/audit">Audit</Link>
-          <Link to="/services/corporporate-finance">Corporate Finance</Link>
-          <Link to="/services/corporate-tax">Corporate Tax</Link>
-          <Link to="/services/employment-tax">Employment Tax</Link>
+          <Link to="/services/startup">Startup</Link>
+          <Link to="/services/income-tax">Income tax filing</Link>
+          <Link to="/services/gst">GST</Link>
+          <Link to="/services/registrations">Registrations</Link>
+          <Link to="/services/accounting">Accounting</Link>
         </div>
         
-        <div className="footer-col">
-          <h4>More Services</h4>
-          <Link to="/services/entrepreneurial-tax">Entrepreneurial Tax</Link>
-          <Link to="/services/payroll">Payroll</Link>
-          <Link to="/services/personal-tax">Personal Tax</Link>
-          <Link to="/services/rd-tax">R&D Tax</Link>
-          <Link to="/services/vat">VAT</Link>
-          <Link to="/about">About Us</Link>
-          <Link to="/pricing">Pricing</Link>
-          <Link to="/careers">Careers</Link>
-        </div>
-        
+                
         <div className="footer-col">
           <h4>Contact Us</h4>
           <div className="footer-contact-item">
-            <span>✉️</span>
-            <span>hello@yearend.in</span>
+            <span>📞</span>
+            <span>+91 7204403746</span>
           </div>
           <div className="footer-contact-item">
-            <span>📞</span>
-            <span>+91 98765 43210</span>
+            <span>✉️</span>
+            <span>support@plusandminus.in</span>
           </div>
           <div className="footer-contact-item">
             <span>📍</span>
-            <span>Mumbai | Bangalore | Delhi NCR</span>
+            <span>Bengaluru</span>
           </div>
           <div className="footer-available-via">
             <p>Available via</p>
             <div className="available-via-buttons">
-              <div className="available-via-button whatsapp">
+              <div className="available-via-button whatsapp" onClick={() => window.open('https://wa.me/917204403746', '_blank')}>
                 <span>WhatsApp</span>
               </div>
-              <div className="available-via-button email">
+              <div className="available-via-button email" onClick={() => window.open('mailto:support@plusandminus.in', '_blank')}>
                 <span>Email</span>
               </div>
-              <div className="available-via-button callback">
-                <span>Callback</span>
+              <div className="available-via-button callback" onClick={() => window.open('tel:+917204403746', '_blank')}>
+                <span>Call</span>
               </div>
             </div>
           </div>

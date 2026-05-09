@@ -73,7 +73,7 @@ const Navbar = () => {
       </button>
       
       <div className="nav-actions">
-        <Link to="/contact" className="btn-primary">Get Started</Link>
+        <Link to="/contact" className="btn-primary"><span>Get Started</span></Link>
       </div>
       
       {/* Mobile Menu */}
@@ -102,7 +102,7 @@ const Navbar = () => {
             Contact
           </Link>
           <div className="mobile-nav-actions">
-            <Link to="/contact" className="btn-primary" onClick={() => setMobileMenuOpen(false)}>Get Started</Link>
+            <Link to="/contact" className="btn-primary" onClick={() => setMobileMenuOpen(false)}><span>Get Started</span></Link>
           </div>
         </div>
       </div>

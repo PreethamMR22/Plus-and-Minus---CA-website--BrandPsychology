@@ -295,12 +295,9 @@ const Home = () => {
             <h2 className="section-title" style={{fontSize: 'clamp(48px, 6vw, 72px)'}}>
               Who we are
             </h2>
-            <button onClick={scrollToServices} className="section-link">
-              See how we can help →
-            </button>
           </div>
           <div className="col-content animate-slide-right" data-animate="slide-right">
-            <p className="section-sub">
+            <p className="section-sub" style={{marginBottom: '0px'}}>
              A modern accounting and tax firm providing full service to Startups and small businesses. 
 
 We believe that entrepreneurs are society's problem solvers. They see opportunities in complexities and drive us towards progress. Plus and Minus is the advisor, guide, and facilitator to every entrepreneur looking to start and manage a business in India. 
@@ -309,6 +306,9 @@ We are the first point of contact for startups whom we handhold from the day the
 
 We work with Individuals, Professionals, startups and small businesses, ranging from two founders to hundred-person teams.
             </p>
+            <button onClick={scrollToServices} className="section-link" style={{marginTop: '20px'}}>
+              See how we can help →
+            </button>
           </div>
         </div>
       </section>
@@ -316,14 +316,14 @@ We work with Individuals, Professionals, startups and small businesses, ranging 
       
       {/* Our Services */}
       <section id="services" className="services-section">
-        <div className="section-tag animate-fade-in" data-animate="fade-in">What We Do</div>
-        <h2 className="section-title animate-slide-up" data-animate="slide-up">Bunch of things we can do for you</h2>
-        <p className="section-sub animate-fade-in" data-animate="fade-in">
+        <div className="section-tag">What We Do</div>
+        <h2 className="section-title">Bunch of things we can do for you</h2>
+        <p className="section-sub">
           Comprehensive accounting and tax services tailored to your needs.
         </p>
         <div className="services-grid">
           {servicesData.map((service, index) => (
-            <div key={index} className="service-card animate-scale-up" data-animate="scale-up" style={{animationDelay: `${index * 0.1}s`}}>
+            <div key={index} className="service-card">
               <div className="service-icon">{service.icon}</div>
               <h3 className="service-title">{service.title}</h3>
               <p className="service-description">{service.description}</p>
