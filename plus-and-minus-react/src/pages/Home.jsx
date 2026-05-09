@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../components/Button';
 import Card from '../components/Card';
+import TestimonialsSection from '../components/TestimonialsSection';
 import './Home.css';
 
 const useCounter = (end, duration = 2000, startOnView = false) => {
@@ -250,7 +251,8 @@ const Home = () => {
           <div className="hero-tag animate-fade-in" data-animate="fade-in">Plus And Minus Accountants & Advisers</div>
           <h1 className="animate-slide-up" data-animate="slide-up" style={{animationDelay: '0.2s'}}>
             One team for all your<br />
-            <span>accounting <span style={{color: 'white'}}>and</span> Tax needs</span>
+            <span>accounting <span style={{color: 'white'}}>and</span></span><br />
+            <span>Tax needs</span>
           </h1>
           <p className="animate-fade-in" data-animate="fade-in" style={{animationDelay: '0.4s'}}>
             We provide quality Accounting, payroll and tax services to startups and small businesses.
@@ -263,25 +265,24 @@ const Home = () => {
               Let's Talk 
             </Button>
           </div>
-
-          
-          <div className="hero-stats-box" ref={heroStatsRef}>
-            <div className="hero-stat-item">
-              <div className="hero-stat-number">{clientsCounter.count}+</div>
-              <div className="hero-stat-label">Happy Clients</div>
-            </div>
-            <div className="hero-stat-item">
-              <div className="hero-stat-number">{teamCounter.count}+</div>
-              <div className="hero-stat-label">Team of Experts</div>
-            </div>
-            <div className="hero-stat-item">
-              <div className="hero-stat-number">{engagementCounter.count}%</div>
-              <div className="hero-stat-label">Repeat Engagement</div>
-            </div>
-            <div className="hero-stat-item">
-              <div className="hero-stat-number">{satisfactionCounter.count}%</div>
-              <div className="hero-stat-label">Satisfaction Rate</div>
-            </div>
+        </div>
+        
+        <div className="hero-stats-box" ref={heroStatsRef}>
+          <div className="hero-stat-item">
+            <div className="hero-stat-number">{clientsCounter.count}+</div>
+            <div className="hero-stat-label">Happy Clients</div>
+          </div>
+          <div className="hero-stat-item">
+            <div className="hero-stat-number">{teamCounter.count}+</div>
+            <div className="hero-stat-label">Team of Experts</div>
+          </div>
+          <div className="hero-stat-item">
+            <div className="hero-stat-number">{engagementCounter.count}%</div>
+            <div className="hero-stat-label">Repeat Engagement</div>
+          </div>
+          <div className="hero-stat-item">
+            <div className="hero-stat-number">{satisfactionCounter.count}%</div>
+            <div className="hero-stat-label">Satisfaction Rate</div>
           </div>
         </div>
       </section>
@@ -291,9 +292,14 @@ const Home = () => {
         <div className="two-col">
           <div className="animate-slide-left" data-animate="slide-left">
             <div className="section-tag">Why Plus & Minus</div>
-            <h2 className="section-title">
+            <h2 className="section-title" style={{fontSize: 'clamp(48px, 6vw, 72px)'}}>
               Who we are
             </h2>
+            <button onClick={scrollToServices} className="section-link">
+              See how we can help →
+            </button>
+          </div>
+          <div className="col-content animate-slide-right" data-animate="slide-right">
             <p className="section-sub">
              A modern accounting and tax firm providing full service to Startups and small businesses. 
 
@@ -303,12 +309,6 @@ We are the first point of contact for startups whom we handhold from the day the
 
 We work with Individuals, Professionals, startups and small businesses, ranging from two founders to hundred-person teams.
             </p>
-            <button onClick={scrollToServices} className="section-link">
-              See how we can help →
-            </button>
-          </div>
-          <div className="col-img animate-slide-right" data-animate="slide-right">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Professional receptionist" className="col-img-content" />
           </div>
         </div>
       </section>
@@ -346,32 +346,36 @@ We work with Individuals, Professionals, startups and small businesses, ranging 
       <section className="mission-section">
         <div className="section-content">
     
-          <h2 className="section-title animate-slide-up" data-animate="slide-up">
-            We know you're busy growing your business. So,<br />
-            <span>we keep it simple with <span style={{color: 'white'}}>4</span> easy steps.</span>
+          <h2 className="section-title animate-slide-up" data-animate="slide-up" style={{fontSize: 'clamp(24px, 3vw, 36px)'}}>
+            We know you're busy growing your business.<br />
+            <span>So, we keep it simple with <span style={{color: 'white'}}>4</span> easy steps.</span>
           </h2>
           <div className="mission-steps">
             <div className="mission-step animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.1s'}}>
+              <div className="step-number">1</div>
               <div className="step-content">
-                <h3>1. Consultation</h3>
+                <h3>Consultation</h3>
                 <p>Share your requirements with our experts for a free consultation.</p>
               </div>
             </div>
             <div className="mission-step animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.2s'}}>
+              <div className="step-number">2</div>
               <div className="step-content">
-                <h3>2. Documentation</h3>
+                <h3>Documentation</h3>
                 <p>We help prepare and review all necessary documents.</p>
               </div>
             </div>
             <div className="mission-step animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.3s'}}>
+              <div className="step-number">3</div>
               <div className="step-content">
-                <h3>3. Application</h3>
+                <h3>Application</h3>
                 <p>We submit your application and follow up with authorities.</p>
               </div>
             </div>
             <div className="mission-step animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.4s'}}>
+              <div className="step-number">4</div>
               <div className="step-content">
-                <h3>4. Approval</h3>
+                <h3>Approval</h3>
                 <p>Receive your certificate/license with our ongoing support.</p>
               </div>
             </div>
@@ -457,59 +461,8 @@ We work with Individuals, Professionals, startups and small businesses, ranging 
       </section>
 
       
-      {/* Technology Section */}
-      <section className="technology-section">
-        <div className="technology-content">
-          <div className="technology-left animate-slide-left" data-animate="slide-left">
-            <div className="technology-image-container">
-              <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Technology" className="technology-main-image" />
-            </div>
-            <div className="technology-tag">Competitive edge through <br /> <b>AI + Deep Expertise</b></div>
-          </div>
-          <div className="technology-right animate-slide-right" data-animate="slide-right">
-            <div className="section-tag">THE PLUS AND MINUS ADVANTAGE</div>
-            <h2 className="section-title">
-              We unite expertise <br /> and tech so you can <br /> <span className="highlight-green">outthink, outpace and <br /> outperform</span>
-            </h2>
-            <p className="section-sub">
-              AI, climate change and geopolitical shifts are reconfiguring global economy. We bring the sharpest minds in tax and finance. Deep expertise that industries are built on. And we roll up our sleeves to deliver results — alongside you, start to finish.
-            </p>
-            <div className="technology-features-grid">
-              <div className="feature-card animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.1s'}}>
-                <h3>AI-Tailored Advice</h3>
-                <p>We know how your business works so you can put AI to work for your business</p>
-              </div>
-              <div className="feature-card animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.2s'}}>
-                <h3>Industry-Leading Expertise</h3>
-                <p>Deep sector knowledge so you can make decisions your future can stand on</p>
-              </div>
-              <div className="feature-card animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.3s'}}>
-                <h3>Strategic Alliances</h3>
-                <p>We work with tech's titans and trailblazers so you can think like a startup</p>
-              </div>
-              <div className="feature-card animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.4s'}}>
-                <h3>Sustainability Built In</h3>
-                <p>We enhance strategy with sustainability to strengthen your resilience and returns</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Clients */}
-      <section className="clients-section">
-        <div className="clients-header animate-fade-in" data-animate="fade-in">
-          <p className="clients-tag">Our clients work at top global companies</p>
-        </div>
-        <div className="clients-grid">
-          {clientsData.map((client, index) => (
-            <div key={index} className="client-item animate-scale-up" data-animate="scale-up" style={{animationDelay: `${index * 0.05}s`}}>
-              <span className="client-name">{client}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
+      
+      
       {/* Blog Section */}
       <section className="blog-section">
         <div className="blog-header">
@@ -551,6 +504,9 @@ We work with Individuals, Professionals, startups and small businesses, ranging 
         </div>
       </section>
 
+      
+      {/* Testimonials Section */}
+      <TestimonialsSection />
       
       
       {/* Final Dark Strip */}

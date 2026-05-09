@@ -3,6 +3,55 @@
   padding-top: 0;
 }
 
+/* CLIENTS */
+.clients-section {
+  background: #ffffff;
+  padding: 56px 166px;
+  max-width: none;
+  margin: 0;
+  height: 179px;
+}
+
+.clients-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.clients-tag {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight:600;
+  color: #99a1af;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  line-height: 16px;
+}
+
+.clients-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.client-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.client-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: rgb(41, 80, 218);
+  line-height: 20px;
+  letter-spacing: 0.35px;
+  white-space: nowrap;
+}
+
 /* INCOME TAX HERO */
 .income-tax-hero {
   min-height: 100vh;

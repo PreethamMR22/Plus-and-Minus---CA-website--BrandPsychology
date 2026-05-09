@@ -5,6 +5,19 @@ import BeyondFiling from '../components/BeyondFiling';
 import TaxOverpaySection from '../components/TaxOverpaySection';
 import './IncomeTax.css';
 
+const clientsData = [
+  'Wipro',
+  'Unilever',
+  'TCS',
+  'Oracle',
+  'Mercedes-Benz',
+  'DB Schenker',
+  'Infosys',
+  'IBM',
+  'Honeywell',
+  'Fidelity'
+];
+
 const IncomeTax = () => {
   return (
     <div className="income-tax-page">
@@ -48,6 +61,20 @@ const IncomeTax = () => {
             <p className="overlay-title">TAX SAVINGS</p>
             <p className="overlay-text">Save up to ₹50,000 with expert tax planning</p>
           </div>
+        </div>
+      </section>
+
+      {/* Clients Section */}
+      <section className="clients-section">
+        <div className="clients-header">
+          <p className="clients-tag">Our clients work at top global companies</p>
+        </div>
+        <div className="clients-grid">
+          {clientsData.map((client, index) => (
+            <div key={index} className="client-item">
+              <span className="client-name">{client}</span>
+            </div>
+          ))}
         </div>
       </section>
 
