@@ -125,7 +125,7 @@
   position: absolute;
   bottom: 20px;
   right: 20px;
-  background: rgba(0, 109, 90, 0.95);
+  background: rgb(91, 130, 255);
   padding: 16px 20px;
   border-radius: 12px;
   backdrop-filter: blur(10px);
@@ -189,7 +189,7 @@
 /* FILE ITR STEPS SECTION */
 .file-itr-steps {
   padding: 100px 40px;
-  background: var(--cream-light);
+  background: rgb(241, 245, 250);
   text-align: center;
 }
 
@@ -373,7 +373,7 @@
 /* NEVER MISS A TAX DEADLINE SECTION */
 .never-miss-deadline {
   padding: 100px 40px;
-  background: var(--cream-light);
+  background: rgb(241, 245, 250);
 }
 
 .never-miss-deadline-content {

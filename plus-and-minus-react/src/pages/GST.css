@@ -321,7 +321,7 @@
 }
 
 .gst-card {
-  background: rgb(245, 240, 232);
+  background: rgb(241, 245, 250);
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 30px;
@@ -339,7 +339,7 @@
   font-family: var(--font-head);
   font-size: 20px;
   font-weight: 600;
-  color: rgb(0, 109, 90);
+  color: rgb(41, 80, 218);
   margin-bottom: 20px;
   line-height: 1.3;
 }

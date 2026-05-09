@@ -129,7 +129,7 @@ div .btn {
 
 .btn.light {
   background: var(--white);
-  color: #006d5b;
+  color: rgb(41, 80, 218);
   padding: 12px 24px;
   font-size: 14px;
   font-weight: 600;

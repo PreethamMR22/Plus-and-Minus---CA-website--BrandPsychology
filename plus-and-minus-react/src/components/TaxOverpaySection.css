@@ -1,6 +1,6 @@
 /* TAX OVERPAY SECTION */
 .tax-overpay-section {
-  background: var(--cream);
+  background: rgb(241, 245, 250);
   padding: 80px 40px;
 }
 
@@ -48,8 +48,8 @@
 }
 
 .tax-overpay-cta {
-  background: rgb(232, 245, 232);
-  border: 0.909px solid rgba(0, 109, 91, 0.2);
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
   border-radius: 16px;
   padding: 20.909px 20.909px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -71,7 +71,7 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  color: #006d5b;
+  color: rgb(41, 80, 218);
   margin: 0;
   position: relative;
   top: 0.36px;
@@ -127,33 +127,33 @@
 }
 
 .tax-issue-card.yellow {
-  background: #FFF3CD;
-  border: 1px solid #FFE69C;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
 }
 
 .tax-issue-card.pink {
-  background: #FFE0EC;
-  border: 1px solid #FFB3D1;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
 }
 
 .tax-issue-card.blue {
-  background: #E3F2FD;
-  border: 1px solid #90CAF9;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
 }
 
 .tax-issue-card.purple {
-  background: #F3E5F5;
-  border: 1px solid #CE93D8;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
 }
 
 .tax-issue-card.light-green {
-  background: #E8F5E8;
-  border: 1px solid #A5D6A7;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
 }
 
 .tax-issue-card.orange {
-  background: #FFF3E0;
-  border: 1px solid #FFCC80;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
 }
 
 .tax-planning-link {

@@ -45,14 +45,14 @@
 
 /* Pricing cards section with background */
 .pricing-page .pricing-section-wrapper {
-  background-color: rgb(249, 245, 240);
+  background-color: rgb(248, 250, 252);
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
 }
 
 .pricing-page .section:first-of-type {
-  background-color: rgb(249, 245, 240);
+  background-color: rgb(248, 250, 252);
   border-radius: 16px;
   margin: 0 auto 40px auto;
 }
@@ -98,9 +98,9 @@
 }
 
 .pricing-page .pricing-card.featured {
-  background: rgb(0, 109, 91);
-  border-color: rgb(0, 109, 91);
-  box-shadow: 0 10px 30px rgba(0, 109, 91, 0.2);
+  background: rgb(41, 80, 218);
+  border-color: rgb(41, 80, 218);
+  box-shadow: 0 10px 30px rgba(41, 80, 218, 0.2);
 }
 
 .pricing-page .pricing-card.featured * {
@@ -232,7 +232,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(249, 245, 240);
+  background-color: rgb(248, 250, 252);
 }
 
 .pricing-page .addon-name {
