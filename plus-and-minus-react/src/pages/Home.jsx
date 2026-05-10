@@ -248,14 +248,12 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
-          <div className="hero-tag animate-fade-in" data-animate="fade-in">Plus And Minus Accountants & Advisers</div>
           <h1 className="animate-slide-up" data-animate="slide-up" style={{animationDelay: '0.2s'}}>
-            One team for all your<br />
-            <span>accounting <span style={{color: 'white'}}>and</span></span><br />
-            <span>Tax needs</span>
+            <span><span style={{color: 'var(--text)'}}>One team for all your</span> accounting <span style={{color: 'var(--green-bright)'}}>and</span> tax <span style={{color: 'var(--text)'}}>needs</span></span>
           </h1>
           <p className="animate-fade-in" data-animate="fade-in" style={{animationDelay: '0.4s'}}>
-            We provide quality Accounting, payroll and tax services to startups and small businesses.
+            Namma Bengaluru's accounting, compliance and tax services designed for professionals, startups and small businesses, so<br />
+            you can focus on what matters most.
           </p>
           <div className="hero-btns animate-slide-up" data-animate="slide-up" style={{animationDelay: '0.6s'}}>
             <Button to="/contact" variant="hero-primary" size="large">
@@ -265,25 +263,20 @@ const Home = () => {
               Let's Talk 
             </Button>
           </div>
+          <div className="hero-stats animate-fade-in" data-animate="fade-in" style={{animationDelay: '0.8s'}}>
+            <span>150+ Google Reviews</span>
+            <span className="bullet">•</span>
+            <span>Serving Bengaluru since 2020</span>
+            <span className="bullet">•</span>
+            <span>500+ clients</span>
+          </div>
         </div>
         
-        <div className="hero-stats-box" ref={heroStatsRef}>
-          <div className="hero-stat-item">
-            <div className="hero-stat-number">{clientsCounter.count}+</div>
-            <div className="hero-stat-label">Happy Clients</div>
-          </div>
-          <div className="hero-stat-item">
-            <div className="hero-stat-number">{teamCounter.count}+</div>
-            <div className="hero-stat-label">Team of Experts</div>
-          </div>
-          <div className="hero-stat-item">
-            <div className="hero-stat-number">{engagementCounter.count}%</div>
-            <div className="hero-stat-label">Repeat Engagement</div>
-          </div>
-          <div className="hero-stat-item">
-            <div className="hero-stat-number">{satisfactionCounter.count}%</div>
-            <div className="hero-stat-label">Satisfaction Rate</div>
-          </div>
+        <div className="hero-image">
+          <img 
+            src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+            alt="Accounting and Tax Services" 
+          />
         </div>
       </section>
 

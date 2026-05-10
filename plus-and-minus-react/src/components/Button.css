@@ -67,16 +67,17 @@ div .btn {
 }
 
 .btn.hero-outline {
-  border: 1.5px solid rgba(255,255,255,0.3);
-  color: var(--white);
+  border: 1.5px solid var(--text);
+  color: var(--text);
   background: none;
   padding: 14px 28px;
   font-size: 14px;
 }
 
 .btn.hero-outline:hover {
-  border-color: var(--white);
-  background: rgba(255,255,255,0.05);
+  border-color: var(--green-bright);
+  color: var(--green-bright);
+  background: rgba(0,123,255,0.05);
 }
 
 .btn.white {
