@@ -145,3 +145,64 @@ div .btn {
   background: #f0f0f0;
   transform: translateY(-1px);
 }
+
+/* Button Responsive Styles */
+@media (max-width: 768px) {
+  .btn.large {
+    padding: 12px 24px;
+    font-size: 13px;
+  }
+  
+  .btn.hero-primary {
+    padding: 12px 24px;
+    font-size: 13px;
+  }
+  
+  .btn.hero-outline {
+    padding: 12px 24px;
+    font-size: 13px;
+  }
+  
+  .btn.medium {
+    padding: 10px 24px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn.large {
+    padding: 10px 20px;
+    font-size: 12px;
+    gap: 6px;
+  }
+  
+  .btn.hero-primary {
+    padding: 10px 20px;
+    font-size: 12px;
+    gap: 6px;
+  }
+  
+  .btn.hero-outline {
+    padding: 10px 20px;
+    font-size: 12px;
+    gap: 6px;
+  }
+  
+  .btn.medium {
+    padding: 8px 20px;
+    font-size: 12px;
+    gap: 6px;
+  }
+  
+  .btn.small {
+    padding: 6px 16px;
+    font-size: 11px;
+    gap: 4px;
+  }
+  
+  .btn.light {
+    padding: 10px 20px;
+    font-size: 12px;
+    gap: 4px;
+  }
+}
