@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPeopleRoof, faBullseye, faHandshake, faUserTag } from '@fortawesome/free-solid-svg-icons';
 import Button from '../components/Button';
 import Card from '../components/Card';
 import TestimonialsSection from '../components/TestimonialsSection';
@@ -150,26 +152,25 @@ const Home = () => {
 
   const servicesData = [
     {
-      icon: '',
-      icon: '�',
+      icon: <FontAwesomeIcon icon={faPeopleRoof} />,
       title: 'Startup',
-      description: 'Complete business setup assistance',
-      services: ['Private Limited Company', 'Limited Liability Partnership', 'One Person Company', 'Partnership Firm', 'Proprietorship']
+      description: 'Complete business setup \nassistance',
+      services: ['Private Limited Company', 'Limited Liability Partnership', 'One Person Company', 'Partnership Firm', 'Prorietorship']
     },
     {
-      icon: '💰',
-      title: 'Income Tax',
-      description: 'Expert tax services for individuals and businesses',
+      icon: <FontAwesomeIcon icon={faBullseye} />,
+      title: 'Tax Filing',
+      description: 'Expert tax services for individuals \nand businesses',
       services: ['Individual tax Filing', 'Business tax Filing', 'Corporate tax returns', 'Tax Audit', 'Notice management']
     },
     {
-      icon: '�',
+      icon: <FontAwesomeIcon icon={faHandshake} />,
       title: 'Accounting Services',
       description: 'Comprehensive financial record management',
-      services: ['Bookkeeping services', 'Monthly financial statements', 'Expense tracking', 'Invoicing and payments', 'TDS Filing']
+      services: ['Day to day Bookkeeping ', 'Monthly financial statements', 'Expense tracking', 'Invoicing and payments', 'TDS Filing']
     },
     {
-      icon: '🧾',
+      icon: <FontAwesomeIcon icon={faUserTag} />,
       title: 'Goods and Service tax - GST',
       description: 'Comprehensive financial record management',
       services: ['GST Registration', 'GST Revocation and Amendment', 'GST Letter of Undertaking', 'GST Monthly filing', 'GST Annual Filing']
@@ -302,17 +303,21 @@ We work with Individuals, Professionals, startups and small businesses, ranging 
       
       {/* Our Services */}
       <section id="services" className="services-section">
-        <div className="section-tag">What We Do</div>
-        <h2 className="section-title">Bunch of things we can do for you</h2>
+                <h2 className="section-title">Everything in one place.</h2>
         <p className="section-sub">
-          Comprehensive accounting and tax services tailored to your needs.
+          Everything you need to launch, operate, and grow your business, in one place.
         </p>
         <div className="services-grid">
           {servicesData.map((service, index) => (
             <div key={index} className="service-card">
               <div className="service-icon">{service.icon}</div>
               <h3 className="service-title">{service.title}</h3>
-              <p className="service-description">{service.description}</p>
+              <p className="service-description">{service.description.split('\n').map((line, index) => (
+                  <span key={index}>
+                    {line}
+                    {index < service.description.split('\n').length - 1 && <br />}
+                  </span>
+                ))}</p>
               <ul className="service-list">
                 {service.services.map((item, idx) => (
                   <li key={idx}>{item}</li>
