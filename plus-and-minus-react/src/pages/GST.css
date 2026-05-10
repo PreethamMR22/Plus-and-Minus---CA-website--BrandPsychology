@@ -196,7 +196,7 @@
 }
 
 .ideal-for-list li::before {
-  content: '->';
+  content: '•';
   position: absolute;
   left: 0;
   color: var(--green);
@@ -223,7 +223,7 @@
 }
 
 .services-list li::before {
-  content: '->';
+  content: '•';
   position: absolute;
   left: 0;
   color: var(--green);

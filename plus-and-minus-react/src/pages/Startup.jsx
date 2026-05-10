@@ -138,6 +138,9 @@ const Startup = () => {
             registration process for you online so you can focus on your business.
             Your big idea deserves a bold execution.
           </p>
+          <p>
+            Say goodbye to stress and hello to your new business. We handle your company registration, documentation, and compliance - so you can focus on building your business.
+          </p>
                     <div className="startup-hero-buttons">
             <Link to="/contact" className="btn btn-start-business">
               Start my business {'->'}
@@ -201,16 +204,20 @@ const Startup = () => {
             </div>
           </div>
           <div className="startup-content-right">
-            <div className="services-card">
-              <h3>Services Included</h3>
-              <ul className="services-list">
-                {entityData[selectedEntity].services.map((service, index) => (
-                  <li key={index}>{service}</li>
-                ))}
-              </ul>
-              <Link to="/contact" className="btn btn-start-business">
-                Start my business {'->'}
-              </Link>
+            <div className="services-card-wrapper">
+              <div className="services-content">
+                <h3>Services Included</h3>
+                <ul className="services-list">
+                  {entityData[selectedEntity].services.map((service, index) => (
+                    <li key={index}>{service}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="services-button">
+                <Link to="/contact" className="btn btn-start-business">
+                  Start my business {'->'}
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -360,12 +367,11 @@ const Startup = () => {
       <section className="dream-business-section">
         <div className="dream-business-content">
           <div className="dream-business-text-content">
-            <h2>Start your dream business with Plus & Minus</h2>
+            <h2>Start your <br />dream business <br />with <br />Plus & Minus</h2>
             <p>From idea to incorporation, we guide you through every step. Our expert team ensures your business journey starts smoothly and successfully.</p>
             <Link to="/contact" className="btn btn-start-business">
               Start my business {'->'}
             </Link>
-            <p className="dream-business-bottom-text">Join thousands of entrepreneurs who trust us with their business registration needs</p>
           </div>
           <div className="dream-business-image-content">
             <img 
@@ -385,7 +391,9 @@ const Startup = () => {
             <div className="faq-item">
               <div className="faq-question" onClick={() => toggleFAQ(0)}>
                 <span>What is the minimum requirement to register a Pvt Ltd company?</span>
-                <span className={`faq-toggle ${expandedFAQ === 0 ? 'expanded' : ''}`}>+</span>
+                <div className={`faq-toggle ${expandedFAQ === 0 ? 'expanded' : ''}`}>
+                  <span className="faq-icon">+</span>
+                </div>
               </div>
               <div className={`faq-answer ${expandedFAQ === 0 ? 'expanded' : ''}`}>
                 You need a minimum of 2 Directors (at least one must be an Indian resident), 2 Shareholders (can be the same as Directors), a registered office address in India, and a minimum authorised capital of ¥1,00,000 (recommended). There is no mandatory paid-up capital requirement.
@@ -395,7 +403,9 @@ const Startup = () => {
             <div className="faq-item">
               <div className="faq-question" onClick={() => toggleFAQ(1)}>
                 <span>How long does the registration process take?</span>
-                <span className={`faq-toggle ${expandedFAQ === 1 ? 'expanded' : ''}`}>+</span>
+                <div className={`faq-toggle ${expandedFAQ === 1 ? 'expanded' : ''}`}>
+                  <span className="faq-icon">+</span>
+                </div>
               </div>
               <div className={`faq-answer ${expandedFAQ === 1 ? 'expanded' : ''}`}>
                 The entire process takes approximately 7-10 working days from the date of document submission. This includes DSC (1-2 days), name approval (1-3 days), and SPICe+ Part B filing (3-5 days).
@@ -405,7 +415,9 @@ const Startup = () => {
             <div className="faq-item">
               <div className="faq-question" onClick={() => toggleFAQ(2)}>
                 <span>What is the difference between Pvt Ltd, LLP, and OPC?</span>
-                <span className={`faq-toggle ${expandedFAQ === 2 ? 'expanded' : ''}`}>+</span>
+                <div className={`faq-toggle ${expandedFAQ === 2 ? 'expanded' : ''}`}>
+                  <span className="faq-icon">+</span>
+                </div>
               </div>
               <div className={`faq-answer ${expandedFAQ === 2 ? 'expanded' : ''}`}>
                 Pvt Ltd requires minimum 2 Directors and is best for startups seeking funding. LLP offers flexibility with no minimum capital and is suitable for professional firms. OPC is for solo entrepreneurs with limited liability. Pvt Ltd can issue shares and attract equity investors; LLP and OPC cannot.
@@ -415,7 +427,9 @@ const Startup = () => {
             <div className="faq-item">
               <div className="faq-question" onClick={() => toggleFAQ(3)}>
                 <span>Can NRIs or foreign nationals be Directors in a Pvt Ltd?</span>
-                <span className={`faq-toggle ${expandedFAQ === 3 ? 'expanded' : ''}`}>+</span>
+                <div className={`faq-toggle ${expandedFAQ === 3 ? 'expanded' : ''}`}>
+                  <span className="faq-icon">+</span>
+                </div>
               </div>
               <div className={`faq-answer ${expandedFAQ === 3 ? 'expanded' : ''}`}>
                 Yes, NRIs and foreign nationals can be Directors and Shareholders. However, at least one Director must be an Indian resident (stayed in India for 182+ days in the preceding calendar year). Foreign directors need a valid passport, and FDI norms may apply.
@@ -425,7 +439,9 @@ const Startup = () => {
             <div className="faq-item">
               <div className="faq-question" onClick={() => toggleFAQ(4)}>
                 <span>What happens if I don't file annual compliances?</span>
-                <span className={`faq-toggle ${expandedFAQ === 4 ? 'expanded' : ''}`}>+</span>
+                <div className={`faq-toggle ${expandedFAQ === 4 ? 'expanded' : ''}`}>
+                  <span className="faq-icon">+</span>
+                </div>
               </div>
               <div className={`faq-answer ${expandedFAQ === 4 ? 'expanded' : ''}`}>
                 Non-compliance results in heavy penalties: ¥100/day for late filing of AOC-4 and MGT-7A, ¥5,000 penalty for missed DIR-3 KYC, and potential disqualification of Directors under Section 164(2). Continued non-filing can lead to the company being struck off by the RoC.
@@ -435,7 +451,9 @@ const Startup = () => {
             <div className="faq-item">
               <div className="faq-question" onClick={() => toggleFAQ(5)}>
                 <span>What is the minimum requirement to register an LLP?</span>
-                <span className={`faq-toggle ${expandedFAQ === 5 ? 'expanded' : ''}`}>+</span>
+                <div className={`faq-toggle ${expandedFAQ === 5 ? 'expanded' : ''}`}>
+                  <span className="faq-icon">+</span>
+                </div>
               </div>
               <div className={`faq-answer ${expandedFAQ === 5 ? 'expanded' : ''}`}>
                 You need a minimum of 2 Designated Partners (at least one must be an Indian resident), a registered office address in India, and a valid DSC for each Designated Partner. There is no minimum capital requirement.
@@ -445,7 +463,9 @@ const Startup = () => {
             <div className="faq-item">
               <div className="faq-question" onClick={() => toggleFAQ(6)}>
                 <span>Is it possible to incorporate 2 companies over a single physical place?</span>
-                <span className={`faq-toggle ${expandedFAQ === 6 ? 'expanded' : ''}`}>+</span>
+                <div className={`faq-toggle ${expandedFAQ === 6 ? 'expanded' : ''}`}>
+                  <span className="faq-icon">+</span>
+                </div>
               </div>
               <div className={`faq-answer ${expandedFAQ === 6 ? 'expanded' : ''}`}>
                 Yes, you can incorporate two or more companies at the same address.
@@ -455,7 +475,9 @@ const Startup = () => {
             <div className="faq-item">
               <div className="faq-question" onClick={() => toggleFAQ(7)}>
                 <span>What is the difference between LLP and Private Limited Company?</span>
-                <span className={`faq-toggle ${expandedFAQ === 7 ? 'expanded' : ''}`}>+</span>
+                <div className={`faq-toggle ${expandedFAQ === 7 ? 'expanded' : ''}`}>
+                  <span className="faq-icon">+</span>
+                </div>
               </div>
               <div className={`faq-answer ${expandedFAQ === 7 ? 'expanded' : ''}`}>
                 LLP has fewer compliances, no minimum capital, and no mandatory audit (below thresholds). However, it cannot issue shares or raise equity funding. A Pvt Ltd can issue shares, attract VC/PE investment, and has higher credibility but comes with more compliance requirements.
@@ -465,7 +487,9 @@ const Startup = () => {
             <div className="faq-item">
               <div className="faq-question" onClick={() => toggleFAQ(8)}>
                 <span>Can an LLP be converted to a Pvt Ltd company?</span>
-                <span className={`faq-toggle ${expandedFAQ === 8 ? 'expanded' : ''}`}>+</span>
+                <div className={`faq-toggle ${expandedFAQ === 8 ? 'expanded' : ''}`}>
+                  <span className="faq-icon">+</span>
+                </div>
               </div>
               <div className={`faq-answer ${expandedFAQ === 8 ? 'expanded' : ''}`}>
                 Yes. An LLP can be converted to a Private Limited Company under Section 366 of the Companies Act, 2013. This is commonly done when the business grows and needs equity funding.
@@ -475,7 +499,9 @@ const Startup = () => {
             <div className="faq-item">
               <div className="faq-question" onClick={() => toggleFAQ(9)}>
                 <span>Who can register an OPC in India?</span>
-                <span className={`faq-toggle ${expandedFAQ === 9 ? 'expanded' : ''}`}>+</span>
+                <div className={`faq-toggle ${expandedFAQ === 9 ? 'expanded' : ''}`}>
+                  <span className="faq-icon">+</span>
+                </div>
               </div>
               <div className={`faq-answer ${expandedFAQ === 9 ? 'expanded' : ''}`}>
                 Any Indian citizen who is also a resident in India can incorporate an OPC. NRIs and foreign nationals are not eligible. The person must be a natural person (not a company or LLP).
@@ -485,7 +511,9 @@ const Startup = () => {
             <div className="faq-item">
               <div className="faq-question" onClick={() => toggleFAQ(10)}>
                 <span>What is the difference between OPC and Sole Proprietorship?</span>
-                <span className={`faq-toggle ${expandedFAQ === 10 ? 'expanded' : ''}`}>+</span>
+                <div className={`faq-toggle ${expandedFAQ === 10 ? 'expanded' : ''}`}>
+                  <span className="faq-icon">+</span>
+                </div>
               </div>
               <div className={`faq-answer ${expandedFAQ === 10 ? 'expanded' : ''}`}>
                 OPC offers limited liability and separate legal entity status, while in sole proprietorship there is no distinction between owner and business. OPC has more credibility, can have a bank account in the company name, and can raise funds more easily.

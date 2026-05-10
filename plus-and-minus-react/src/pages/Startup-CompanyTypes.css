@@ -54,6 +54,15 @@
   font-size: 14px;
   padding: 6px 0;
   padding-left: 24px;
+  position: relative;
+}
+
+.company-type-card .services-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--green);
+  font-weight: 600;
 }
 
 .company-type-card .ideal-for-section {
@@ -71,6 +80,15 @@
   font-size: 14px;
   padding: 4px 0;
   padding-left: 24px;
+  position: relative;
+}
+
+.company-type-card .ideal-for-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--green);
+  font-weight: 600;
 }
 
 /* Responsive for Company Types */

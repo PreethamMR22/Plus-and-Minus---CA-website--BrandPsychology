@@ -64,30 +64,37 @@
   color: var(--text);
   line-height: 1.5;
   flex: 1;
-  padding-right: 20px;
 }
 
 .faq-toggle {
-  font-size: 24px;
-  font-weight: 300;
-  color: var(--green);
-  transition: transform 0.3s ease;
-  flex-shrink: 0;
-  width: 30px;
-  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: rgba(26, 122, 74, 0.1);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.faq-icon {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--green);
   line-height: 1;
+  display: block;
   text-align: center;
-  vertical-align: middle;
+  font-family: system-ui, -apple-system, sans-serif;
 }
 
 .faq-toggle.expanded {
-  transform: rotate(45deg);
   background: var(--green);
+  transform: rotate(45deg);
+}
+
+.faq-toggle.expanded .faq-icon {
   color: var(--white);
 }
 
@@ -132,12 +139,12 @@
   }
   
   .faq-toggle {
-    font-size: 20px;
     width: 28px;
     height: 28px;
-    line-height: 1;
-    text-align: center;
-    vertical-align: middle;
+  }
+  
+  .faq-icon {
+    font-size: 16px;
   }
   
   .faq-answer.expanded {
