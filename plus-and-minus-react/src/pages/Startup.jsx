@@ -130,33 +130,37 @@ const Startup = () => {
   return (
     <div className="startup-page">
       {/* Hero Section */}
-      <section className="startup-hero">
-        <div className="startup-hero-content">
+      <section className="hero startup-hero">
+        <div className="hero-content">
           <h1>Give your idea <span>Wings</span></h1>
           <p>
-            Company registration in India doesn't have to be a hassle. Let us handle
-            registration process for you online so you can focus on your business.
-            Your big idea deserves a bold execution.
+            Company registration in India doesn't have to be a hassle. Let us handle the registration process for you online so you can focus on your business. Your big idea deserves a bold execution.
           </p>
           <p>
-            Say goodbye to stress and hello to your new business. We handle your company registration, documentation, and compliance - so you can focus on building your business.
+            We register your company in 7–10 days. You just show up with the idea. Namma team handle your company registration, documentation, and compliance - so you can focus on building your business.
           </p>
-                    <div className="startup-hero-buttons">
-            <Link to="/contact" className="btn btn-start-business">
-              Start my business {'->'}
-            </Link>
-            <a 
-              href="https://wa.me/917204403746" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="btn btn-talk-expert"
-            >
-              Talk to an Expert
-            </a>
+          <div className="hero-btns">
+            <Button to="/contact" variant="hero-primary" size="large">
+              Get Started  {' ->'}
+            </Button>
+            <Button onClick={() => window.open('https://wa.me/917204403746', '_blank')} variant="hero-outline" size="large">
+              WhatsApp Us Now 
+            </Button>
+          </div>
+          <div className="hero-stats">
+            <span>150+ Google Reviews</span>
+            <span className="bullet">•</span>
+            <span>Serving Bengaluru since 2020</span>
+            <span className="bullet">•</span>
+            <span>500+ clients</span>
           </div>
         </div>
-        <div className="startup-hero-image">
-          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Startup Registration" />
+        
+        <div className="hero-image">
+          <img 
+            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+            alt="Startup Registration" 
+          />
           <div className="image-overlay-card">
             <p className="overlay-title">PLUS & MINUS</p>
             <p className="overlay-text">Your company has been successfully Registered.</p>
@@ -170,9 +174,7 @@ const Startup = () => {
         <div className="startup-content-grid">
           <div className="startup-content-left">
             <p>
-              Choose the right business structure for your startup. We help you
-              register different types of legal entities in India with complete
-              documentation support.
+              We register your business entity as per your requirement be it a Private Limited Company (PLC), a Limited Liability Partnership (LLP), a One Person Company (OPC) or a Partnership firm.
             </p>
             <div className="entity-buttons">
               <button 
@@ -295,7 +297,7 @@ const Startup = () => {
 
       {/* Idea to Entity Section */}
       <section className="idea-to-entity-section">
-        <h2>From Idea to Entity in just a few steps</h2>
+        <h2>From <span style={{color: 'var(--green-bright)', fontWeight: '700'}}>Idea to Entity</span> in just a few steps</h2>
         <div className="idea-to-entity-content">
           <div className="idea-to-entity-steps">
             <div className="step-item">
@@ -342,23 +344,26 @@ const Startup = () => {
 
       {/* Learn Before You Incorporate Section */}
       <section className="learn-incorporate-section">
-        <h2>Learn before you incorporate</h2>
-        <p className="subtitle">Foundational guides for every founder setting up an Indian company.</p>
+        <div style={{textAlign: 'center', marginBottom: '8px'}}>
+          <span style={{color: 'black', fontSize: '14px', fontWeight: '700', letterSpacing: '2px'}}>BLOGS</span>
+        </div>
+        <h2 style={{fontSize: 'clamp(30px, 4vw, 42px)'}}>Learn before you <span style={{color: 'var(--green-bright)'}}>incorporate</span></h2>
+        <p className="subtitle" style={{color: 'black', opacity: '1', fontWeight: '500'}}>Foundational guides for every founder setting up an Indian company.</p>
         
         <div className="incorporate-cards-container">
           <div className="incorporate-card">
-            <h3>Setting up a Private Limited Company (PLC) in India : A comprehensive guide</h3>
-            <p>A private limited company is the most flexible and credible structure of businesses. It is a type of structure wherein investors can be separate and the people managing the company that is directors can be different.</p>
+            <h3 style={{fontWeight: '700', fontSize: '15px'}}>Setting up a Private Limited Company (PLC) in India : A comprehensive guide</h3>
+            <p style={{color: 'black'}}>A private limited company is the most flexible and credible structure of businesses. It is a type of structure wherein investors can be separate and the people managing the company that is directors can be different.</p>
           </div>
           
           <div className="incorporate-card">
-            <h3>Setting up a Limited Liability Partnership (LLP) in India : A comprehensive guide</h3>
-            <p>A Limited Liability Partnership (LLP) is a partnership in which some or all partners have limited liabilities. It therefore can exhibit elements of a partnership firm and a private limited company, where the business is carried out in a corporate framework, guided by terms of the mutually adopted partnership deed.</p>
+            <h3 style={{fontWeight: '700', fontSize: '15px'}}>Setting up a Limited Liability Partnership (LLP) in India : A comprehensive guide</h3>
+            <p style={{color: 'black'}}>A Limited Liability Partnership (LLP) is a partnership in which some or all partners have limited liabilities. It therefore can exhibit elements of a partnership firm and a private limited company, where the business is carried out in a corporate framework, guided by terms of the mutually adopted partnership deed.</p>
           </div>
           
           <div className="incorporate-card">
-            <h3>Annual return of a Limited Liability Partnership (LLP) - Form 11</h3>
-            <p>Form 11 is an annual return required for Limited Liability Partnerships (LLPs) in India, to be filed with the Registrar of Companies (RoC) via the Ministry of Corporate Affairs (MCA) website.</p>
+            <h3 style={{fontWeight: '700', fontSize: '15px'}}>Annual return of a Limited Liability Partnership (LLP) - Form 11</h3>
+            <p style={{color: 'black'}}>Form 11 is an annual return required for Limited Liability Partnerships (LLPs) in India, to be filed with the Registrar of Companies (RoC) via the Ministry of Corporate Affairs (MCA) website.</p>
           </div>
         </div>
       </section>
@@ -367,8 +372,8 @@ const Startup = () => {
       <section className="dream-business-section">
         <div className="dream-business-content">
           <div className="dream-business-text-content">
-            <h2>Start your <br />dream business <br />with <br />Plus & Minus</h2>
-            <p>From idea to incorporation, we guide you through every step. Our expert team ensures your business journey starts smoothly and successfully.</p>
+            <h2 style={{fontSize: 'clamp(28px, 3.5vw, 42px)', maxWidth: '700px', lineHeight: '1.2'}}>Start your dream business<br />with Plus & Minus</h2>
+            <p>Our goal is to make business easy. We have got experts available by phone to answer questions, 7 days a week. Let us handle the details so you can focus on what you do best.</p>
             <Link to="/contact" className="btn btn-start-business">
               Start my business {'->'}
             </Link>
