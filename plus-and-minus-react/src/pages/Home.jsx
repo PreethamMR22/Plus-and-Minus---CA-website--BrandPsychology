@@ -413,39 +413,38 @@ We work with Individuals, Professionals, startups and small businesses, ranging 
       <section className="why-different-section">
         <div className="section-content">
           <div className="section-tag animate-fade-in" data-animate="fade-in" style={{color: 'white'}}>Why we're Different</div>
-          <h2 className="section-title animate-slide-up" data-animate="slide-up">
-            Faster, Cheaper, Easier is Possible With<br />
-            <span>One Platform</span>
+          <h2 className="section-title animate-slide-up" data-animate="slide-up" style={{fontSize: 'clamp(28px, 3.5vw, 42px)'}}>
+            <span style={{color: 'rgb(41, 80, 218)'}}>Faster, Cheaper, Easier</span> is Possible With <span style={{color: '#1a1a1a'}}>One Platform</span>
           </h2>
-          <p className="section-sub animate-fade-in" data-animate="fade-in">
-            When your Incorporation, taxes, and accounting are all managed separately, you lose time and money. 
+          <p className="section-sub animate-fade-in" data-animate="fade-in" style={{maxWidth: '800px', marginBottom: '40px'}}>
+            When your Incorporation, taxes, and accounting are all managed separately, you lose time and money.<br />
             We bring everything together, so you can focus on what matters.
           </p>
           
           <div className="why-different-grid">
             <div className="why-different-card animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.1s'}}>
-              <h3>We Guide You at Every Step</h3>
-              <p>Expert guidance from start to finish, ensuring you make the right decisions for your business.</p>
+              <h3>One team. No juggling.</h3>
+              <p style={{fontSize: '13px'}}>Starting a business can be confusing, especially for the first time. We guide you step by step so you always know what to do next.</p>
             </div>
             <div className="why-different-card animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.2s'}}>
               <h3>No More Running Around</h3>
-              <p>Everything you need in one place. No more coordinating between multiple service providers.</p>
+              <p style={{fontSize: '13px'}}>No need to deal with different people for tax, accounts, and compliance. We handle everything in one place.</p>
             </div>
             <div className="why-different-card animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.3s'}}>
               <h3>Save More, Stress Less</h3>
-              <p>Cost-effective solutions that reduce your expenses while providing comprehensive services.</p>
+              <p style={{fontSize: '13px'}}>Hiring separate experts is costly. With PLUS & MINUS, you get all services in one place - simple and cost-effective.</p>
             </div>
             <div className="why-different-card animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.4s'}}>
               <h3>Trusted Tools & Partners</h3>
-              <p>Industry-leading technology and partnerships that ensure reliability and accuracy.</p>
+              <p style={{fontSize: '13px'}}>We work with reliable accounting software and systems so your data is always accurate, organised, and accessible</p>
             </div>
           </div>
           
-          <div className="guarantee-section animate-scale-up" data-animate="scale-up">
+          <div className="guarantee-section animate-scale-up" data-animate="scale-up" style={{marginTop: '-40px', padding: '35px 50px'}}>
             <h2 className="guarantee-title">Flawless Company Formation or Your Money Back</h2>
             <p className="guarantee-sub">
               Your business deserves a perfect start.<br />
-              If there's any error from our side, we'll refund the relevant amount - no questions asked.
+              If there's any error from our side, we will refund the relevant amount. No questions asked.
             </p>
           </div>
         </div>
