@@ -245,6 +245,28 @@
   .hero-stats {
     font-size: 13px;
   }
+  
+  /* Who we are section mobile responsiveness */
+  .section-expanded {
+    padding: 80px 20px;
+  }
+  
+  .two-col {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .col-content .section-sub {
+    max-width: 100%;
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  
+  .section-title {
+    font-size: clamp(28px, 8vw, 40px);
+    text-align: center;
+  }
 }
 
 .image-overlay-card {
@@ -444,8 +466,8 @@
 .section-sub {
   font-size: 16px;
   color: var(--gray);
-  line-height: 1.7;
-  max-width: 560px;
+  line-height: 1.4;
+  max-width: 600px;
 }
 
 .section-link {
@@ -505,8 +527,11 @@
 
 .col-content .section-sub {
   color: var(--text);
-  line-height: 1.8;
+  line-height: 1.4;
   opacity: 0.7;
+  max-width: 700px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .col-img-placeholder {

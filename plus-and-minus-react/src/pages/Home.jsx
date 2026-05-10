@@ -284,24 +284,17 @@ const Home = () => {
       <section className="section section-expanded">
         <div className="two-col">
           <div className="animate-slide-left" data-animate="slide-left">
-            <div className="section-tag">Why Plus & Minus</div>
-            <h2 className="section-title" style={{fontSize: 'clamp(48px, 6vw, 72px)'}}>
+            <h2 className="section-title" style={{fontSize: 'clamp(32px, 4.5vw, 48px)'}}>
               Who we are
             </h2>
           </div>
           <div className="col-content animate-slide-right" data-animate="slide-right">
             <p className="section-sub" style={{marginBottom: '0px'}}>
-             A modern accounting and tax firm providing full service to Startups and small businesses. 
-
-We believe that entrepreneurs are society's problem solvers. They see opportunities in complexities and drive us towards progress. Plus and Minus is the advisor, guide, and facilitator to every entrepreneur looking to start and manage a business in India. 
-
-We are the first point of contact for startups whom we handhold from the day they start their business and at every step of the way throughout their entrepreneurship journey.
-
+             A modern accounting and tax firm providing full service to Startups and small businesses.<br /><br />
+We believe that entrepreneurs are society's problem solvers. They see opportunities in complexities and drive us towards progress. Plus and Minus is the advisor, guide, and facilitator to every entrepreneur looking to start and manage a business in India.<br /><br />
+We are the first point of contact for startups whom we handhold from the day they start their business and at every step of the way throughout their entrepreneurship journey.<br /><br />
 We work with Individuals, Professionals, startups and small businesses, ranging from two founders to hundred-person teams.
             </p>
-            <button onClick={scrollToServices} className="section-link" style={{marginTop: '20px'}}>
-              See how we can help →
-            </button>
           </div>
         </div>
       </section>
