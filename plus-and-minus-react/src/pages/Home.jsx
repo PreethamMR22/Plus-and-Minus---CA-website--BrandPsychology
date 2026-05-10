@@ -453,6 +453,9 @@ We work with Individuals, Professionals, startups and small businesses, ranging 
       
       
       
+      {/* Testimonials Section */}
+      <TestimonialsSection />
+      
       {/* Blog Section */}
       <section className="blog-section">
         <div className="blog-header">
@@ -493,10 +496,6 @@ We work with Individuals, Professionals, startups and small businesses, ranging 
           ))}
         </div>
       </section>
-
-      
-      {/* Testimonials Section */}
-      <TestimonialsSection />
       
       
       {/* Final Dark Strip */}
