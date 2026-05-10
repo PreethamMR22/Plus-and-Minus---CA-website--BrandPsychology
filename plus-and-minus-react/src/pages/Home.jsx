@@ -385,13 +385,15 @@ We work with Individuals, Professionals, startups and small businesses, ranging 
       <section className="startup-finance-experts-section">
         <div className="startup-finance-experts-content">
           <div className="startup-finance-card animate-slide-left" data-animate="slide-left">
-            <h2>Startup Finance Experts</h2>
+            <h2>Startup Finance<br /><span>Experts</span></h2>
             <p>
-              Whether you're bootstrapping or backed by venture capital, we support startups at
-              every stage of growth. From bookkeeping and tax compliance to Audit, we take care
-              of your financial operations so you can focus on building and scaling your
-              business.
+              Whether you're bootstrapping or backed<br />by venture capital, we support startups at<br />every stage of growth. From bookkeeping<br />and tax compliance to Audit, we take care<br />of your financial operations so you can focus<br />on building and scaling your business.
             </p>
+            <div className="startup-finance-cta">
+              <Button onClick={() => window.open('tel:917204403746', '_self')} variant="primary" size="large">
+                Talk to an Expert →
+              </Button>
+            </div>
           </div>
           <div className="who-we-work-with animate-slide-right" data-animate="slide-right">
             <h2>Who We Work With</h2>

@@ -2059,7 +2059,6 @@
 }
 
 .startup-finance-card {
-  background: rgb(241, 245, 250);
   border-radius: 16px;
   padding: 40px;
 }
@@ -2067,11 +2066,15 @@
 
 .startup-finance-card h2 {
   font-family: var(--font-head);
-  font-size: clamp(24px, 3vw, 32px);
+  font-size: clamp(38px, 5vw, 48px);
   color: var(--text);
   line-height: 1.3;
-  margin-bottom: 20px;
+  margin-bottom: 32px;
   font-weight: 700;
+}
+
+.startup-finance-card h2 br + span {
+  color: var(--green);
 }
 
 .startup-finance-card p {
@@ -2079,6 +2082,10 @@
   color: var(--gray);
   line-height: 1.7;
   margin: 0;
+}
+
+.startup-finance-cta {
+  margin-top: 24px;
 }
 
 .who-we-work-with {
@@ -2090,31 +2097,27 @@
 .who-we-work-with h2 {
   font-family: var(--font-head);
   font-size: clamp(24px, 3vw, 32px);
-  color: var(--green);
+  color: var(--text);
   line-height: 1.3;
   margin: 0;
   font-weight: 700;
 }
 
 .who-we-work-with ul {
-  list-style: none;
-  padding: 0;
+  list-style: disc;
+  padding-left: 20px;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
 }
 
 .who-we-work-with li {
-  font-size: 16px;
+  font-size: 18px;
   color: var(--text);
-  padding: 12px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 4px 0;
   transition: color 0.2s ease;
-}
-
-.who-we-work-with li:last-child {
-  border-bottom: none;
+  line-height: 1.2;
 }
 
 .who-we-work-with li:hover {
