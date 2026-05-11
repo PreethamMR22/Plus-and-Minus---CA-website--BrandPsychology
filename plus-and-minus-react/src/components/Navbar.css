@@ -22,30 +22,25 @@ nav.scrolled {
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   cursor: pointer;
   text-decoration: none;
   color: inherit;
 }
 
-.nav-logo-icon {
-  width: 36px;
-  height: 36px;
-  background: var(--dark);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.nav-logo-image {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
-.nav-logo-icon span {
-  color: var(--green-bright);
-  font-size: 16px;
-  font-weight: 700;
+.nav-logo:hover .nav-logo-image {
+  transform: scale(1.05);
 }
 
-.nav-logo-text span {
-  color: var(--green-bright);
+.nav-logo:hover .nav-logo-text {
+  opacity: 0.8;
 }
 
 nav.scrolled .nav-logo-text {

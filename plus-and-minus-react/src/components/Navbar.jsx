@@ -24,9 +24,7 @@ const Navbar = () => {
   return (
     <nav className={scrolled ? 'scrolled' : ''}>
       <Link to="/" className="nav-logo">
-        <div className="nav-logo-icon">
-          <span>±</span>
-        </div>
+        <img src="/logos/logo.png" alt="Plus & Minus Accountants & Advisers" className="nav-logo-image" />
         <div className="nav-logo-text">
           Plus <span>&</span> Minus
           <small>ACCOUNTANTS & ADVISERS</small>
