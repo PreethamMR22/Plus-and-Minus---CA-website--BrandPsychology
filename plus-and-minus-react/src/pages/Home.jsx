@@ -285,7 +285,7 @@ const Home = () => {
       <section className="section section-expanded">
         <div className="two-col">
           <div className="animate-slide-left" data-animate="slide-left">
-            <h2 className="section-title" style={{fontSize: 'clamp(32px, 4.5vw, 48px)'}}>
+            <h2 className="section-title" style={{fontSize: 'clamp(32px, 4.5vw, 48px)',color:'black'}}>
               Who we are
             </h2>
           </div>
@@ -463,7 +463,7 @@ We work with Individuals, Professionals, startups and small businesses, ranging 
         <div className="blog-header">
           <div className="blog-header-left animate-slide-left" data-animate="slide-left">
             <div className="section-tag">Latest</div>
-            <h2 className="section-title">Read our Blog</h2>
+            <h2 className="section-title" style={{color:'black'}}>Read our Blog</h2>
             <p className="section-sub">
               Our articles help you manage your business in India with ease. From GST and income tax to registrations and compliance, 
               we provide simple guides, checklists, and clear explanations to keep you on track.

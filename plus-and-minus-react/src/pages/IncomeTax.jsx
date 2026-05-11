@@ -341,6 +341,13 @@ const IncomeTax = () => {
       <TaxOverpaySection />
       <WhatYouGetSection />
       <ImageContentSection />
+
+      {/* Ee Sala Strip Section */}
+      <section className="ee-sala-strip">
+        <div className="ee-sala-content">
+          <p>Ee Sala - file without last minute panic. That's the plan.</p>
+        </div>
+      </section>
       
     </div>
   );

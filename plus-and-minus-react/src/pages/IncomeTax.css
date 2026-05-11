@@ -3,6 +3,27 @@
   padding-top: 0;
 }
 
+/* EE SALA STRIP SECTION */
+.ee-sala-strip {
+  background-color: #000000;
+  padding: 24px 0;
+  width: 100%;
+}
+
+.ee-sala-content {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.ee-sala-content p {
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.4;
+}
+
 /* CLIENTS */
 .clients-section {
   background: #ffffff;
