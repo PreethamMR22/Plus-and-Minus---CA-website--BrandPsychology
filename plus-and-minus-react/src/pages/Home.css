@@ -463,6 +463,10 @@
   color: var(--green);
 }
 
+.tax-overpay-left .section-title .tax-highlight-blue {
+  color: rgb(48, 94, 255) !important;
+}
+
 .section-sub {
   font-size: 16px;
   color: var(--gray);
@@ -1814,7 +1818,7 @@
 }
 
 .tax-overpay-left .section-title .highlight {
-  color: var(--green);
+  color: var(--green-bright) !important;
 }
 
 .tax-overpay-left .section-sub {

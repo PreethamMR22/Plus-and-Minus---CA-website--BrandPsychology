@@ -10,7 +10,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  align-items: start;
+  align-items: center;
 }
 
 .tax-overpay-left {
@@ -35,7 +35,11 @@
 }
 
 .tax-overpay-left .section-title .highlight {
-  color: var(--green);
+  color: var(--green-bright) !important;
+}
+
+.tax-overpay-left .section-title .tax-highlight-blue {
+  color: rgb(48, 94, 255) !important;
 }
 
 .tax-overpay-left .section-sub {
@@ -178,6 +182,14 @@
   .tax-overpay-content {
     grid-template-columns: 1fr;
     gap: 40px;
+    align-items: stretch;
+  }
+
+  .tax-overpay-left {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .tax-overpay-left .section-title {
@@ -205,19 +217,22 @@
 
   .tax-overpay-grid {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 15px;
   }
 
   .tax-issue-card {
-    padding: 16px;
+    padding: 18px;
+    text-align: left;
   }
 
   .tax-issue-card h4 {
-    font-size: 14px;
+    font-size: 16px;
+    margin-bottom: 10px;
   }
 
   .tax-issue-card p {
-    font-size: 12px;
+    font-size: 14px;
+    line-height: 1.6;
   }
 
   .tax-planning-link {
@@ -235,6 +250,13 @@
     gap: 30px;
   }
 
+  .tax-overpay-left {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .tax-overpay-left .section-title {
     font-size: clamp(24px, 7vw, 32px);
   }
@@ -247,8 +269,23 @@
     padding: 12px;
   }
 
+  .tax-overpay-grid {
+    gap: 12px;
+  }
+
   .tax-issue-card {
-    padding: 12px;
+    padding: 15px;
+    text-align: left;
+  }
+
+  .tax-issue-card h4 {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .tax-issue-card p {
+    font-size: 13px;
+    line-height: 1.5;
   }
 
   .tax-planning-link {

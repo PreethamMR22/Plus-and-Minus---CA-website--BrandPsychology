@@ -95,6 +95,19 @@ div .btn {
   font-size: 14px;
 }
 
+.btn.secondary {
+  background: none;
+  color: var(--text);
+  border: 1.5px solid var(--text);
+  padding: 14px 28px;
+  font-size: 14px;
+}
+
+.btn.secondary:hover {
+  background: var(--text);
+  color: var(--white);
+}
+
 .btn.white-rounded {
   background: var(--white);
   color: var(--dark);
