@@ -1,42 +1,66 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPeopleRoof, faBullseye, faHandshake, faUserTag } from '@fortawesome/free-solid-svg-icons';
 import Button from '../components/Button';
 import './Accounting.css';
 
 const Accounting = () => {
+  const observerRefs = useRef(new Map());
+
+  // Intersection observer for animations
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animated');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    // Observe all animated elements
+    const animatedElements = document.querySelectorAll('[data-animate]');
+    animatedElements.forEach((el) => {
+      observer.observe(el);
+      observerRefs.current.set(el, observer);
+    });
+
+    return () => {
+      observerRefs.current.forEach((obs, el) => {
+        obs.unobserve(el);
+      });
+    };
+  }, []);
   return (
     <div className="accounting-page">
       {/* Hero Section */}
       <section className="accounting-hero">
         <div className="accounting-hero-content">
-          <div className="hero-tag">Accounting Services</div>
-          <h1>You didn't start a startup to do Accounting. But we did.</h1>
-          <p>
-            Professional accounting services for startups and small businesses. 
-            Focus on growing your business while we handle your numbers with precision and care.
+          <h1 className="animate-slide-up" data-animate="slide-up" style={{animationDelay: '0.2s'}}>
+            You didn't start a startup <br /> to do <span style={{color: 'var(--green)'}}>Accounting.</span> <br /> <span style={{color: 'var(--green)'}}>But we did.</span>
+          </h1>
+          <p className="animate-fade-in" data-animate="fade-in" style={{animationDelay: '0.4s', color: 'var(--darker)'}}>
+            Accounting for startups and small businesses, done right. <br /> We keep your books clean every month. 
+            You get one clear report. And peace of mind.
           </p>
-          <div className="hero-buttons">
-            <Link to="/contact" className="btn btn-primary">
-              Talk to an Expert
-            </Link>
-            <Link to="/contact" className="btn btn-secondary">
-              Get Free Consultation
-            </Link>
+          <div className="hero-btns animate-slide-up" data-animate="slide-up" style={{animationDelay: '0.6s'}}>
+            <Button to="/contact" variant="hero-primary" size="large">
+              Talk to an Expert →
+            </Button>
+            <Button onClick={() => window.open('https://wa.me/917204403746?text=Hi! I would like to know more about your accounting services.', '_blank')} variant="hero-outline" size="large">
+              WhatsApp Us Now
+            </Button>
           </div>
-          
-          <div className="hero-features">
-            <div className="hero-feature">
-              <span className="hero-feature-icon">®</span>
-              <span>Expert Accountants</span>
-            </div>
-            <div className="hero-feature">
-              <span className="hero-feature-icon">®</span>
-              <span>Real-time Financial Insights</span>
-            </div>
-            <div className="hero-feature">
-              <span className="hero-feature-icon">®</span>
-              <span>100% Compliance Guaranteed</span>
-            </div>
+          <div className="hero-stats animate-fade-in" data-animate="fade-in" style={{animationDelay: '0.8s'}}>
+            <span>150+ Google Reviews</span>
+            <span className="bullet">•</span>
+            <span>Serving Bengaluru since 2020</span>
+            <span className="bullet">•</span>
+            <span>500+ clients</span>
           </div>
         </div>
         
@@ -73,11 +97,11 @@ const Accounting = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="speech-bubble">
-          <div className="bubble-content">
-            <span className="bubble-brand">PLUS & MINUS</span>
-            <span className="bubble-text">Your monthly financial statements are ready.</span>
+          <div className="speech-bubble">
+            <div className="bubble-content">
+              <span className="bubble-brand">PLUS & MINUS</span>
+              <span className="bubble-text">Your monthly financial statements are ready.</span>
+            </div>
           </div>
         </div>
       </section>
@@ -85,40 +109,42 @@ const Accounting = () => {
       {/* Tailor Made Services Section */}
       <section className="tailor-made-services">
         <div className="tailor-made-content">
-          <h2>Tailor Made Services To Control <br />Your Finance Team</h2>
-          <p className="subtitle">Accurate books, timely taxes, crisp reports.</p>
+          <h2 style={{fontSize: 'clamp(28px, 3.5vw, 40px)', textAlign: 'center'}}>Everything your books need. <br /><span style={{color: 'var(--green)'}}>Every month.</span></h2>
+          <p className="subtitle" style={{ color: 'black', fontSize: '15px' }}>Accurate books, timely taxes, crisp reports.</p>
           
           <div className="services-grid">
             <div className="service-card">
               <div className="service-icon">
-                <span>�</span>
+                 <FontAwesomeIcon icon={faPeopleRoof} />
               </div>
-              <h3>Accounting & Bookkeeping Services</h3>
-              <p>We keep your books clean and your mind clear. Say goodbye to the stress of balancing the numbers.</p>
+              <h3>Accounting & <br />Bookkeeping Services</h3>
+              <p style={{color: 'black'}}>Clean books, closed monthly. Know exactly where your money stands.</p>
             </div>
             
             <div className="service-card">
               <div className="service-icon">
-                <span>📋</span>
+                <FontAwesomeIcon icon={faBullseye} />
+               
               </div>
-              <h3>GST Filing & Monthly Reconciliation</h3>
-              <p>Stay on the right side of compliance with hassle-free GST filing and reconciliation - no headaches, just results.</p>
+              <h3>GST Filing & Monthly<br />Reconciliation</h3>
+              <p style={{color: 'black'}}>Filed on time, ITC maximised. No penalties, no stress.</p>
             </div>
             
             <div className="service-card">
               <div className="service-icon">
-                <span>📝</span>
+                 <FontAwesomeIcon icon={faUserTag} />
               </div>
               <h3>TDS Filing</h3>
-              <p>TDS filing that's seamless, stress-free, and penalty-proof. We've got it covered.</p>
+              <p style={{color: 'black'}}>Seamless, on-time, penalty-proof. We've got it covered.</p>
             </div>
             
             <div className="service-card">
               <div className="service-icon">
-                <span>📈</span>
+                <FontAwesomeIcon icon={faHandshake} />
+               
               </div>
               <h3>Monthly MIS Report</h3>
-              <p>Get sharp, actionable insights every month. Our MIS reports cut through the noise to show you what matters.</p>
+              <p style={{color: 'black'}}>Revenue, expenses, profit - delivered by the 1st. In plain language.</p>
             </div>
           </div>
           

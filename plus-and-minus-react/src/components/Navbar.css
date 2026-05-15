@@ -179,6 +179,21 @@ nav.scrolled .nav-link.active {
   gap: 10px;
 }
 
+/* Base button styles for navbar */
+.btn {
+  font-family: var(--font-body);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  border-radius: 50px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  gap: 8px;
+}
+
 /* More specific selectors to override Button.css */
 nav .btn-outline,
 .nav-actions .btn-outline {

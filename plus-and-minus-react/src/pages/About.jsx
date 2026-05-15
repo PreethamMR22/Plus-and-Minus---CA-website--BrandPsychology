@@ -31,7 +31,7 @@ const About = () => {
       photo: '👨‍💼',
       name: 'Punith Krishna',
       role: 'Managing Partner · Taxation Expert, FCA'
-    },
+    },  
     {
       photo: '👨‍💼',
       name: 'N Raghu Kumar',
