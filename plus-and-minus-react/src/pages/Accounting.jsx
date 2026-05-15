@@ -40,14 +40,14 @@ const Accounting = () => {
       {/* Hero Section */}
       <section className="accounting-hero">
         <div className="accounting-hero-content">
-          <h1 className="animate-slide-up" data-animate="slide-up" style={{animationDelay: '0.2s'}}>
-            You didn't start a startup <br /> to do <span style={{color: 'var(--green)'}}>Accounting.</span> <br /> <span style={{color: 'var(--green)'}}>But we did.</span>
+          <h1 className="animate-slide-up" data-animate="slide-up" style={{ animationDelay: '0.2s' }}>
+            You didn't start a startup <br /> to do <span style={{ color: 'var(--green)' }}>Accounting.</span> <br /> <span style={{ color: 'var(--green)' }}>But we did.</span>
           </h1>
-          <p className="animate-fade-in" data-animate="fade-in" style={{animationDelay: '0.4s', color: 'var(--darker)'}}>
-            Accounting for startups and small businesses, done right. <br /> We keep your books clean every month. 
+          <p className="animate-fade-in" data-animate="fade-in" style={{ animationDelay: '0.4s', color: 'var(--darker)' }}>
+            Accounting for startups and small businesses, done right. <br /> We keep your books clean every month.
             You get one clear report. And peace of mind.
           </p>
-          <div className="hero-btns animate-slide-up" data-animate="slide-up" style={{animationDelay: '0.6s'}}>
+          <div className="hero-btns animate-slide-up" data-animate="slide-up" style={{ animationDelay: '0.6s' }}>
             <Button to="/contact" variant="hero-primary" size="large">
               Talk to an Expert →
             </Button>
@@ -55,7 +55,7 @@ const Accounting = () => {
               WhatsApp Us Now
             </Button>
           </div>
-          <div className="hero-stats animate-fade-in" data-animate="fade-in" style={{animationDelay: '0.8s'}}>
+          <div className="hero-stats animate-fade-in" data-animate="fade-in" style={{ animationDelay: '0.8s' }}>
             <span>150+ Google Reviews</span>
             <span className="bullet">•</span>
             <span>Serving Bengaluru since 2020</span>
@@ -63,11 +63,11 @@ const Accounting = () => {
             <span>500+ clients</span>
           </div>
         </div>
-        
+
         <div className="accounting-hero-image">
-          <img 
-            src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
-            alt="Accounting professional" 
+          <img
+            src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+            alt="Accounting professional"
           />
           <div className="financial-summary-card">
             <div className="card-header">
@@ -109,45 +109,45 @@ const Accounting = () => {
       {/* Tailor Made Services Section */}
       <section className="tailor-made-services">
         <div className="tailor-made-content">
-          <h2 style={{fontSize: 'clamp(28px, 3.5vw, 40px)', textAlign: 'center'}}>Everything your books need. <br /><span style={{color: 'var(--green)'}}>Every month.</span></h2>
+          <h2 style={{ fontSize: 'clamp(28px, 3.5vw, 40px)', textAlign: 'center' }}>Everything your books need. <br /><span style={{ color: 'var(--green)' }}>Every month.</span></h2>
           <p className="subtitle" style={{ color: 'black', fontSize: '15px' }}>Accurate books, timely taxes, crisp reports.</p>
-          
+
           <div className="services-grid">
             <div className="service-card">
               <div className="service-icon">
-                 <FontAwesomeIcon icon={faPeopleRoof} />
+                <FontAwesomeIcon icon={faPeopleRoof} />
               </div>
               <h3>Accounting & <br />Bookkeeping Services</h3>
-              <p style={{color: 'black'}}>Clean books, closed monthly. Know exactly where your money stands.</p>
+              <p style={{ color: 'black' }}>Clean books, closed monthly. Know exactly where your money stands.</p>
             </div>
-            
+
             <div className="service-card">
               <div className="service-icon">
                 <FontAwesomeIcon icon={faBullseye} />
-               
+
               </div>
               <h3>GST Filing & Monthly<br />Reconciliation</h3>
-              <p style={{color: 'black'}}>Filed on time, ITC maximised. No penalties, no stress.</p>
+              <p style={{ color: 'black' }}>Filed on time, ITC maximised. No penalties, no stress.</p>
             </div>
-            
+
             <div className="service-card">
               <div className="service-icon">
-                 <FontAwesomeIcon icon={faUserTag} />
+                <FontAwesomeIcon icon={faUserTag} />
               </div>
               <h3>TDS Filing</h3>
-              <p style={{color: 'black'}}>Seamless, on-time, penalty-proof. We've got it covered.</p>
+              <p style={{ color: 'black' }}>Seamless, on-time, penalty-proof. We've got it covered.</p>
             </div>
-            
+
             <div className="service-card">
               <div className="service-icon">
                 <FontAwesomeIcon icon={faHandshake} />
-               
+
               </div>
               <h3>Monthly MIS Report</h3>
-              <p style={{color: 'black'}}>Revenue, expenses, profit - delivered by the 1st. In plain language.</p>
+              <p style={{ color: 'black' }}>Revenue, expenses, profit - delivered by the 1st. In plain language.</p>
             </div>
           </div>
-          
+
           <div className="cta-button">
             <Link to="/contact" className="btn btn-primary">
               Talk to an Expert
@@ -155,101 +155,213 @@ const Accounting = () => {
           </div>
         </div>
       </section>
-
       {/* Simple Process Section */}
       <section className="process-section">
-        <div className="process-content">
-          <div className="process-image">
-            <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
-              alt="Simple Process" 
+        <div className="process-header" style={{ textAlign: 'center', marginBottom: '50px' }}>
+          <h2 style={{ fontSize: 'clamp(22px, 3vw, 32px)', marginBottom: '16px', color: 'var(--darker)' }}>Simple Process<span style={{ color: 'rgb(41, 80, 218)' }}>. Powerful Results</span></h2>
+          <p className="subtitle" style={{ maxWidth: '800px', margin: '0 auto', fontSize: '16px', color: 'var(--gray)', lineHeight: '1.6' }}>
+            Streamline your finances with a structured approach.
+          </p>
+        </div>
+        <div className="process-content" style={{ alignItems: 'center' }}>
+          <div className="process-image" style={{ position: 'sticky', top: '100px' }}>
+            <img
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Simple Process"
+              style={{ borderRadius: '16px', width: '100%', height: '420px', objectFit: 'cover', display: 'block' }}
             />
           </div>
-          <div className="process-steps">
-            <h2>Simple Process. Powerful Results</h2>
-            <p className="subtitle">Streamline your finances with a structured approach. Each phase enhances clarity and control, building a strong foundation for long-term financial success</p>
-            
-            <div className="step">
+          <div className="process-steps" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <div className="step" style={{ margin: 0 }}>
               <h3>Setup</h3>
-              <p>We start by understanding your business, current setup, and requirements. Our team will guide you through sharing the necessary documents and set up your accounting, compliance, and systems properly - so everything is structured from day one.</p>
+              <p>We get your books in order. We understand your business, set up your accounting system properly from day one.</p>
             </div>
-            
-            <div className="step">
+
+            <div className="step" style={{ margin: 0 }}>
               <h3>Manage</h3>
-              <p>Once everything is set up, we take care of your day-to-day accounting, bookkeeping, and tax compliance. From maintaining accurate records to handling GST, TDS, and filings, we ensure everything runs smoothly without you having to follow up.</p>
+              <p>We run it every month. Bookkeeping, GST, TDS, filings - handled. You never have to follow up with us.</p>
             </div>
-            
-            <div className="step">
+
+            <div className="step" style={{ margin: 0 }}>
               <h3>Grow</h3>
-              <p>With your finances in order, we go beyond compliance. We provide regular reports, insights, and guidance to help you understand your numbers better, save taxes, and make smarter business decisions as you grow.</p>
+              <p>We give you insights, not just numbers. Monthly MIS, tax-saving tips, and financial clarity to make smarter decisions.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Simple Process Section */}
-      <section className="why-choose-section">
-        <div className="why-choose-content">
-          <h2>Simple Process. Powerful Results</h2>
-          <p className="subtitle">Streamline your finances with a structured approach. Each phase enhances clarity <br />and control, building a strong foundation for long-term financial success</p>
-          
-          <div className="why-choose-columns">
-            <div className="why-column">
-              <h3>Setup (Day 1-15)</h3>
-              <ul>
-                <li>Understanding Your Business</li>
-                <li>We start by understanding your business, current setup, and challenges to identify what needs to be done.</li>
-                <li>Document & Data Collection</li>
-                <li>Our team will guide you in sharing the required documents and access, making the process smooth and hassle-free</li>
-                <li>Accounting & System Setup</li>
-                <li>We set up your accounting structure, tools, and compliance systems so everything is organized from day one.</li>
-                <li>Start Operations</li>
-                <li>Once everything is ready, we start managing your accounts and ensure a smooth transition.</li>
-              </ul>
+      {/* Fixed Pricing Banner Section */}
+      <section className="pricing-banner-section">
+        <div className="pricing-banner">
+          <div className="banner-left">
+            <h2>
+              Fixed monthly<br />pricing.
+            </h2>
+            <p>
+              Know exactly what to expect every month.<br />
+              No surprises, just clear and transparent service.
+            </p>
+          </div>
+          <div className="banner-right">
+            <div className="banner-feature">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M8 12l3 3 5-6" />
+              </svg>
+              <span>No hourly billing. Simple fixed pricing.</span>
             </div>
-            
-            <div className="why-column">
-              <h3>Manage (Day 15-60)</h3>
-              <ul>
-                <li>Bookkeeping & Reconciliation</li>
-                <li>We maintain your books regularly and ensure all transactions are recorded accurately.</li>
-                <li>Tax Filing & Compliance</li>
-                <li>We handle GST, TDS, and other compliance filings on time, so you don't have to worry about deadlines.</li>
-                <li>Monthly Reports & Insights</li>
-                <li>You receive clear financial reports that help you understand your business performance.</li>
-              </ul>
+            <div className="banner-feature">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M8 12l3 3 5-6" />
+              </svg>
+              <span>No hidden Fees. What you see is what you pay.</span>
             </div>
-            
-            <div className="why-column">
-              <h3>Grow (Ongoing)</h3>
-              <ul>
-                <li>Financial Review</li>
-                <li>We regularly review your financials to identify areas of improvement and growth.</li>
-                <li>Tax Planning & Optimization</li>
-                <li>We help you save taxes legally and improve overall financial efficiency.</li>
-                <li>Business Support & Scaling</li>
-                <li>As your business grows, we support you with better systems, insights, and decision-making.</li>
-              </ul>
+            <div className="banner-feature">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M8 12l3 3 5-6" />
+              </svg>
+              <span>Full support from our dedicated team is always included.</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Final CTA Section */}
-      <section className="final-cta">
-        <div className="final-cta-content">
-          <div className="final-cta-left">
-            <h2>Ready to take control of your finances?</h2>
-            <p>Talk to our experts today. No obligation, just clarity.</p>
+      {/* What's Included Section */}
+      <section className="whats-included-section">
+        <div className="whats-included-content">
+          <h2 className="whats-included-title">What's included<span style={{ color: '#1949C6' }}>.</span></h2>
+          <div className="whats-included-grid">
+
+            <div className="included-card">
+              <div className="included-number">1</div>
+              <h3 className="included-card-title">Monthly close</h3>
+              <p className="included-card-text">Your accounts are updated and finalized on time every month with accurate reports and proper accounting.</p>
+            </div>
+
+            <div className="included-card">
+              <div className="included-number">2</div>
+              <h3 className="included-card-title">Bank & credit card reconciliation</h3>
+              <p className="included-card-text">Transactions are checked and matched regularly to avoid mistakes and maintain accurate accounts.</p>
+            </div>
+
+            <div className="included-card">
+              <div className="included-number">3</div>
+              <h3 className="included-card-title">Journal entries & adjustments</h3>
+              <p className="included-card-text">Accruals, reclassifications, and adjusting entries recorded accurately so your books reflect the full picture.</p>
+            </div>
+
+            <div className="included-card">
+              <div className="included-number">4</div>
+              <h3 className="included-card-title">Payroll Management</h3>
+              <p className="included-card-text">Accurate salary processing, payslips, PF, ESI, and payroll compliance handled on time by our dedicated support team.</p>
+            </div>
+
+            <div className="included-card">
+              <div className="included-number">5</div>
+              <h3 className="included-card-title">Financial statements</h3>
+              <p className="included-card-text">Profit & Loss, Balance Sheet, TDS, GST working, and other financial reports prepared and reviewed by our team.</p>
+            </div>
+
+            <div className="included-card">
+              <div className="included-number">6</div>
+              <h3 className="included-card-title">Dedicated accounting team</h3>
+              <p className="included-card-text">A dedicated team that understands your business. Consistent, reliable, and always reachable.</p>
+            </div>
+
           </div>
-          <div className="final-cta-right">
-            <Button to="/contact" variant="light" className="lets-talk-button">
-              Let's Talk →
+        </div>
+      </section>
+      {/* Target Audience Section */}
+      <section className="target-audience-section">
+        <div className="target-audience-content">
+          <h2 className="target-audience-title">
+            From day one <span style={{ color: '#1949C6' }}>founder to growing team</span><br />
+            we have got you.
+          </h2>
+          <div className="target-audience-grid">
+
+            <div className="audience-card">
+              <div className="audience-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Solo Founder" />
+              </div>
+              <h3 className="audience-card-title">Solo Founders</h3>
+              <p className="audience-card-text">
+                Starting alone doesn't mean doing everything alone. We support you from day one with accounting, tax compliance, and clear guidance, so you can focus on building your business with confidence.
+              </p>
+            </div>
+
+            <div className="audience-card">
+              <div className="audience-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Small Businesses" />
+              </div>
+              <h3 className="audience-card-title">Small businesses</h3>
+              <p className="audience-card-text">
+                As your business grows, so do your financial responsibilities. We handle your accounting, tax filings, and compliance, giving you the clarity and control you need to make better business decisions.
+              </p>
+            </div>
+
+            <div className="audience-card">
+              <div className="audience-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Ecommerce" />
+              </div>
+              <h3 className="audience-card-title">Ecommerce</h3>
+              <p className="audience-card-text">
+                Selling on Amazon, Flipkart, or Meesho? We simplify your ecommerce accounting, manage GST and reconciliations, and keep your finances in control - so you can focus on scaling your business.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      {/* Accounting for Startups Section */}
+      <section className="startups-simplified-section">
+        <div className="startups-content-wrapper">
+          <div className="startups-text-side">
+            <h2>
+              <span style={{ whiteSpace: 'nowrap' }}>Accounting for Startups,</span><br />
+              <span style={{ color: '#1949C6' }}>Simplified.</span>
+            </h2>
+            <p>
+              Our finance experts handle your books so you can<br />
+              focus on your business
+            </p>
+            <Button variant="primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+              Talk to an Expert
             </Button>
           </div>
+          <div className="startups-image-side">
+            <div className="startups-image-container">
+              <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Accounting Simplified" />
+              <div className="floating-tags">
+                <div className="tag-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#1949C6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                  Balance Sheet
+                </div>
+                <div className="tag-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#1949C6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                  Income Statement
+                </div>
+                <div className="tag-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#1949C6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                  Audit Report
+                </div>
+                <div className="tag-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#1949C6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                  Ledger Statement
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-      
+
+
+
     </div>
   );
 };

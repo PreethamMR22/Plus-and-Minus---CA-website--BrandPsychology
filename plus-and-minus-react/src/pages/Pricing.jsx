@@ -98,36 +98,36 @@ const Pricing = () => {
       <div className="pricing-section-wrapper">
         <section className="section">
           <div className="pricing-grid">
-          {pricingPlans.map((plan, index) => (
-            <div key={index} className={`pricing-card ${plan.featured ? 'featured' : ''}`}>
-              {plan.badge && <div className="pricing-badge">{plan.badge}</div>}
-              <div className="pricing-name">{plan.name}</div>
-              <div className="pricing-desc">{plan.description}</div>
-              <div className="pricing-price">
-                {plan.price}<small>{plan.period}</small>
+            {pricingPlans.map((plan, index) => (
+              <div key={index} className={`pricing-card ${plan.featured ? 'featured' : ''}`}>
+                {plan.badge && <div className="pricing-badge">{plan.badge}</div>}
+                <div className="pricing-name">{plan.name}</div>
+                <div className="pricing-desc">{plan.description}</div>
+                <div className="pricing-price">
+                  {plan.price}<small>{plan.period}</small>
+                </div>
+                <div className="pricing-period">
+                  {plan.name === 'Business' ? 'per year' : 'per filing'}
+                </div>
+                <ul className="pricing-features">
+                  {plan.features.map((feature, idx) => (
+                    <li key={idx}>{feature}</li>
+                  ))}
+                </ul>
+                <Button
+                  to="/contact"
+                  className={`btn-pricing ${plan.featured ? 'featured' : ''}`}
+                  variant="pricing"
+                >
+                  Get Started →
+                </Button>
               </div>
-              <div className="pricing-period">
-                {plan.name === 'Business' ? 'per year' : 'per filing'}
-              </div>
-              <ul className="pricing-features">
-                {plan.features.map((feature, idx) => (
-                  <li key={idx}>{feature}</li>
-                ))}
-              </ul>
-              <Button 
-                to="/contact" 
-                className={`btn-pricing ${plan.featured ? 'featured' : ''}`}
-                variant="pricing"
-              >
-                Get Started →
-              </Button>
-            </div>
-          ))}
-        </div>
-        <p className="pricing-note">
-          All prices exclusive of GST. Pay only after successful filing. Zero upfront charges.
-        </p>
-      </section>
+            ))}
+          </div>
+          <p className="pricing-note">
+            All prices exclusive of GST. Pay only after successful filing. Zero upfront charges.
+          </p>
+        </section>
       </div>
 
       {/* Add-ons */}
