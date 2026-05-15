@@ -17,18 +17,18 @@ const useCounter = (end, duration = 2000, startOnView = false) => {
       hasStarted.current = true;
       const startTime = Date.now();
       const endValue = typeof end === 'string' ? parseInt(end) : end;
-      
+
       const animate = () => {
         const now = Date.now();
         const progress = Math.min((now - startTime) / duration, 1);
-        
+
         setCount(Math.floor(progress * endValue));
-        
+
         if (progress < 1) {
           requestAnimationFrame(animate);
         }
       };
-      
+
       requestAnimationFrame(animate);
     }
   }, [end, duration, startOnView]);
@@ -38,18 +38,18 @@ const useCounter = (end, duration = 2000, startOnView = false) => {
       hasStarted.current = true;
       const startTime = Date.now();
       const endValue = typeof end === 'string' ? parseInt(end) : end;
-      
+
       const animate = () => {
         const now = Date.now();
         const progress = Math.min((now - startTime) / duration, 1);
-        
+
         setCount(Math.floor(progress * endValue));
-        
+
         if (progress < 1) {
           requestAnimationFrame(animate);
         }
       };
-      
+
       requestAnimationFrame(animate);
     }
   };
@@ -195,19 +195,19 @@ const Home = () => {
       category: 'PLC',
       title: 'Setting up a Private Limited Company (PLC) in India : A comprehensive guide',
       description: 'A private limited company is the most flexible and credible structure of businesses. It is a type of structure wherein investors can be separate and the people managing the company that is directors can be different.',
-      image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80'
     },
     {
       category: 'LLP',
       title: 'Setting up a Limited Liability Partnership (LLP) in India : A comprehensive guide',
       description: 'A Limited Liability Partnership (LLP) is a partnership in which some or all partners have limited liabilities. It therefore can exhibit elements of a partnership firm and a private limited company, where the business is carried out in a corporate framework, guided by terms of the mutually adopted partnership deed.',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80'
     },
     {
       category: 'LLP- Form 11',
       title: 'Annual return of a Limited Liability Partnership (LLP) - Form 11',
       description: 'Form 11 is an annual return required for Limited Liability Partnerships (LLPs) in India, to be filed with the Registrar of Companies (RoC) via the Ministry of Corporate Affairs (MCA) website.',
-      image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&q=80'
     }
   ];
 
@@ -249,22 +249,22 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
-          <h1 className="animate-slide-up" data-animate="slide-up" style={{animationDelay: '0.2s'}}>
-            <span><span style={{color: 'var(--text)'}}>One team for all your</span> accounting <span style={{color: 'var(--green-bright)'}}>and</span> tax <span style={{color: 'var(--text)'}}>needs</span></span>
+          <h1 className="animate-slide-up" data-animate="slide-up" style={{ animationDelay: '0.2s' }}>
+            <span><span style={{ color: 'var(--text)' }}>One team for all your</span> accounting <span style={{ color: 'var(--green-bright)' }}>and</span> tax <span style={{ color: 'var(--text)' }}>needs</span></span>
           </h1>
-          <p className="animate-fade-in" data-animate="fade-in" style={{animationDelay: '0.4s'}}>
+          <p className="animate-fade-in" data-animate="fade-in" style={{ animationDelay: '0.4s' }}>
             Namma Bengaluru's accounting, compliance and tax services designed for professionals, startups and small businesses, so<br />
             you can focus on what matters most.
           </p>
-          <div className="hero-btns animate-slide-up" data-animate="slide-up" style={{animationDelay: '0.6s'}}>
+          <div className="hero-btns animate-slide-up" data-animate="slide-up" style={{ animationDelay: '0.6s' }}>
             <Button to="/contact" variant="hero-primary" size="large">
               Get Started  {' ->'}
             </Button>
             <Button onClick={openWhatsApp} variant="hero-outline" size="large">
-              Let's Talk 
+              Let's Talk
             </Button>
           </div>
-          <div className="hero-stats animate-fade-in" data-animate="fade-in" style={{animationDelay: '0.8s'}}>
+          <div className="hero-stats animate-fade-in" data-animate="fade-in" style={{ animationDelay: '0.8s' }}>
             <span>150+ Google Reviews</span>
             <span className="bullet">•</span>
             <span>Serving Bengaluru since 2020</span>
@@ -272,11 +272,11 @@ const Home = () => {
             <span>500+ clients</span>
           </div>
         </div>
-        
+
         <div className="hero-image">
-          <img 
-            src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
-            alt="Accounting and Tax Services" 
+          <img
+            src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80"
+            alt="Accounting and Tax Services"
           />
         </div>
       </section>
@@ -285,25 +285,25 @@ const Home = () => {
       <section className="section section-expanded">
         <div className="two-col">
           <div className="animate-slide-left" data-animate="slide-left">
-            <h2 className="section-title" style={{fontSize: 'clamp(32px, 4.5vw, 48px)',color:'black'}}>
+            <h2 className="section-title" style={{ fontSize: 'clamp(32px, 4.5vw, 48px)', color: 'black' }}>
               Who we are
             </h2>
           </div>
           <div className="col-content animate-slide-right" data-animate="slide-right">
-            <p className="section-sub" style={{marginBottom: '0px'}}>
-             A modern accounting and tax firm providing full service to Startups and small businesses.<br /><br />
-We believe that entrepreneurs are society's problem solvers. They see opportunities in complexities and drive us towards progress. Plus and Minus is the advisor, guide, and facilitator to every entrepreneur looking to start and manage a business in India.<br /><br />
-We are the first point of contact for startups whom we handhold from the day they start their business and at every step of the way throughout their entrepreneurship journey.<br /><br />
-We work with Individuals, Professionals, startups and small businesses, ranging from two founders to hundred-person teams.
+            <p className="section-sub" style={{ marginBottom: '0px' }}>
+              A modern accounting and tax firm providing full service to Startups and small businesses.<br /><br />
+              We believe that entrepreneurs are society's problem solvers. They see opportunities in complexities and drive us towards progress. Plus and Minus is the advisor, guide, and facilitator to every entrepreneur looking to start and manage a business in India.<br /><br />
+              We are the first point of contact for startups whom we handhold from the day they start their business and at every step of the way throughout their entrepreneurship journey.<br /><br />
+              We work with Individuals, Professionals, startups and small businesses, ranging from two founders to hundred-person teams.
             </p>
           </div>
         </div>
       </section>
 
-      
+
       {/* Our Services */}
       <section id="services" className="services-section">
-                <h2 className="section-title">Everything in one place.</h2>
+        <h2 className="section-title">Everything in one place.</h2>
         <p className="section-sub">
           Everything you need to launch, operate, and grow your business, in one place.
         </p>
@@ -313,11 +313,11 @@ We work with Individuals, Professionals, startups and small businesses, ranging 
               <div className="service-icon">{service.icon}</div>
               <h3 className="service-title">{service.title}</h3>
               <p className="service-description">{service.description.split('\n').map((line, index) => (
-                  <span key={index}>
-                    {line}
-                    {index < service.description.split('\n').length - 1 && <br />}
-                  </span>
-                ))}</p>
+                <span key={index}>
+                  {line}
+                  {index < service.description.split('\n').length - 1 && <br />}
+                </span>
+              ))}</p>
               <ul className="service-list">
                 {service.services.map((item, idx) => (
                   <li key={idx}>{item}</li>
@@ -336,34 +336,34 @@ We work with Individuals, Professionals, startups and small businesses, ranging 
       {/* Mission Section */}
       <section className="mission-section">
         <div className="section-content">
-    
-          <h2 className="section-title animate-slide-up" data-animate="slide-up" style={{fontSize: 'clamp(24px, 3vw, 36px)'}}>
+
+          <h2 className="section-title animate-slide-up" data-animate="slide-up" style={{ fontSize: 'clamp(24px, 3vw, 36px)' }}>
             We know you're busy growing your business.<br />
-            <span>So, we keep it simple with <span style={{color: 'white'}}>4</span> easy steps.</span>
+            <span>So, we keep it simple with <span style={{ color: 'white' }}>4</span> easy steps.</span>
           </h2>
           <div className="mission-steps">
-            <div className="mission-step animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.1s'}}>
+            <div className="mission-step animate-scale-up" data-animate="scale-up" style={{ animationDelay: '0.1s' }}>
               <div className="step-number">1</div>
               <div className="step-content">
                 <h3>Consultation</h3>
                 <p>Share your requirements with our experts for a free consultation.</p>
               </div>
             </div>
-            <div className="mission-step animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.2s'}}>
+            <div className="mission-step animate-scale-up" data-animate="scale-up" style={{ animationDelay: '0.2s' }}>
               <div className="step-number">2</div>
               <div className="step-content">
                 <h3>Documentation</h3>
                 <p>We help prepare and review all necessary documents.</p>
               </div>
             </div>
-            <div className="mission-step animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.3s'}}>
+            <div className="mission-step animate-scale-up" data-animate="scale-up" style={{ animationDelay: '0.3s' }}>
               <div className="step-number">3</div>
               <div className="step-content">
                 <h3>Application</h3>
                 <p>We submit your application and follow up with authorities.</p>
               </div>
             </div>
-            <div className="mission-step animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.4s'}}>
+            <div className="mission-step animate-scale-up" data-animate="scale-up" style={{ animationDelay: '0.4s' }}>
               <div className="step-number">4</div>
               <div className="step-content">
                 <h3>Approval</h3>
@@ -371,7 +371,7 @@ We work with Individuals, Professionals, startups and small businesses, ranging 
               </div>
             </div>
           </div>
-          <div className="mission-buttons animate-slide-up" data-animate="slide-up" style={{animationDelay: '0.5s'}}>
+          <div className="mission-buttons animate-slide-up" data-animate="slide-up" style={{ animationDelay: '0.5s' }}>
             <Button to="/contact" variant="hero-primary" size="large">
               Start Your Journey →
             </Button>
@@ -379,7 +379,7 @@ We work with Individuals, Professionals, startups and small businesses, ranging 
         </div>
       </section>
 
-      
+
 
       {/* Startup Finance Experts Section */}
       <section className="startup-finance-experts-section">
@@ -414,35 +414,35 @@ We work with Individuals, Professionals, startups and small businesses, ranging 
       {/* Why we're Different Section */}
       <section className="why-different-section">
         <div className="section-content">
-          <div className="section-tag animate-fade-in" data-animate="fade-in" style={{color: 'white'}}>Why we're Different</div>
-          <h2 className="section-title animate-slide-up" data-animate="slide-up" style={{fontSize: 'clamp(28px, 3.5vw, 42px)'}}>
-            <span style={{color: 'rgb(41, 80, 218)'}}>Faster, Cheaper, Easier</span> is Possible With <span style={{color: '#1a1a1a'}}>One Platform</span>
+          <div className="section-tag animate-fade-in" data-animate="fade-in" style={{ color: 'white' }}>Why we're Different</div>
+          <h2 className="section-title animate-slide-up" data-animate="slide-up" style={{ fontSize: 'clamp(28px, 3.5vw, 42px)' }}>
+            <span style={{ color: 'rgb(41, 80, 218)' }}>Faster, Cheaper, Easier</span> is Possible With <span style={{ color: '#1a1a1a' }}>One Platform</span>
           </h2>
-          <p className="section-sub animate-fade-in" data-animate="fade-in" style={{maxWidth: '800px', marginBottom: '40px'}}>
+          <p className="section-sub animate-fade-in" data-animate="fade-in" style={{ maxWidth: '800px', marginBottom: '40px' }}>
             When your Incorporation, taxes, and accounting are all managed separately, you lose time and money.<br />
             We bring everything together, so you can focus on what matters.
           </p>
-          
+
           <div className="why-different-grid">
-            <div className="why-different-card animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.1s'}}>
+            <div className="why-different-card animate-scale-up" data-animate="scale-up" style={{ animationDelay: '0.1s' }}>
               <h3>One team. No juggling.</h3>
-              <p style={{fontSize: '13px'}}>Starting a business can be confusing, especially for the first time. We guide you step by step so you always know what to do next.</p>
+              <p style={{ fontSize: '13px' }}>Starting a business can be confusing, especially for the first time. We guide you step by step so you always know what to do next.</p>
             </div>
-            <div className="why-different-card animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.2s'}}>
+            <div className="why-different-card animate-scale-up" data-animate="scale-up" style={{ animationDelay: '0.2s' }}>
               <h3>No More Running Around</h3>
-              <p style={{fontSize: '13px'}}>No need to deal with different people for tax, accounts, and compliance. We handle everything in one place.</p>
+              <p style={{ fontSize: '13px' }}>No need to deal with different people for tax, accounts, and compliance. We handle everything in one place.</p>
             </div>
-            <div className="why-different-card animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.3s'}}>
+            <div className="why-different-card animate-scale-up" data-animate="scale-up" style={{ animationDelay: '0.3s' }}>
               <h3>Save More, Stress Less</h3>
-              <p style={{fontSize: '13px'}}>Hiring separate experts is costly. With PLUS & MINUS, you get all services in one place - simple and cost-effective.</p>
+              <p style={{ fontSize: '13px' }}>Hiring separate experts is costly. With PLUS & MINUS, you get all services in one place - simple and cost-effective.</p>
             </div>
-            <div className="why-different-card animate-scale-up" data-animate="scale-up" style={{animationDelay: '0.4s'}}>
+            <div className="why-different-card animate-scale-up" data-animate="scale-up" style={{ animationDelay: '0.4s' }}>
               <h3>Trusted Tools & Partners</h3>
-              <p style={{fontSize: '13px'}}>We work with reliable accounting software and systems so your data is always accurate, organised, and accessible</p>
+              <p style={{ fontSize: '13px' }}>We work with reliable accounting software and systems so your data is always accurate, organised, and accessible</p>
             </div>
           </div>
-          
-          <div className="guarantee-section animate-scale-up" data-animate="scale-up" style={{marginTop: '-40px', padding: '35px 50px'}}>
+
+          <div className="guarantee-section animate-scale-up" data-animate="scale-up" style={{ marginTop: '-40px', padding: '35px 50px' }}>
             <h2 className="guarantee-title">Flawless Company Formation or Your Money Back</h2>
             <p className="guarantee-sub">
               Your business deserves a perfect start.<br />
@@ -452,20 +452,20 @@ We work with Individuals, Professionals, startups and small businesses, ranging 
         </div>
       </section>
 
-      
-      
-      
+
+
+
       {/* Testimonials Section */}
       <TestimonialsSection />
-      
+
       {/* Blog Section */}
       <section className="blog-section">
         <div className="blog-header">
           <div className="blog-header-left animate-slide-left" data-animate="slide-left">
             <div className="section-tag">Latest</div>
-            <h2 className="section-title" style={{color:'black'}}>Read our Blog</h2>
+            <h2 className="section-title" style={{ color: 'black' }}>Read our Blog</h2>
             <p className="section-sub">
-              Our articles help you manage your business in India with ease. From GST and income tax to registrations and compliance, 
+              Our articles help you manage your business in India with ease. From GST and income tax to registrations and compliance,
               we provide simple guides, checklists, and clear explanations to keep you on track.
             </p>
           </div>
@@ -477,7 +477,7 @@ We work with Individuals, Professionals, startups and small businesses, ranging 
         </div>
         <div className="blog-grid">
           {blogData.map((blog, index) => (
-            <div key={index} className="blog-card animate-scale-up" data-animate="scale-up" style={{animationDelay: `${index * 0.1}s`}}>
+            <div key={index} className="blog-card animate-scale-up" data-animate="scale-up" style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="blog-image-container">
                 <img src={blog.image} alt={blog.title} className="blog-image" />
               </div>
@@ -487,8 +487,8 @@ We work with Individuals, Professionals, startups and small businesses, ranging 
                 {blog.description}
               </p>
               <div className="blog-read-more">
-                <button 
-                  onClick={() => toggleBlogExpansion(index)} 
+                <button
+                  onClick={() => toggleBlogExpansion(index)}
                   className="blog-read-more-link"
                 >
                   {expandedBlogs[index] ? 'Read less ←' : 'Read more →'}
@@ -498,8 +498,8 @@ We work with Individuals, Professionals, startups and small businesses, ranging 
           ))}
         </div>
       </section>
-      
-      
+
+
       {/* Final Dark Strip */}
       <section className="final-cta">
         <div className="final-cta-content animate-slide-up" data-animate="slide-up">

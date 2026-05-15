@@ -66,7 +66,7 @@ const Accounting = () => {
 
         <div className="accounting-hero-image">
           <img
-            src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+            src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80"
             alt="Accounting professional"
           />
           <div className="financial-summary-card">
@@ -166,7 +166,7 @@ const Accounting = () => {
         <div className="process-content" style={{ alignItems: 'center' }}>
           <div className="process-image" style={{ position: 'sticky', top: '100px' }}>
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80"
               alt="Simple Process"
               style={{ borderRadius: '16px', width: '100%', height: '420px', objectFit: 'cover', display: 'block' }}
             />
@@ -284,7 +284,7 @@ const Accounting = () => {
 
             <div className="audience-card">
               <div className="audience-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Solo Founder" />
+                <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=600&q=80" alt="Solo Founder" />
               </div>
               <h3 className="audience-card-title">Solo Founders</h3>
               <p className="audience-card-text">
@@ -294,7 +294,7 @@ const Accounting = () => {
 
             <div className="audience-card">
               <div className="audience-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Small Businesses" />
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=80" alt="Small Businesses" />
               </div>
               <h3 className="audience-card-title">Small businesses</h3>
               <p className="audience-card-text">
@@ -304,7 +304,7 @@ const Accounting = () => {
 
             <div className="audience-card">
               <div className="audience-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Ecommerce" />
+                <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=600&q=80" alt="Ecommerce" />
               </div>
               <h3 className="audience-card-title">Ecommerce</h3>
               <p className="audience-card-text">
@@ -327,7 +327,7 @@ const Accounting = () => {
               Our finance experts handle your books so you can<br />
               focus on your business
             </p>
-            <Button variant="primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+            <Button to="/contact" variant="primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none">
                 <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
               </svg>
@@ -336,7 +336,7 @@ const Accounting = () => {
           </div>
           <div className="startups-image-side">
             <div className="startups-image-container">
-              <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Accounting Simplified" />
+              <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80" alt="Accounting Simplified" />
               <div className="floating-tags">
                 <div className="tag-item">
                   <svg viewBox="0 0 24 24" fill="none" stroke="#1949C6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
