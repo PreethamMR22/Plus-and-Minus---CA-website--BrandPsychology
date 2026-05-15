@@ -5,7 +5,7 @@
 
 /* CONTACT HERO */
 .contact-hero {
-  background: rgb(10, 22, 40);
+  background: rgb(241, 245, 250);
   padding: calc(var(--nav-h) + 120px) 40px 80px;
   text-align: center;
   margin-top: calc(-1 * var(--nav-h));
@@ -103,18 +103,18 @@
 }
 
 .contact-hero .section-tag {
-  color: var(--green-bright);
+  color: var(--green);
 }
 
 .contact-hero h1 {
   font-family: var(--font-head);
   font-size: clamp(36px, 6vw, 64px);
-  color: var(--white);
+  color: var(--darker);
   margin-bottom: 14px;
 }
 
 .contact-hero p {
-  color: rgba(255,255,255,0.6);
+  color: rgba(0, 0, 0, 0.6);
   font-size: 16px;
 }
 
