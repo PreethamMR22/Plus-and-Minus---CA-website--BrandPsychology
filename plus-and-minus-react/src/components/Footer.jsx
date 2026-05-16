@@ -13,13 +13,15 @@ const Footer = () => {
           </div>
           <p>We work with numbers. But for people. Innovation with experience on its side — helping you achieve financial freedom in the age of AI.</p>
           <div className="footer-socials">
-            <FontAwesomeIcon icon={faLinkedin} className="social-icon" />
+            <a href="https://www.linkedin.com/company/plusandminus.in/?viewAsMember=true" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faLinkedin} className="social-icon" />
+            </a>
             <FontAwesomeIcon icon={faXTwitter} className="social-icon" />
             <FontAwesomeIcon icon={faFacebook} className="social-icon" />
             <FontAwesomeIcon icon={faInstagram} className="social-icon" />
           </div>
         </div>
-        
+
         <div className="footer-col">
           <h4>Our Services</h4>
           <Link to="/services/startup">Startup</Link>
@@ -28,8 +30,8 @@ const Footer = () => {
           <Link to="/services/registrations">Registrations</Link>
           <Link to="/services/accounting">Accounting</Link>
         </div>
-        
-                
+
+
         <div className="footer-col">
           <h4>Contact Us</h4>
           <div className="footer-contact-item">
@@ -60,7 +62,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      
+
       <div className="footer-bottom">
         <p>© 2026 Plus And Minus Accountants & Advisers. All rights reserved.</p>
         <div className="footer-bottom-links">

@@ -158,7 +158,7 @@ const Accounting = () => {
       {/* Simple Process Section */}
       <section className="process-section">
         <div className="process-header" style={{ textAlign: 'center', marginBottom: '50px' }}>
-          <h2 style={{ fontSize: 'clamp(22px, 3vw, 32px)', marginBottom: '16px', color: 'var(--darker)' }}>Simple Process<span style={{ color: 'rgb(41, 80, 218)' }}>. Powerful Results</span></h2>
+          <h2 style={{ fontSize: 'clamp(22px, 3vw, 32px)', marginBottom: '16px', color: 'var(--darker)' }}>Simple Process<span style={{ color: 'rgb(19, 64, 191)' }}>. Powerful Results</span></h2>
           <p className="subtitle" style={{ maxWidth: '800px', margin: '0 auto', fontSize: '16px', color: 'var(--gray)', lineHeight: '1.6' }}>
             Streamline your finances with a structured approach.
           </p>
@@ -231,7 +231,7 @@ const Accounting = () => {
       {/* What's Included Section */}
       <section className="whats-included-section">
         <div className="whats-included-content">
-          <h2 className="whats-included-title">What's included<span style={{ color: '#1949C6' }}>.</span></h2>
+          <h2 className="whats-included-title">What's included<span style={{ color: 'rgb(19, 64, 191)' }}>.</span></h2>
           <div className="whats-included-grid">
 
             <div className="included-card">
@@ -277,7 +277,7 @@ const Accounting = () => {
       <section className="target-audience-section">
         <div className="target-audience-content">
           <h2 className="target-audience-title">
-            From day one <span style={{ color: '#1949C6' }}>founder to growing team</span><br />
+            From day one <span style={{ color: 'rgb(19, 64, 191)' }}>founder to growing team</span><br />
             we have got you.
           </h2>
           <div className="target-audience-grid">
@@ -321,7 +321,7 @@ const Accounting = () => {
           <div className="startups-text-side">
             <h2>
               <span style={{ whiteSpace: 'nowrap' }}>Accounting for Startups,</span><br />
-              <span style={{ color: '#1949C6' }}>Simplified.</span>
+              <span style={{ color: 'rgb(19, 64, 191)' }}>Simplified.</span>
             </h2>
             <p>
               Our finance experts handle your books so you can<br />
@@ -339,19 +339,19 @@ const Accounting = () => {
               <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80" alt="Accounting Simplified" />
               <div className="floating-tags">
                 <div className="tag-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#1949C6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="rgb(19, 64, 191)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                   Balance Sheet
                 </div>
                 <div className="tag-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#1949C6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="rgb(19, 64, 191)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                   Income Statement
                 </div>
                 <div className="tag-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#1949C6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="rgb(19, 64, 191)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                   Audit Report
                 </div>
                 <div className="tag-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#1949C6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="rgb(19, 64, 191)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                   Ledger Statement
                 </div>
               </div>

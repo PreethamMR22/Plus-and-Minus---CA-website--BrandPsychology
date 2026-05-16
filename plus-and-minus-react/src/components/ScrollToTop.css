@@ -4,7 +4,7 @@
   right: 30px;
   width: 50px;
   height: 50px;
-  background: rgb(41, 80, 218);
+  background: rgb(19, 64, 191);
   border: none;
   border-radius: 50%;
   color: white;
@@ -29,7 +29,7 @@
 .scroll-to-top:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(41, 80, 218, 0.5);
-  background: rgb(66, 105, 243);
+  background: rgb(19, 64, 191);
 }
 
 .scroll-to-top:active {

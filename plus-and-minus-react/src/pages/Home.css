@@ -464,7 +464,7 @@
 }
 
 .tax-overpay-left .section-title .tax-highlight-blue {
-  color: rgb(48, 94, 255) !important;
+  color: rgb(19, 64, 191) !important;
 }
 
 .section-sub {
@@ -570,7 +570,7 @@
 .stat-icon {
   font-size: 28px;
   margin-bottom: 12px;
-  color: rgb(41, 80, 218);
+  color: rgb(19, 64, 191);
   opacity: 1;
   font-weight: 400;
   filter: drop-shadow(0 0 1px rgba(41, 80, 218, 0.3));
@@ -812,7 +812,7 @@
   font-family: 'Inter', sans-serif;
   font-size: 14px;
 
-  color: rgb(41, 80, 218);
+  color: rgb(19, 64, 191);
   line-height: 20px;
   letter-spacing: 0.35px;
   white-space: nowrap;
@@ -1152,14 +1152,14 @@
   font-weight: 600;
   margin-bottom: 0;
   line-height: 32px;
-  color: rgb(41, 80, 218);
+  color: rgb(19, 64, 191);
 }
 
 .final-cta p {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: rgb(41, 80, 218);
+  color: rgb(19, 64, 191);
   margin-bottom: 0;
   line-height: 24px;
 }
@@ -1547,7 +1547,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%23081510" width="400" height="300"/><path fill="%232950da" opacity="0.1" d="M50 150 Q100 100 150 150 T250 150 Q300 100 350 150"/><circle fill="%232950da" opacity="0.05" cx="320" cy="80" r="40"/><circle fill="%232950da" opacity="0.03" cx="80" cy="220" r="60"/></svg>') no-repeat center;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%23081510" width="400" height="300"/><path fill="%231340BF" opacity="0.1" d="M50 150 Q100 100 150 150 T250 150 Q300 100 350 150"/><circle fill="%231340BF" opacity="0.05" cx="320" cy="80" r="40"/><circle fill="%231340BF" opacity="0.03" cx="80" cy="220" r="60"/></svg>') no-repeat center;
   background-size: cover;
   opacity: 0.3;
 }
@@ -1615,7 +1615,7 @@
   left: 16px;
   width: 32px;
   height: 32px;
-  background: rgb(41, 80, 218);
+  background: rgb(19, 64, 191);
   color: #ffffff;
   border-radius: 6px;
   display: flex;
@@ -1753,7 +1753,7 @@
 }
 
 .tax-callout {
-  background: rgb(41, 80, 218);
+  background: rgb(19, 64, 191);
   border-radius: 16px;
   padding: 20px;
   text-align: left;
@@ -1903,8 +1903,8 @@
 }
 
 .tax-issue-card.blue {
-  background: #E3F2FD;
-  border: 1px solid #90CAF9;
+  background: rgba(19, 64, 191, 0.1);
+  border: 1px solid rgb(19, 64, 191);
 }
 
 .tax-issue-card.purple {
@@ -2148,15 +2148,15 @@
 }
 
 .why-different-section .section-content .section-tag {
-  color: rgb(41, 80, 218) !important;
+  color: rgb(19, 64, 191) !important;
 }
 
 .why-different-section .section-content .section-title span {
-  color: rgb(41, 80, 218) !important;
+  color: rgb(19, 64, 191) !important;
 }
 
 .why-different-section .section-tag {
-  color: rgb(41, 80, 218);
+  color: rgb(19, 64, 191);
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 1.5px;
@@ -2174,7 +2174,7 @@
 }
 
 .why-different-section .section-title span {
-  color: rgb(41, 80, 218);
+  color: rgb(19, 64, 191);
 }
 
 .why-different-section .section-sub {
@@ -2216,7 +2216,7 @@
 }
 
 .guarantee-section {
-  background: linear-gradient(135deg, var(--green), rgb(41, 80, 218));
+  background: linear-gradient(135deg, var(--green), rgb(19, 64, 191));
   border-radius: 20px;
   padding: 50px 60px;
   color: var(--white);

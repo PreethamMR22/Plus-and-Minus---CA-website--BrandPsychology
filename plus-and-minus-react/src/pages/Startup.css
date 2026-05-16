@@ -259,24 +259,6 @@
   cursor: default;
 }
 
-.start-business-btn {
-  background: #f5f5f5;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 16px 20px;
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--text);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-align: left;
-}
-
-.start-business-btn:hover {
-  background: #e8e8e8;
-  border-color: #d0d0d0;
-}
-
 .ideal-for-section {
   margin-top: 32px;
 }
@@ -355,959 +337,10 @@
   background: var(--green);
   color: var(--white);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(41,80,218,0.2);
+  box-shadow: 0 8px 25px rgba(19, 64, 191, 0.2);
 }
 
-/* Hero section specific button - green by default */
-
-
-/* COMPANY SELECTION SECTION */
-.company-selection-section {
-  padding: 100px 40px;
-  background: rgb(11, 22, 40);
-  color: var(--white);
-}
-
-.company-selection-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.selection-title {
-  font-family: var(--font-head);
-  font-size: clamp(28px, 4vw, 36px);
-  color: var(--white);
-  text-align: center;
-  margin-bottom: 40px;
-  font-weight: 700;
-}
-
-.company-type-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  margin-bottom: 50px;
-  flex-wrap: wrap;
-}
-
-.type-button {
-  background: transparent;
-  color: rgba(255,255,255,0.8);
-  border: none;
-  padding: 8px 0;
-  font-size: 18px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  text-decoration: none;
-}
-
-.type-button::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--green);
-  transition: width 0.3s ease;
-}
-
-.type-button:hover {
-  color: var(--green);
-}
-
-.type-button.active {
-  color: var(--green-bright);
-  font-weight: 600;
-}
-
-.type-button.active::after {
-  width: 100%;
-}
-
-.company-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: flex-start;
-}
-
-.content-left {
-  position: relative;
-}
-
-.company-image {
-  width: 100%;
-  height: 520px;
-  object-fit: cover;
-  border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-}
-
-.content-right h3 {
-  font-family: var(--font-head);
-  font-size: 32px;
-  color: var(--white);
-  margin-bottom: 20px;
-  font-weight: 700;
-}
-
-.company-description {
-  font-size: 16px;
-  color: rgba(255,255,255,0.7);
-  line-height: 1.7;
-  margin-bottom: 30px;
-}
-
-.company-features {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 8px 0;
-}
-
-.company-features li {
-  font-size: 17px;
-  color: rgba(255,255,255,0.8);
-  padding: 4px 0;
-  position: relative;
-  padding-left: 24px;
-  display: flex;
-  align-items: flex-start;
-  line-height: 1.4;
-  min-height: 24px;
-}
-
-.company-features li::before {
-  content: none;
-}
-
-.company-features .feature-text::before {
-  content: none !important;
-}
-
-.feature-icon {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  font-weight: 600;
-  font-size: 14px !important;
-  width: 18px !important;
-  height: 18px !important;
-  line-height: 18px !important;
-  text-align: left;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.feature-item.check .feature-icon {
-  color: #22c55e;
-}
-
-.feature-item.cross .feature-icon {
-  color: #ef4444;
-}
-
-.feature-text {
-  margin-left: 0;
-  line-height: 1.3;
-  display: flex;
-  align-items: flex-start;
-  min-height: 20px;
-}
-
-
-.excluded-features {
-  margin-top: 0;
-  padding-top: 8px;
-}
-
-/* Responsive for Company Selection Section */
-@media (max-width: 900px) {
-  .company-content {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  
-  .company-image {
-    height: 350px;
-  }
-  
-  .content-right h3 {
-    font-size: 28px;
-  }
-  
-  .company-description {
-    font-size: 16px;
-  }
-}
-
-/* START YOUR DREAM BUSINESS SECTION */
-.dream-business-section {
-  padding: 60px 60px;
-  min-height: 60vh;
-  background: rgb(41, 80, 218);
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  position: relative;
-  color: var(--white);
-  z-index: 10;
-  margin: 0 auto;
-  max-width: 100%;
-}
-
-
-.dream-business-content {
-  display: flex;
-  background: rgba(41,80,218,0.3);
-  border-radius: 16px;
-  max-width: 1200px;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-  backdrop-filter: blur(10px);
-  border: none;
-}
-
-.dream-business-text-content {
-  padding: 80px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  text-align: left;
-  position: relative;
-  z-index: 1;
-}
-
-.dream-business-text-content h2 {
-  font-size: clamp(48px, 6vw, 64px);
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 30px;
-  line-height: 1.1;
-  text-align: left;
-  max-width: 600px;
-}
-
-.dream-business-text-content h2 span {
-  color: var(--green-bright);
-}
-
-.dream-business-text-content p {
-  font-size: 17px;
-  color: rgba(255,255,255,0.7);
-  line-height: 1.6;
-  margin-bottom: 30px;
-  max-width: 500px;
-}
-
-.dream-business-text-content .btn-start-business {
-  background-color: var(--white);
-  color: var(--green);
-  padding: 15px 30px;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  
-  border: none;
-  position: relative;
-}
-
-.dream-business-text-content .btn-start-business:hover {
-  background-color: var(--green);
-  color: var(--white);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(41,80,218,0.2);
-}
-
-.dream-business-image-content {
-  flex: 0.7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(41,80,218,0.3);
-  border-radius: 0 16px 16px 0;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-}
-
-.dream-business-image-content img {
-  width: 100%;
-  height: 85%;
-  object-fit: cover;
-  border-radius: 16px;
-  object-position: center;
-}
-
-.dream-business-bottom-text {
-  font-size: 16px;
-  color: rgba(255,255,255,0.7);
-  margin-top: 40px;
-  max-width: 500px;
-}
-
-@media (max-width: 1024px) {
-  .dream-business-content {
-    flex-direction: column;
-  }
-
-  .dream-business-text-content {
-    padding: 40px;
-    text-align: left;
-    align-items: flex-start;
-  }
-
-  .dream-business-text-content .btn-start-business {
-    align-self: center;
-  }
-
-  .dream-business-image-content {
-    height: 300px;
-    border-radius: 0 0 16px 16px;
-  }
-
-  .dream-business-image-content img {
-    border-radius: 0 0 16px 16px;
-  }
-}
-
-@media (max-width: 768px) {
-  .dream-business-section {
-    padding: 60px 20px;
-  }
-
-  .dream-business-text-content {
-    padding: 30px;
-  }
-
-  .dream-business-text-content h2 {
-    font-size: 32px;
-  }
-
-  .dream-business-text-content p {
-    font-size: 16px;
-  }
-
-  .dream-business-image-content {
-    height: 250px;
-  }
-}
-
-@media (max-width: 600px) {
-  .company-selection-section {
-    padding: 60px 20px;
-  }
-  
-  .company-type-buttons {
-    gap: 32px;
-    margin-bottom: 30px;
-  }
-  
-  .type-button {
-    padding: 6px 0;
-    font-size: 16px;
-  }
-  
-    
-  .company-image {
-    height: 220px;
-  }
-  
-  .content-right h3 {
-    font-size: 24px;
-  }
-  
-  .company-description {
-    font-size: 15px;
-  }
-  
-  .company-features li {
-    font-size: 15px;
-    padding: 1px 0;
-    padding-left: 24px;
-    line-height: 1.3;
-    min-height: 20px;
-  }
-}
-
-/* START YOUR DREAM BUSINESS SECTION */
-.dream-business-section {
-  padding: 60px 60px;
-  min-height: 60vh;
-  background: rgb(41, 80, 218);
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  position: relative;
-  color: var(--white);
-  z-index: 10;
-  margin: 0 auto;
-  max-width: 100%;
-}
-
-
-.dream-business-content {
-  display: flex;
-  background: rgba(41,80,218,0.3);
-  border-radius: 16px;
-  max-width: 1200px;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-  backdrop-filter: blur(10px);
-  border: none;
-}
-
-.dream-business-text-content {
-  padding: 80px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  text-align: left;
-  position: relative;
-  z-index: 1;
-}
-
-.dream-business-text-content h2 {
-  font-size: clamp(48px, 6vw, 64px);
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 30px;
-  line-height: 1.1;
-  text-align: left;
-  max-width: 600px;
-}
-
-.dream-business-text-content h2 span {
-  color: var(--green-bright);
-}
-
-.dream-business-text-content p {
-  font-size: 17px;
-  color: rgba(255,255,255,0.7);
-  line-height: 1.6;
-  margin-bottom: 30px;
-  max-width: 500px;
-}
-
-.dream-business-text-content .btn-start-business {
-  background-color: var(--white);
-  color: var(--green);
-  padding: 15px 30px;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  
-  border: none;
-  position: relative;
-}
-
-.dream-business-text-content .btn-start-business:hover {
-  background-color: var(--green);
-  color: var(--white);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(41,80,218,0.2);
-}
-
-.dream-business-image-content {
-  flex: 0.7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(41,80,218,0.3);
-  border-radius: 0 16px 16px 0;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-}
-
-.dream-business-image-content img {
-  width: 100%;
-  height: 85%;
-  object-fit: cover;
-  border-radius: 16px;
-  object-position: center;
-}
-
-.dream-business-bottom-text {
-  font-size: 16px;
-  color: rgba(255,255,255,0.7);
-  margin-top: 40px;
-  max-width: 500px;
-}
-
-@media (max-width: 1024px) {
-  .dream-business-content {
-    flex-direction: column;
-  }
-
-  .dream-business-text-content {
-    padding: 40px;
-    text-align: left;
-    align-items: flex-start;
-  }
-
-  .dream-business-text-content .btn-start-business {
-    align-self: center;
-  }
-
-  .dream-business-image-content {
-    height: 300px;
-    border-radius: 0 0 16px 16px;
-  }
-
-  .dream-business-image-content img {
-    border-radius: 0 0 16px 16px;
-  }
-}
-
-@media (max-width: 768px) {
-  .dream-business-section {
-    padding: 60px 20px;
-  }
-
-  .dream-business-text-content {
-    padding: 30px;
-  }
-
-  .dream-business-text-content h2 {
-    font-size: 32px;
-  }
-
-  .dream-business-text-content p {
-    font-size: 16px;
-  }
-
-  .dream-business-image-content {
-    height: 250px;
-  }
-}
-
-/* LEARN BEFORE YOU INCORPORATE SECTION */
-.learn-incorporate-section {
-  padding: 80px 40px;
-  background-color: var(--white);
-  text-align: center;
-}
-
-.learn-incorporate-section h2 {
-  font-size: 36px;
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: 15px;
-}
-
-.learn-incorporate-section p.subtitle {
-  font-size: 18px;
-  color: var(--gray);
-  margin-bottom: 50px;
-}
-
-.incorporate-cards-container {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.incorporate-card {
-  background-color: #f8f9fa;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  padding: 30px;
-  width: 30%;
-  text-align: left;
-  transition: transform 0.3s ease;
-  min-height: 200px;
-}
-
-.incorporate-card:hover {
-  transform: translateY(-5px);
-}
-
-.incorporate-card h3 {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 15px;
-  line-height: 1.4;
-}
-
-.incorporate-card p {
-  font-size: 15px;
-  color: var(--gray);
-  line-height: 1.6;
-}
-
-@media (max-width: 1024px) {
-  .incorporate-card {
-    width: 45%;
-  }
-}
-
-/* START YOUR DREAM BUSINESS SECTION */
-.dream-business-section {
-  padding: 60px 60px;
-  min-height: 60vh;
-  background: rgb(41, 80, 218);
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  position: relative;
-  color: var(--white);
-  z-index: 10;
-  margin: 0 auto;
-  max-width: 100%;
-}
-
-
-.dream-business-content {
-  display: flex;
-  background: rgba(41,80,218,0.3);
-  border-radius: 16px;
-  max-width: 1200px;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-  backdrop-filter: blur(10px);
-  border: none;
-}
-
-.dream-business-text-content {
-  padding: 80px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  text-align: left;
-  position: relative;
-  z-index: 1;
-}
-
-.dream-business-text-content h2 {
-  font-size: clamp(48px, 6vw, 64px);
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 30px;
-  line-height: 1.1;
-  text-align: left;
-  max-width: 600px;
-}
-
-.dream-business-text-content h2 span {
-  color: var(--green-bright);
-}
-
-.dream-business-text-content p {
-  font-size: 17px;
-  color: rgba(255,255,255,0.7);
-  line-height: 1.6;
-  margin-bottom: 30px;
-  max-width: 500px;
-}
-
-.dream-business-text-content .btn-start-business {
-  background-color: var(--white);
-  color: var(--green);
-  padding: 15px 30px;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  
-  border: none;
-  position: relative;
-}
-
-.dream-business-text-content .btn-start-business:hover {
-  background-color: var(--green);
-  color: var(--white);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(41,80,218,0.2);
-}
-
-.dream-business-image-content {
-  flex: 0.7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(41,80,218,0.3);
-  border-radius: 0 16px 16px 0;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-}
-
-.dream-business-image-content img {
-  width: 100%;
-  height: 85%;
-  object-fit: cover;
-  border-radius: 16px;
-  object-position: center;
-}
-
-.dream-business-bottom-text {
-  font-size: 16px;
-  color: rgba(255,255,255,0.7);
-  margin-top: 40px;
-  max-width: 500px;
-}
-
-@media (max-width: 1024px) {
-  .dream-business-content {
-    flex-direction: column;
-  }
-
-  .dream-business-text-content {
-    padding: 40px;
-    text-align: left;
-    align-items: flex-start;
-  }
-
-  .dream-business-text-content .btn-start-business {
-    align-self: center;
-  }
-
-  .dream-business-image-content {
-    height: 300px;
-    border-radius: 0 0 16px 16px;
-  }
-
-  .dream-business-image-content img {
-    border-radius: 0 0 16px 16px;
-  }
-}
-
-@media (max-width: 768px) {
-  .dream-business-section {
-    padding: 60px 20px;
-  }
-
-  .dream-business-text-content {
-    padding: 30px;
-  }
-
-  .dream-business-text-content h2 {
-    font-size: 32px;
-  }
-
-  .dream-business-text-content p {
-    font-size: 16px;
-  }
-
-  .dream-business-image-content {
-    height: 250px;
-  }
-}
-
-@media (max-width: 768px) {
-  .learn-incorporate-section h2 {
-    font-size: 30px;
-  }
-
-  .learn-incorporate-section p.subtitle {
-    font-size: 16px;
-  }
-
-  .incorporate-card {
-    width: 100%;
-    padding: 25px;
-  }
-}
-
-/* START YOUR DREAM BUSINESS SECTION */
-.dream-business-section {
-  padding: 60px 60px;
-  min-height: 60vh;
-  background: rgb(41, 80, 218);
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  position: relative;
-  color: var(--white);
-  z-index: 10;
-  margin: 0 auto;
-  max-width: 100%;
-}
-
-
-.dream-business-content {
-  display: flex;
-  background: rgba(41,80,218,0.3);
-  border-radius: 16px;
-  max-width: 1200px;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-  backdrop-filter: blur(10px);
-  border: none;
-}
-
-.dream-business-text-content {
-  padding: 80px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  text-align: left;
-  position: relative;
-  z-index: 1;
-}
-
-.dream-business-text-content h2 {
-  font-size: clamp(48px, 6vw, 64px);
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 30px;
-  line-height: 1.1;
-  text-align: left;
-  max-width: 600px;
-}
-
-.dream-business-text-content h2 span {
-  color: var(--green-bright);
-}
-
-.dream-business-text-content p {
-  font-size: 17px;
-  color: rgba(255,255,255,0.7);
-  line-height: 1.6;
-  margin-bottom: 30px;
-  max-width: 500px;
-}
-
-.dream-business-text-content .btn-start-business {
-  background-color: var(--white);
-  color: var(--green);
-  padding: 15px 30px;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  
-  border: none;
-  position: relative;
-}
-
-.dream-business-text-content .btn-start-business:hover {
-  background-color: var(--green);
-  color: var(--white);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(41,80,218,0.2);
-}
-
-.dream-business-image-content {
-  flex: 0.7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(41,80,218,0.3);
-  border-radius: 0 16px 16px 0;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-}
-
-.dream-business-image-content img {
-  width: 100%;
-  height: 85%;
-  object-fit: cover;
-  border-radius: 16px;
-  object-position: center;
-}
-
-.dream-business-bottom-text {
-  font-size: 16px;
-  color: rgba(255,255,255,0.7);
-  margin-top: 40px;
-  max-width: 500px;
-}
-
-@media (max-width: 1024px) {
-  .dream-business-content {
-    flex-direction: column;
-  }
-
-  .dream-business-text-content {
-    padding: 40px;
-    text-align: left;
-    align-items: flex-start;
-  }
-
-  .dream-business-text-content .btn-start-business {
-    align-self: center;
-  }
-
-  .dream-business-image-content {
-    height: 300px;
-    border-radius: 0 0 16px 16px;
-  }
-
-  .dream-business-image-content img {
-    border-radius: 0 0 16px 16px;
-  }
-}
-
-@media (max-width: 768px) {
-  .dream-business-section {
-    padding: 60px 20px;
-  }
-
-  .dream-business-text-content {
-    padding: 30px;
-  }
-
-  .dream-business-text-content h2 {
-    font-size: 32px;
-  }
-
-  .dream-business-text-content p {
-    font-size: 16px;
-  }
-
-  .dream-business-image-content {
-    height: 250px;
-  }
-}
-
-.startup-content-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 40px;
-}
-
-.startup-content-card h3 {
-  font-family: var(--font-head);
-  font-size: 24px;
-  color: var(--text);
-  margin-bottom: 16px;
-}
-
-
+/* SERVICES CARD */
 .services-card-wrapper {
   background: rgb(232, 232, 232);
   border-radius: 16px;
@@ -1317,74 +350,26 @@
   height: 500px;
 }
 
-/* Responsive styles for services card */
-@media (max-width: 768px) {
-  .services-card-wrapper {
-    height: auto;
-    min-height: 400px;
-  }
-  
-  .services-content {
-    height: auto;
-    padding: 20px;
-    flex: 1;
-  }
-  
-  .services-button {
-    height: auto;
-    min-height: 60px;
-  }
-  
-  .services-button .btn-start-business {
-    font-size: 16px;
-    padding: 15px;
-    justify-content: center;
-    text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .services-card-wrapper {
-    min-height: 350px;
-  }
-  
-  .services-content {
-    padding: 15px;
-  }
-  
-  .services-button {
-    min-height: 50px;
-  }
-  
-  .services-button .btn-start-business {
-    font-size: 14px;
-    padding: 12px;
-    justify-content: center;
-    text-align: center;
-  }
-}
-
 .services-content {
   height: 90%;
   padding: 30px 40px 5px 40px;
   flex: 1;
 }
 
-.services-button {
-  height: 10%;
-  background: rgb(41, 80, 218);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  vertical-align: middle;
-}
-
-.services-card h3 {
+.services-content h3 {
   font-family: var(--font-head);
   font-size: 20px;
   color: var(--text);
   margin-bottom: 16px;
   font-weight: 600;
+}
+
+.services-button {
+  height: 10%;
+  background: rgb(19, 64, 191);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .services-button .btn-start-business {
@@ -1403,224 +388,22 @@
   text-decoration: none;
   line-height: 1;
   margin: 0;
+  border-radius: 0;
 }
 
 .services-button:hover {
   background: rgb(30, 60, 180);
 }
 
-.services-button .btn-start-business:hover {
-  background: transparent;
-  transform: none;
-}
-
-.startup-content-card p {
-  font-size: 16px;
-  color: var(--gray);
-  line-height: 1.7;
-  margin-bottom: 24px;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .startup-content-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-}
-
-/* Company selection section specific button - green by default */
-.company-selection-section .btn-start-business {
-  background: var(--green);
-  color: var(--white);
-  border: 2px solid var(--green);
-}
-
-.company-selection-section .btn-start-business:hover {
-  background: var(--white);
-  color: var(--green);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-}
-
-/* Mobile responsive for content section buttons */
 @media (max-width: 768px) {
-  .startup-content-right .btn-start-business {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 24px auto 0;
-    text-align: left;
+  .services-card-wrapper {
+    height: auto;
+    min-height: 400px;
   }
-  
-  .company-selection-section .btn-start-business {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 0 auto;
-    text-align: left;
+  .services-content {
+    padding: 20px;
   }
 }
-
-/* START YOUR DREAM BUSINESS SECTION */
-.dream-business-section {
-  padding: 60px 60px;
-  min-height: 60vh;
-  background: rgb(41, 80, 218);
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  position: relative;
-  color: var(--white);
-  z-index: 10;
-  margin: 0 auto;
-  max-width: 100%;
-}
-
-
-.dream-business-content {
-  display: flex;
-  background: rgba(41,80,218,0.3);
-  border-radius: 16px;
-  max-width: 1200px;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-  backdrop-filter: blur(10px);
-  border: none;
-}
-
-.dream-business-text-content {
-  padding: 80px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  text-align: left;
-  position: relative;
-  z-index: 1;
-}
-
-.dream-business-text-content h2 {
-  font-size: clamp(48px, 6vw, 64px);
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 30px;
-  line-height: 1.1;
-  text-align: left;
-  max-width: 600px;
-}
-
-.dream-business-text-content h2 span {
-  color: var(--green-bright);
-}
-
-.dream-business-text-content p {
-  font-size: 17px;
-  color: rgba(255,255,255,0.7);
-  line-height: 1.6;
-  margin-bottom: 30px;
-  max-width: 500px;
-}
-
-.dream-business-text-content .btn-start-business {
-  background-color: var(--white);
-  color: var(--green);
-  padding: 15px 30px;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  
-  border: none;
-  position: relative;
-}
-
-.dream-business-text-content .btn-start-business:hover {
-  background-color: var(--green);
-  color: var(--white);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(41,80,218,0.2);
-}
-
-.dream-business-image-content {
-  flex: 0.7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(41,80,218,0.3);
-  border-radius: 0 16px 16px 0;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-}
-
-.dream-business-image-content img {
-  width: 100%;
-  height: 85%;
-  object-fit: cover;
-  border-radius: 16px;
-  object-position: center;
-}
-
-.dream-business-bottom-text {
-  font-size: 16px;
-  color: rgba(255,255,255,0.7);
-  margin-top: 40px;
-  max-width: 500px;
-}
-
-@media (max-width: 1024px) {
-  .dream-business-content {
-    flex-direction: column;
-  }
-
-  .dream-business-text-content {
-    padding: 40px;
-    text-align: left;
-    align-items: flex-start;
-  }
-
-  .dream-business-text-content .btn-start-business {
-    align-self: center;
-  }
-
-  .dream-business-image-content {
-    height: 300px;
-    border-radius: 0 0 16px 16px;
-  }
-
-  .dream-business-image-content img {
-    border-radius: 0 0 16px 16px;
-  }
-}
-
-@media (max-width: 768px) {
-  .dream-business-section {
-    padding: 60px 20px;
-  }
-
-  .dream-business-text-content {
-    padding: 30px;
-  }
-
-  .dream-business-text-content h2 {
-    font-size: 32px;
-  }
-
-  .dream-business-text-content p {
-    font-size: 16px;
-  }
-
-  .dream-business-image-content {
-    height: 250px;
-  }
-}
-
-
 
 /* COMPANY SELECTION SECTION */
 .company-selection-section {
@@ -1740,28 +523,13 @@
   min-height: 24px;
 }
 
-.company-features li::before {
-  content: none;
-}
-
-.company-features .feature-text::before {
-  content: none !important;
-}
-
 .feature-icon {
   position: absolute;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
   font-weight: 600;
-  font-size: 14px !important;
-  width: 18px !important;
-  height: 18px !important;
-  line-height: 18px !important;
-  text-align: left;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+  font-size: 14px;
 }
 
 .feature-item.check .feature-icon {
@@ -1773,44 +541,24 @@
 }
 
 .feature-text {
-  margin-left: 0;
   line-height: 1.3;
-  display: flex;
-  align-items: flex-start;
-  min-height: 20px;
 }
 
-
-.excluded-features {
-  margin-top: 0;
-  padding-top: 8px;
-}
-
-/* Responsive for Company Selection Section */
 @media (max-width: 900px) {
   .company-content {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  
   .company-image {
     height: 350px;
   }
-  
-  .content-right h3 {
-    font-size: 28px;
-  }
-  
-  .company-description {
-    font-size: 16px;
-  }
 }
 
 /* START YOUR DREAM BUSINESS SECTION */
 .dream-business-section {
   padding: 60px 60px;
   min-height: 60vh;
-  background: rgb(41, 80, 218);
+  background: rgb(19, 64, 191);
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -1821,10 +569,9 @@
   max-width: 100%;
 }
 
-
 .dream-business-content {
   display: flex;
-  background: rgba(41,80,218,0.3);
+  background: rgb(19, 64, 191);
   border-radius: 16px;
   max-width: 1200px;
   width: 100%;
@@ -1878,7 +625,6 @@
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
-  
   border: none;
   position: relative;
 }
@@ -1887,7 +633,7 @@
   background-color: var(--green);
   color: var(--white);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(41,80,218,0.2);
+  box-shadow: 0 8px 25px rgba(19, 64, 191, 0.2);
 }
 
 .dream-business-image-content {
@@ -1895,7 +641,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(41,80,218,0.3);
+  background: rgb(19, 64, 191);
   border-radius: 0 16px 16px 0;
   overflow: hidden;
   position: relative;
@@ -1910,252 +656,16 @@
   object-position: center;
 }
 
-.dream-business-bottom-text {
-  font-size: 16px;
-  color: rgba(255,255,255,0.7);
-  margin-top: 40px;
-  max-width: 500px;
-}
-
 @media (max-width: 1024px) {
   .dream-business-content {
     flex-direction: column;
   }
-
   .dream-business-text-content {
     padding: 40px;
-    text-align: left;
-    align-items: flex-start;
   }
-
-  .dream-business-text-content .btn-start-business {
-    align-self: center;
-  }
-
   .dream-business-image-content {
     height: 300px;
     border-radius: 0 0 16px 16px;
-  }
-
-  .dream-business-image-content img {
-    border-radius: 0 0 16px 16px;
-  }
-}
-
-@media (max-width: 768px) {
-  .dream-business-section {
-    padding: 60px 20px;
-  }
-
-  .dream-business-text-content {
-    padding: 30px;
-  }
-
-  .dream-business-text-content h2 {
-    font-size: 32px;
-  }
-
-  .dream-business-text-content p {
-    font-size: 16px;
-  }
-
-  .dream-business-image-content {
-    height: 250px;
-  }
-}
-
-@media (max-width: 600px) {
-  .company-selection-section {
-    padding: 60px 20px;
-  }
-  
-  .company-type-buttons {
-    gap: 32px;
-    margin-bottom: 30px;
-  }
-  
-  .type-button {
-    padding: 6px 0;
-    font-size: 16px;
-  }
-  
-    
-  .company-image {
-    height: 220px;
-  }
-  
-  .content-right h3 {
-    font-size: 24px;
-  }
-  
-  .company-description {
-    font-size: 15px;
-  }
-  
-  .company-features li {
-    font-size: 15px;
-    padding: 1px 0;
-    padding-left: 24px;
-    line-height: 1.3;
-    min-height: 20px;
-  }
-}
-
-/* START YOUR DREAM BUSINESS SECTION */
-.dream-business-section {
-  padding: 60px 60px;
-  min-height: 60vh;
-  background: rgb(41, 80, 218);
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  position: relative;
-  color: var(--white);
-  z-index: 10;
-  margin: 0 auto;
-  max-width: 100%;
-}
-
-
-.dream-business-content {
-  display: flex;
-  background: rgba(41,80,218,0.3);
-  border-radius: 16px;
-  max-width: 1200px;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-  backdrop-filter: blur(10px);
-  border: none;
-}
-
-.dream-business-text-content {
-  padding: 80px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  text-align: left;
-  position: relative;
-  z-index: 1;
-}
-
-.dream-business-text-content h2 {
-  font-size: clamp(48px, 6vw, 64px);
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 30px;
-  line-height: 1.1;
-  text-align: left;
-  max-width: 600px;
-}
-
-.dream-business-text-content h2 span {
-  color: var(--green-bright);
-}
-
-.dream-business-text-content p {
-  font-size: 17px;
-  color: rgba(255,255,255,0.7);
-  line-height: 1.6;
-  margin-bottom: 30px;
-  max-width: 500px;
-}
-
-.dream-business-text-content .btn-start-business {
-  background-color: var(--white);
-  color: var(--green);
-  padding: 15px 30px;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  
-  border: none;
-  position: relative;
-}
-
-.dream-business-text-content .btn-start-business:hover {
-  background-color: var(--green);
-  color: var(--white);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(41,80,218,0.2);
-}
-
-.dream-business-image-content {
-  flex: 0.7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(41,80,218,0.3);
-  border-radius: 0 16px 16px 0;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-}
-
-.dream-business-image-content img {
-  width: 100%;
-  height: 85%;
-  object-fit: cover;
-  border-radius: 16px;
-  object-position: center;
-}
-
-.dream-business-bottom-text {
-  font-size: 16px;
-  color: rgba(255,255,255,0.7);
-  margin-top: 40px;
-  max-width: 500px;
-}
-
-@media (max-width: 1024px) {
-  .dream-business-content {
-    flex-direction: column;
-  }
-
-  .dream-business-text-content {
-    padding: 40px;
-    text-align: left;
-    align-items: flex-start;
-  }
-
-  .dream-business-text-content .btn-start-business {
-    align-self: center;
-  }
-
-  .dream-business-image-content {
-    height: 300px;
-    border-radius: 0 0 16px 16px;
-  }
-
-  .dream-business-image-content img {
-    border-radius: 0 0 16px 16px;
-  }
-}
-
-@media (max-width: 768px) {
-  .dream-business-section {
-    padding: 60px 20px;
-  }
-
-  .dream-business-text-content {
-    padding: 30px;
-  }
-
-  .dream-business-text-content h2 {
-    font-size: 32px;
-  }
-
-  .dream-business-text-content p {
-    font-size: 16px;
-  }
-
-  .dream-business-image-content {
-    height: 250px;
   }
 }
 
@@ -2201,6 +711,7 @@
 
 .incorporate-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(19, 64, 191, 0.1);
 }
 
 .incorporate-card h3 {
@@ -2223,336 +734,12 @@
   }
 }
 
-/* START YOUR DREAM BUSINESS SECTION */
-.dream-business-section {
-  padding: 60px 60px;
-  min-height: 60vh;
-  background: rgb(41, 80, 218);
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  position: relative;
-  color: var(--white);
-  z-index: 10;
-  margin: 0 auto;
-  max-width: 100%;
-}
-
-
-.dream-business-content {
-  display: flex;
-  background: rgba(41,80,218,0.3);
-  border-radius: 16px;
-  max-width: 1200px;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-  backdrop-filter: blur(10px);
-  border: none;
-}
-
-.dream-business-text-content {
-  padding: 80px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  text-align: left;
-  position: relative;
-  z-index: 1;
-}
-
-.dream-business-text-content h2 {
-  font-size: clamp(48px, 6vw, 64px);
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 30px;
-  line-height: 1.1;
-  text-align: left;
-  max-width: 600px;
-}
-
-.dream-business-text-content h2 span {
-  color: var(--green-bright);
-}
-
-.dream-business-text-content p {
-  font-size: 17px;
-  color: rgba(255,255,255,0.7);
-  line-height: 1.6;
-  margin-bottom: 30px;
-  max-width: 500px;
-}
-
-.dream-business-text-content .btn-start-business {
-  background-color: var(--white);
-  color: var(--green);
-  padding: 15px 30px;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  
-  border: none;
-  position: relative;
-}
-
-.dream-business-text-content .btn-start-business:hover {
-  background-color: var(--green);
-  color: var(--white);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(41,80,218,0.2);
-}
-
-.dream-business-image-content {
-  flex: 0.7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(41,80,218,0.3);
-  border-radius: 0 16px 16px 0;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-}
-
-.dream-business-image-content img {
-  width: 100%;
-  height: 85%;
-  object-fit: cover;
-  border-radius: 16px;
-  object-position: center;
-}
-
-.dream-business-bottom-text {
-  font-size: 16px;
-  color: rgba(255,255,255,0.7);
-  margin-top: 40px;
-  max-width: 500px;
-}
-
-@media (max-width: 1024px) {
-  .dream-business-content {
-    flex-direction: column;
-  }
-
-  .dream-business-text-content {
-    padding: 40px;
-    text-align: left;
-    align-items: flex-start;
-  }
-
-  .dream-business-text-content .btn-start-business {
-    align-self: center;
-  }
-
-  .dream-business-image-content {
-    height: 300px;
-    border-radius: 0 0 16px 16px;
-  }
-
-  .dream-business-image-content img {
-    border-radius: 0 0 16px 16px;
-  }
-}
-
 @media (max-width: 768px) {
-  .dream-business-section {
-    padding: 60px 20px;
-  }
-
-  .dream-business-text-content {
-    padding: 30px;
-  }
-
-  .dream-business-text-content h2 {
-    font-size: 32px;
-  }
-
-  .dream-business-text-content p {
-    font-size: 16px;
-  }
-
-  .dream-business-image-content {
-    height: 250px;
-  }
-}
-
-@media (max-width: 768px) {
-  .learn-incorporate-section h2 {
-    font-size: 30px;
-  }
-
-  .learn-incorporate-section p.subtitle {
-    font-size: 16px;
-  }
-
   .incorporate-card {
     width: 100%;
-    padding: 25px;
   }
 }
 
-/* START YOUR DREAM BUSINESS SECTION */
-.dream-business-section {
-  padding: 60px 60px;
-  min-height: 60vh;
-  background: rgb(41, 80, 218);
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  position: relative;
-  color: var(--white);
-  z-index: 10;
-  margin: 0 auto;
-  max-width: 100%;
-}
-
-
-.dream-business-content {
-  display: flex;
-  background: rgba(41,80,218,0.3);
-  border-radius: 16px;
-  max-width: 1200px;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-  backdrop-filter: blur(10px);
-  border: none;
-}
-
-.dream-business-text-content {
-  padding: 80px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  text-align: left;
-  position: relative;
-  z-index: 1;
-}
-
-.dream-business-text-content h2 {
-  font-size: clamp(48px, 6vw, 64px);
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 30px;
-  line-height: 1.1;
-  text-align: left;
-  max-width: 600px;
-}
-
-.dream-business-text-content h2 span {
-  color: var(--green-bright);
-}
-
-.dream-business-text-content p {
-  font-size: 17px;
-  color: rgba(255,255,255,0.7);
-  line-height: 1.6;
-  margin-bottom: 30px;
-  max-width: 500px;
-}
-
-.dream-business-text-content .btn-start-business {
-  background-color: var(--white);
-  color: var(--green);
-  padding: 15px 30px;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  
-  border: none;
-  position: relative;
-}
-
-.dream-business-text-content .btn-start-business:hover {
-  background-color: var(--green);
-  color: var(--white);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(41,80,218,0.2);
-}
-
-.dream-business-image-content {
-  flex: 0.7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(41,80,218,0.3);
-  border-radius: 0 16px 16px 0;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-}
-
-.dream-business-image-content img {
-  width: 100%;
-  height: 85%;
-  object-fit: cover;
-  border-radius: 16px;
-  object-position: center;
-}
-
-.dream-business-bottom-text {
-  font-size: 16px;
-  color: rgba(255,255,255,0.7);
-  margin-top: 40px;
-  max-width: 500px;
-}
-
-@media (max-width: 1024px) {
-  .dream-business-content {
-    flex-direction: column;
-  }
-
-  .dream-business-text-content {
-    padding: 40px;
-    text-align: left;
-    align-items: flex-start;
-  }
-
-  .dream-business-text-content .btn-start-business {
-    align-self: center;
-  }
-
-  .dream-business-image-content {
-    height: 300px;
-    border-radius: 0 0 16px 16px;
-  }
-
-  .dream-business-image-content img {
-    border-radius: 0 0 16px 16px;
-  }
-}
-
-@media (max-width: 768px) {
-  .dream-business-section {
-    padding: 60px 20px;
-  }
-
-  .dream-business-text-content {
-    padding: 30px;
-  }
-
-  .dream-business-text-content h2 {
-    font-size: 32px;
-  }
-
-  .dream-business-text-content p {
-    font-size: 16px;
-  }
-
-  .dream-business-image-content {
-    height: 250px;
-  }
-}
 /* IDEA TO ENTITY SECTION */
 .idea-to-entity-section {
   padding: 80px 40px;
@@ -2588,11 +775,7 @@
   padding: 14px;
   background: white;
   border-radius: 10px;
-  border: 1px solid rgba(0, 109, 91, 0.1);
-  box-shadow: none !important;
-  filter: none !important;
-  -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
+  border: 1px solid rgba(19, 64, 191, 0.1);
 }
 
 .idea-to-entity-section .step-number {
@@ -2607,32 +790,24 @@
   font-weight: 600;
   font-size: 14px;
   flex-shrink: 0;
-  position: relative;
-  top: auto;
-  left: auto;
 }
 
 .step-text h3 {
   font-size: 15px;
   font-weight: 600;
   color: var(--text);
-  margin-bottom: 6px;
-  line-height: 1.3;
+  margin-bottom: 4px;
 }
 
 .step-text p {
   font-size: 13px;
   color: var(--gray);
-  line-height: 1.4;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .idea-to-entity-image {
-  flex: 0.7;
-  position: relative;
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
-  margin-left: 40px;
   max-height: 465px;
 }
 
@@ -2640,159 +815,14 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 16px;
 }
 
-.boom-section {
-  margin-top: 60px;
-  text-align: center;
-}
-
-.boom-content {
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-}
-
-.boom-icon {
-  background: var(--green);
-  color: var(--white);
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  font-size: 12px;
-  text-align: center;
-  line-height: 1.2;
-}
-
-.boom-content h3 {
-  font-size: 24px;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 0;
-}
-
-.boom-content p {
-  font-size: 16px;
-  color: var(--gray);
-  line-height: 1.6;
-  margin-bottom: 0;
-}
-
-/* Responsive for Idea to Entity Section */
 @media (max-width: 768px) {
-  .idea-to-entity-section {
-    padding: 60px 20px;
-  }
-
-  .idea-to-entity-section h2 {
-    font-size: clamp(28px, 6vw, 36px);
-    margin-bottom: 40px;
-  }
-
   .idea-to-entity-content {
     grid-template-columns: 1fr;
-    gap: 40px;
   }
-
-  .idea-to-entity-steps {
-    gap: 16px;
-  }
-
-  .step-item {
-    padding: 16px;
-    gap: 12px;
-  }
-
-  .idea-to-entity-section .step-number {
-    width: 28px;
-    height: 28px;
-    font-size: 14px;
-  }
-
-  .step-text h3 {
-    font-size: 15px;
-  }
-
-  .step-text p {
-    font-size: 13px;
-  }
-
   .idea-to-entity-image {
-    flex: 0.9;
-    max-width: 350px;
-    max-height: 467px;
+    max-width: 400px;
     margin: 0 auto;
-  }
-
-  .boom-section {
-    margin-top: 40px;
-  }
-
-  .boom-icon {
-    width: 56px;
-    height: 56px;
-    font-size: 11px;
-  }
-
-  .boom-content h3 {
-    font-size: 20px;
-  }
-
-  .boom-content p {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 480px) {
-  .idea-to-entity-section {
-    padding: 40px 16px;
-  }
-
-  .idea-to-entity-section h2 {
-    margin-bottom: 30px;
-  }
-
-  .idea-to-entity-content {
-    gap: 30px;
-  }
-
-  .step-item {
-    padding: 12px;
-  }
-
-  .step-text h3 {
-    font-size: 14px;
-  }
-
-  .step-text p {
-    font-size: 12px;
-  }
-
-  .idea-to-entity-image {
-    margin: 40px auto 0;
-    max-width: 300px;
-    max-height: 400px;
-  }
-
-  .boom-icon {
-    width: 48px;
-    height: 48px;
-    font-size: 10px;
-  }
-
-  .boom-content h3 {
-    font-size: 18px;
-  }
-
-  .boom-content p {
-    font-size: 13px;
   }
 }

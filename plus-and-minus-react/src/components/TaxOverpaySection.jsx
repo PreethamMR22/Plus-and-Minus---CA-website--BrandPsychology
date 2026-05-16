@@ -42,7 +42,7 @@ const TaxOverpaySection = () => {
       <div className="tax-overpay-content">
         <div className="tax-overpay-left">
           <div className="section-tag">THE PROBLEM</div>
-          <h2 className="section-title" style={{color:'black'}}>Overpaying your <span style={{color: 'rgb(48, 94, 255)'}}>taxes?</span> Let's fix that!</h2>
+          <h2 className="section-title" style={{color:'black'}}>Overpaying your <span style={{color: 'rgb(19, 64, 191)'}}>taxes?</span> Let's fix that!</h2>
           <p className="section-sub">
             Beyond Filing : Tax Planning & Advisory Services, Reduce your tax liabilities by strategically planning your taxes.
           </p>

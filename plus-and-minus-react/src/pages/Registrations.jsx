@@ -432,7 +432,7 @@ const Registrations = () => {
                 onClick={() => window.open('https://wa.me/917204403746', '_blank')} 
                 variant="primary" 
                 size="large"
-                style={{ background: '#1949C6' }}
+                style={{ background: 'rgb(19, 64, 191)' }}
               >
                 <i className="fab fa-whatsapp"></i> WhatsApp us now
               </Button>

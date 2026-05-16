@@ -30,7 +30,7 @@
 }
 
 .registrations-hero .hero-content h1 span {
-  color: #1949C6;
+  color: rgb(19, 64, 191);
 }
 
 .registrations-hero .hero-content p {
@@ -118,7 +118,7 @@
 .registrations-hero .bubble-brand {
   font-size: 10px;
   font-weight: 700;
-  color: #1949C6;
+  color: rgb(19, 64, 191);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -182,7 +182,7 @@ section.registrations-hero .hero-btns {
 }
 
 .services-overview-section h2 span {
-  color: #1949C6;
+  color: rgb(19, 64, 191);
 }
 
 .services-overview-section p {
@@ -215,7 +215,7 @@ section.registrations-hero .hero-btns {
 .services-overview-section .service-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  border-color: #1949C6;
+  border-color: rgb(19, 64, 191);
 }
 
 .card-badge {
@@ -234,8 +234,8 @@ section.registrations-hero .hero-btns {
 }
 
 .badge-blue {
-  background: #E1E8F8;
-  color: #1949C6;
+  background: rgba(19, 64, 191, 0.1);
+  color: rgb(19, 64, 191);
 }
 
 .badge-orange {
@@ -313,14 +313,14 @@ section.registrations-hero .hero-btns {
 }
 
 .wa-link:hover {
-  color: #1949C6;
+  color: rgb(19, 64, 191);
 }
 
 .timeline-badge {
   position: absolute;
   bottom: 24px;
   right: 20px;
-  background: #F1F5FA;
+  background: rgba(19, 64, 191, 0.05);
   padding: 4px 10px;
   border-radius: 6px;
   font-size: 11px;
@@ -332,7 +332,7 @@ section.registrations-hero .hero-btns {
   position: absolute;
   bottom: 24px;
   right: 20px;
-  background: #F1F5FA;
+  background: rgba(19, 64, 191, 0.05);
   padding: 4px 10px;
   border-radius: 6px;
   font-size: 11px;
@@ -359,7 +359,7 @@ section.registrations-hero .hero-btns {
 }
 
 .audience-section h2 span {
-  color: #1949C6;
+  color: rgb(19, 64, 191);
 }
 
 .audience-container {
@@ -493,7 +493,7 @@ section.registrations-hero .hero-btns {
 }
 
 .how-it-works-section h2 span {
-  color: #1949C6;
+  color: rgb(19, 64, 191);
 }
 
 .how-it-works-container {
@@ -512,7 +512,7 @@ section.registrations-hero .hero-btns {
 }
 
 .step-card {
-  background: #F1F5FA;
+  background: rgba(19, 64, 191, 0.05);
   border: 2px solid #EAECEF;
   border-radius: 16px;
   padding: 24px;
@@ -526,7 +526,7 @@ section.registrations-hero .hero-btns {
 
 .step-card:hover {
   transform: translateX(8px);
-  border-color: #1949C6;
+  border-color: rgb(19, 64, 191);
 }
 
 .step-header {
@@ -536,7 +536,7 @@ section.registrations-hero .hero-btns {
 }
 
 .step-number {
-  background: #1949C6;
+  background: rgb(19, 64, 191);
   color: #fff;
   width: 28px;
   height: 28px;
@@ -626,7 +626,7 @@ section.registrations-hero .hero-btns {
 }
 
 .faqs-container h2 span {
-  color: #1949C6;
+  color: rgb(19, 64, 191);
 }
 
 .faq-subtitle {
@@ -689,7 +689,7 @@ section.registrations-hero .hero-btns {
 
 .faq-icon {
   font-size: 20px;
-  color: #1949C6;
+  color: rgb(19, 64, 191);
   line-height: 0;
   display: flex;
   align-items: center;
@@ -697,7 +697,7 @@ section.registrations-hero .hero-btns {
 }
 
 .faq-toggle.expanded {
-  background: #1949C6;
+  background: rgb(19, 64, 191);
   transform: rotate(45deg);
 }
 
@@ -751,7 +751,7 @@ section.registrations-hero .hero-btns {
 }
 
 .consultancy-left h2 span {
-  color: #1949C6;
+  color: rgb(19, 64, 191);
 }
 
 .consultancy-left p {
