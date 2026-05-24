@@ -40,15 +40,9 @@ const Registrations = () => {
         
         <div className="hero-image">
           <img 
-            src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80" 
+            src="/images/registration/Hero Section_Reg.png" 
             alt="Business Registration Professional" 
           />
-          <div className="speech-bubble">
-            <div className="bubble-content">
-              <span className="bubble-brand">PLUS & MINUS</span>
-              <span className="bubble-text">Your FSSAI have been Approved.</span>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -249,22 +243,11 @@ const Registrations = () => {
 
           {/* Center Image Gallery */}
           <div className="audience-gallery">
-            <div className="gallery-tall">
-              <img 
-                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80" 
-                alt="Business professional" 
-              />
-            </div>
-            <div className="gallery-stacked">
-              <img 
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" 
-                alt="Team collaboration" 
-              />
-              <img 
-                src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80" 
-                alt="Food professional" 
-              />
-            </div>
+            <img 
+              src="/images/registration/5 (1).png" 
+              alt="Business professional" 
+              className="gallery-single-image"
+            />
           </div>
 
           {/* Right Text Column */}
@@ -325,7 +308,7 @@ const Registrations = () => {
           </div>
           <div className="how-it-works-right">
             <img 
-              src="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=1200&q=80" 
+              src="/images/registration/6 (1).png" 
               alt="Professional at work" 
             />
           </div>
@@ -440,7 +423,7 @@ const Registrations = () => {
           </div>
           <div className="consultancy-right">
             <img 
-              src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=1200&q=80" 
+              src="/images/registration/Hero Section_Reg.png" 
               alt="Professional consultancy" 
             />
           </div>
