@@ -7,7 +7,7 @@ const ImageContentSection = () => {
     <section className="image-content-section">
       <div className="image-content-container">
         <div className="content-left">
-          <h2 className="main-title">July 31 is coming.<br />Are you ready?</h2>
+          <h2 className="main-title">July 31 is coming.<br />Are you <span className="blue-text">ready?</span></h2>
           <p className="subtitle">We provide a dedicated team with decades of experience, ensuring every filing on your tax calendar is done right and on time</p>
           <div className="button-group">
             <Button 
@@ -26,7 +26,7 @@ const ImageContentSection = () => {
         </div>
         <div className="image-right">
           <img 
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+            src="/images/income-tax/6.png" 
             alt="Tax planning consultation" 
             className="section-image"
           />
