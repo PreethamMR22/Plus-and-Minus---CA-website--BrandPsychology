@@ -108,7 +108,7 @@
   border-radius: 16px;
   overflow: hidden;
   width: 380px;
-  height: 480px;
+  height: 550px;
   margin-right: 40px;
   margin-left: auto;
   z-index: 1;
@@ -1552,6 +1552,8 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  transform: scale(1.15);
+  transform-origin: center;
 }
 
 .audience-card-title {

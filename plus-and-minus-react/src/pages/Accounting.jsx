@@ -66,43 +66,9 @@ const Accounting = () => {
 
         <div className="accounting-hero-image">
           <img
-            src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80"
+            src="/images/accounting/hero.png"
             alt="Accounting professional"
           />
-          <div className="financial-summary-card">
-            <div className="card-header">
-              <span className="month">January 2026</span>
-            </div>
-            <div className="financial-metrics">
-              <div className="metric-item">
-                <div className="metric-label-group">
-                  <span className="color-square revenue"></span>
-                  <span className="metric-label">Revenue</span>
-                </div>
-                <span className="metric-value">₹9,46,000</span>
-              </div>
-              <div className="metric-item">
-                <div className="metric-label-group">
-                  <span className="color-square expense"></span>
-                  <span className="metric-label">Expense</span>
-                </div>
-                <span className="metric-value">₹5,96,780</span>
-              </div>
-              <div className="metric-item">
-                <div className="metric-label-group">
-                  <span className="color-square profit"></span>
-                  <span className="metric-label">Net Profit</span>
-                </div>
-                <span className="metric-value">₹3,49,220</span>
-              </div>
-            </div>
-          </div>
-          <div className="speech-bubble">
-            <div className="bubble-content">
-              <span className="bubble-brand">PLUS & MINUS</span>
-              <span className="bubble-text">Your monthly financial statements are ready.</span>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -164,11 +130,11 @@ const Accounting = () => {
           </p>
         </div>
         <div className="process-content" style={{ alignItems: 'center' }}>
-          <div className="process-image" style={{ position: 'sticky', top: '100px' }}>
+          <div className="process-image" style={{ position: 'sticky', top: '100px', overflow: 'hidden' }}>
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80"
+              src="/images/accounting/PLUS AND MINUS (14).png"
               alt="Simple Process"
-              style={{ borderRadius: '16px', width: '100%', height: '420px', objectFit: 'cover', display: 'block' }}
+              style={{ borderRadius: '16px', width: '100%', height: '420px', objectFit: 'cover', display: 'block', transform: 'scale(1.1)', transformOrigin: 'center' }}
             />
           </div>
           <div className="process-steps" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
@@ -284,7 +250,7 @@ const Accounting = () => {
 
             <div className="audience-card">
               <div className="audience-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=600&q=80" alt="Solo Founder" />
+                <img src="/images/accounting/4.png" alt="Solo Founder" />
               </div>
               <h3 className="audience-card-title">Solo Founders</h3>
               <p className="audience-card-text">
@@ -294,7 +260,7 @@ const Accounting = () => {
 
             <div className="audience-card">
               <div className="audience-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=80" alt="Small Businesses" />
+                <img src="/images/accounting/5.png" alt="Small Businesses" />
               </div>
               <h3 className="audience-card-title">Small businesses</h3>
               <p className="audience-card-text">
@@ -304,7 +270,7 @@ const Accounting = () => {
 
             <div className="audience-card">
               <div className="audience-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=600&q=80" alt="Ecommerce" />
+                <img src="/images/accounting/6.png" alt="Ecommerce" />
               </div>
               <h3 className="audience-card-title">Ecommerce</h3>
               <p className="audience-card-text">
@@ -336,25 +302,7 @@ const Accounting = () => {
           </div>
           <div className="startups-image-side">
             <div className="startups-image-container">
-              <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80" alt="Accounting Simplified" />
-              <div className="floating-tags">
-                <div className="tag-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="rgb(19, 64, 191)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                  Balance Sheet
-                </div>
-                <div className="tag-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="rgb(19, 64, 191)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                  Income Statement
-                </div>
-                <div className="tag-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="rgb(19, 64, 191)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                  Audit Report
-                </div>
-                <div className="tag-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="rgb(19, 64, 191)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                  Ledger Statement
-                </div>
-              </div>
+              <img src="/images/accounting/2.png" alt="Accounting Simplified" />
             </div>
           </div>
         </div>
