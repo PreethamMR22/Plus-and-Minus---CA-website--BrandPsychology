@@ -48,7 +48,7 @@ const GST = () => {
         
         <div className="hero-image">
           <img 
-            src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+            src="/images/GST/Hero Section.png" 
             alt="GST Professional" 
           />
         </div>
@@ -110,25 +110,25 @@ const GST = () => {
       <section className="gst-business-types">
         <h2>We handle GST for every kind of business.</h2>
         <div className="business-type-cards">
-          <div className="business-type-card" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80)'}}>
+          <div className="business-type-card" style={{backgroundImage: 'url(/images/GST/Startups.png)'}}>
             <div className="business-type-content">
               <h3>Startups</h3>
               <p>Set up compliance from day one. Scale without surprises.</p>
             </div>
           </div>
-          <div className="business-type-card" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80)'}}>
+          <div className="business-type-card" style={{backgroundImage: 'url(/images/GST/Real%20Estate.png)'}}>
             <div className="business-type-content">
               <h3>Real Estate</h3>
               <p>GST in real estate is complex. We make it simple.</p>
             </div>
           </div>
-          <div className="business-type-card" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80)'}}>
+          <div className="business-type-card" style={{backgroundImage: 'url(/images/GST/E%20Commerce.png)'}}>
             <div className="business-type-content">
               <h3>E Commerce</h3>
               <p>Multiple platforms, constant reconciliation - we bring clarity.</p>
             </div>
           </div>
-          <div className="business-type-card" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80)'}}>
+          <div className="business-type-card" style={{backgroundImage: 'url(/images/GST/Exports.png)'}}>
             <div className="business-type-content">
               <h3>Exports</h3>
               <p>LUT, filings, refunds - handled. Export without GST stress.</p>
@@ -161,7 +161,7 @@ const GST = () => {
           </div>
           <div className="take-off-plate-right">
             <img 
-              src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+              src="/images/GST/Middle imag.png" 
               alt="Professional barista" 
             />
           </div>
@@ -171,7 +171,7 @@ const GST = () => {
       {/* Why Plus & Minus Section */}
       <section className="why-plus-minus-section">
         <div className="why-plus-minus-container">
-          <h2>Why Plus & Minus</h2>
+          <h2>Why <span style={{color: 'rgb(19, 64, 191)'}}>Plus & Minus</span></h2>
           <div className="why-plus-minus-cards">
             <div className="why-plus-minus-card">
               <h3>You never miss a deadline.</h3>
@@ -200,7 +200,7 @@ const GST = () => {
             </Link>
           </div>
           <div className="contact-us-gst-image">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Professional working" />
+            <img src="/images/GST/Footer.png" alt="Professional working" />
           </div>
         </div>
       </section>
