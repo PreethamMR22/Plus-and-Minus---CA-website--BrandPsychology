@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faLocationDot, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import Button from '../components/Button';
 import Modal from '../components/Modal';
 import './Contact.css';
@@ -94,7 +96,7 @@ const Contact = () => {
           <p>Connect with us via WhatsApp, email, or request a callback. Our team will get in touch quickly.</p>
           
           <div className="contact-item">
-            <div className="contact-item-icon">📞</div>
+            <div className="contact-item-icon"><FontAwesomeIcon icon={faPhone} /></div>
             <div>
               <div className="contact-item-label">Call Us</div>
               <div className="contact-item-val">+91 7204403746</div>
@@ -102,7 +104,7 @@ const Contact = () => {
           </div>
           
           <div className="contact-item">
-            <div className="contact-item-icon">✉️</div>
+            <div className="contact-item-icon"><FontAwesomeIcon icon={faEnvelope} /></div>
             <div>
               <div className="contact-item-label">Email Us</div>
               <div className="contact-item-val">support@plusandminus.in</div>
@@ -110,7 +112,7 @@ const Contact = () => {
           </div>
           
           <div className="contact-item">
-            <div className="contact-item-icon">📍</div>
+            <div className="contact-item-icon"><FontAwesomeIcon icon={faLocationDot} /></div>
             <div>
               <div className="contact-item-label">Location</div>
               <div className="contact-item-val">Bengaluru</div>
