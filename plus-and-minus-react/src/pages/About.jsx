@@ -1,10 +1,17 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBullseye, faLightbulb, faHandsClapping, faHandHoldingHeart, faPuzzlePiece, faCrosshairs, faClipboardList } from '@fortawesome/free-solid-svg-icons';
+import { faBullseye, faLightbulb, faHandsClapping, faHandHoldingHeart, faPuzzlePiece, faCrosshairs, faClipboardList, faStar, faChevronLeft, faChevronRight, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import './About.css';
 import peopleGrid from '../assets/people-grid-new.png';
 import vidhanaSoudha from '../assets/vidhana-soudha.png';
-import teamPlaceholder from '../assets/team-placeholder.png';
+import punithImage from '/images/team/Punith K.png';
+import sowjanyaImage from '/images/team/Sowjanya.png';
+import harshaImage from '/images/team/Harsha.png';
+import harshaComplianceImage from '/images/team/Harsha Compliance.png';
+import raghuImage from '/images/team/Raghu.png';
+import vasuImage from '/images/team/Vasu.png';
+import deepakImage from '/images/team/Deepak .png';
 
 const About = () => {
   const values = [
@@ -39,37 +46,55 @@ const About = () => {
     {
       name: 'Punith Krishna',
       role: 'Taxation Expert',
-      photo: teamPlaceholder
+      photo: punithImage
     },
     {
       name: 'C S Sowjanya Prakash',
       role: 'Company Secretary',
-      photo: teamPlaceholder
+      photo: sowjanyaImage
     },
     {
       name: 'Harsha Swamy',
       role: 'Accounting and Bookkeeping Expert',
-      photo: teamPlaceholder
+      photo: harshaImage
     },
     {
       name: 'Harsha Ganesh',
       role: 'Compliance Expert',
-      photo: teamPlaceholder
+      photo: harshaComplianceImage
     },
     {
       name: 'N Raghu Kumar, CFP',
       role: 'Certified Financial Planner and SEBI Registered Investment Advisor',
-      photo: teamPlaceholder
+      photo: raghuImage
     },
     {
       name: 'Shank K Vasudev',
       role: 'Mentor and Startup Advisor, Founder and CEO of Plan a wedding and phundo',
-      photo: teamPlaceholder
+      photo: vasuImage
     },
     {
       name: 'Deepak Anniyappa',
       role: 'Mentor and Advisor, IIM Alumni, Founder of NxVoy Trips',
-      photo: teamPlaceholder
+      photo: deepakImage
+    }
+  ];
+
+  const testimonials = [
+    {
+      stars: 5,
+      text: "Huge shoutout to Punit at Plus and Minus for his help with our overdue tax filings. My wife and I were worried about the missed assessment years, but Punit guided us through every step with clarity and patience. His services are professional yet very affordably priced.\n\nI'm so impressed that I've moved my tax business away from my previous CA to work with him exclusively moving forward. 5 stars!",
+      author: "Raghu K"
+    },
+    {
+      stars: 5,
+      text: "We have been working with Punith for ITR filing for the last 5 years. Recently when we started a business he guided us and completed the entire process in just 3 days.\n\nNo matter how many questions I asked he always replied properly without any delay. His approach is very friendly and professional. He genuinely cares about clients and makes sure everything is handled well. Highly recommended",
+      author: "SPORTIQ"
+    },
+    {
+      stars: 5,
+      text: "I was recently introduced to Punith by my financial planner, and the experience with his services has been seamless and excellent.\n\nHe efficiently handled the process for our company registration and tax compliance. The attention to detail and prompt service is remarkable. Truly a trustworthy partner for all financial needs.",
+      author: "Ananya R"
     }
   ];
 
@@ -192,6 +217,54 @@ const About = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="testimonials-section-fresh section-padding">
+        <div className="container">
+          <h2 className="testimonials-title fade-up">What our <span className="blue-text">customers</span> say</h2>
+          <p className="testimonials-subtitle fade-up">Here's a glimpse of what they love about Plus and Minus.</p>
+          <div className="testimonials-grid-fresh">
+            {testimonials.map((testimonial, index) => (
+              <div className="testimonial-card-fresh fade-up" key={index} style={{ animationDelay: `${index * 0.1}s` }}>
+                <div className="stars">
+                  {[...Array(testimonial.stars)].map((_, i) => (
+                    <FontAwesomeIcon icon={faStar} key={i} />
+                  ))}
+                </div>
+                <p className="testimonial-text">{testimonial.text}</p>
+                <p className="testimonial-author">{testimonial.author}</p>
+              </div>
+            ))}
+          </div>
+          <div className="testimonials-navigation-fresh">
+            <button className="nav-arrow left-arrow"><FontAwesomeIcon icon={faChevronLeft} /></button>
+            <button className="nav-arrow right-arrow"><FontAwesomeIcon icon={faChevronRight} /></button>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="cta-section-fresh section-padding">
+        <div className="container">
+          <div className="cta-content-fresh fade-up">
+            <h2 className="cta-greeting">Swagata</h2>
+            <h1 className="cta-heading">Let's make this simple.</h1>
+            <p className="cta-description">
+              Drop us a WhatsApp. Tell us what's on your mind. We'll take it from there like we have for 500+ folks across Bengaluru.
+            </p>
+            <div className="cta-buttons-fresh">
+              <a href="tel:+919876543210" className="btn-primary cta-btn">
+                <FontAwesomeIcon icon={faPhone} />
+                <span>Talk to an Expert</span>
+              </a>
+              <a href="https://wa.me/919876543210" className="btn-secondary cta-btn">
+                <FontAwesomeIcon icon={faWhatsapp} />
+                <span>WhatsApp us now</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faXTwitter, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import './Footer.css';
 
 const Footer = () => {
@@ -35,15 +36,15 @@ const Footer = () => {
         <div className="footer-col">
           <h4>Contact Us</h4>
           <div className="footer-contact-item">
-            <span>📞</span>
+            <span><FontAwesomeIcon icon={faPhone} /></span>
             <span>+91 7204403746</span>
           </div>
           <div className="footer-contact-item">
-            <span>✉️</span>
+            <span><FontAwesomeIcon icon={faEnvelope} /></span>
             <span>support@plusandminus.in</span>
           </div>
           <div className="footer-contact-item">
-            <span>📍</span>
+            <span><FontAwesomeIcon icon={faLocationDot} /></span>
             <span>Bengaluru</span>
           </div>
           <div className="footer-available-via">
