@@ -79,7 +79,7 @@ const Startup = () => {
   const companyTypes = {
     PLC: {
       title: 'Private Limited Company',
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: '/images/startup/3.png',
       content: 'A Private Limited Company is a business entity held by private stakeholders. It offers limited liability protection to its shareholders and is ideal for businesses looking to raise funds from investors. This structure provides credibility, separate legal existence, and easier transfer of ownership.',
       features: [
         { text: 'Limited liability protection for owners', type: 'check' },
@@ -95,7 +95,7 @@ const Startup = () => {
     },
     OPC: {
       title: 'One Person Company',
-      image: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: '/images/startup/4.png',
       content: 'A One Person Company (OPC) is designed for solo entrepreneurs who want to run a business with full control while enjoying the benefits of a corporate structure. It provides limited liability and a separate legal identity, making it a great option for individuals starting their business journey with simplicity and structure.',
       features: [
         { text: 'Single owner with full control', type: 'check' },
@@ -111,7 +111,7 @@ const Startup = () => {
     },
     LLP: {
       title: 'Limited Liability Partnership',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: '/images/startup/2.png',
       content: 'A Limited Liability Partnership (LLP) combines the flexibility of a traditional partnership with the benefits of limited liability. It is well-suited for professionals, service providers, and small businesses who want a simple structure with fewer compliance requirements while protecting personal assets.',
       features: [
         { text: 'Limited liability for partners', type: 'check' },
@@ -158,7 +158,7 @@ const Startup = () => {
         
         <div className="hero-image">
           <img 
-            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+            src="/images/startup/1.png" 
             alt="Startup Registration" 
           />
           <div className="image-overlay-card">
@@ -337,7 +337,7 @@ const Startup = () => {
             </div>
           </div>
           <div className="idea-to-entity-image">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Business professional" />
+            <img src="/images/startup/6.png" alt="Business professional" />
           </div>
         </div>
               </section>
@@ -380,7 +380,7 @@ const Startup = () => {
           </div>
           <div className="dream-business-image-content">
             <img 
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+              src="/images/startup/6.png" 
               alt="Business professionals collaborating"
             />
           </div>
