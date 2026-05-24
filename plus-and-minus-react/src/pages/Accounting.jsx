@@ -302,7 +302,7 @@ const Accounting = () => {
           </div>
           <div className="startups-image-side">
             <div className="startups-image-container">
-              <img src="/images/accounting/2.png" alt="Accounting Simplified" />
+              <img src="/images/accounting/simple-process.png" alt="Accounting Simplified" />
             </div>
           </div>
         </div>

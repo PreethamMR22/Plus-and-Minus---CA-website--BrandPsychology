@@ -161,10 +161,6 @@ const Startup = () => {
             src="/images/startup/1.png" 
             alt="Startup Registration" 
           />
-          <div className="image-overlay-card">
-            <p className="overlay-title">PLUS & MINUS</p>
-            <p className="overlay-text">Your company has been successfully Registered.</p>
-          </div>
         </div>
       </section>
 
