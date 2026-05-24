@@ -15,10 +15,10 @@ const Registrations = () => {
       {/* Hero Section */}
       <section className="hero registrations-hero">
         <div className="hero-content">
-          <h1>Running a <span>business legally</span><br />shouldn't be this hard.</h1>
+          <h1>Running a <span>business legally</span><br className="desktop-only-br" />shouldn't be this hard.</h1>
           <p>
-            From FSSAI to Trademark, PF to Startup India - we handle every<br />
-            registration and licence your business needs. One team. Zero<br />
+            From FSSAI to Trademark, PF to Startup India - we handle every<br className="desktop-only-br" />
+            registration and licence your business needs. One team. Zero<br className="desktop-only-br" />
             running around
           </p>
           <div className="hero-btns">
@@ -230,18 +230,18 @@ const Registrations = () => {
             <div className="audience-box">
               <h3>New founders</h3>
               <p>
-                Just starting? Udyam, Shops Act,<br />
-                and Startup India recognition are<br />
-                your first three steps. We'll guide<br />
+                Just starting? Udyam, Shops Act,<br className="desktop-only-br" />
+                and Startup India recognition are<br className="desktop-only-br" />
+                your first three steps. We'll guide<br className="desktop-only-br" />
                 you on what's needed.
               </p>
             </div>
             <div className="audience-box">
               <h3>Food businesses</h3>
               <p>
-                Cloud kitchen, restaurant,<br />
-                bakery, or home cook - FSSAI is<br />
-                non-negotiable. Get registered<br />
+                Cloud kitchen, restaurant,<br className="desktop-only-br" />
+                bakery, or home cook - FSSAI is<br className="desktop-only-br" />
+                non-negotiable. Get registered<br className="desktop-only-br" />
                 before you start selling.
               </p>
             </div>
@@ -272,18 +272,18 @@ const Registrations = () => {
             <div className="audience-box">
               <h3>Growing teams</h3>
               <p>
-                Hired your 10th employee?<br />
-                PF and ESIC become mandatory.<br />
-                Don't wait for a notice - get<br />
+                Hired your 10th employee?<br className="desktop-only-br" />
+                PF and ESIC become mandatory.<br className="desktop-only-br" />
+                Don't wait for a notice - get<br className="desktop-only-br" />
                 registered today.
               </p>
             </div>
             <div className="audience-box">
               <h3>Exporters & importers</h3>
               <p>
-                Want to sell internationally or<br />
-                source from abroad? IEC is your<br />
-                first step - one-time registration,<br />
+                Want to sell internationally or<br className="desktop-only-br" />
+                source from abroad? IEC is your<br className="desktop-only-br" />
+                first step - one-time registration,<br className="desktop-only-br" />
                 valid for life.
               </p>
             </div>
@@ -418,10 +418,10 @@ const Registrations = () => {
       <section className="consultancy-section">
         <div className="consultancy-container">
           <div className="consultancy-left">
-            <h2>Not sure where<br /><span>to start?</span></h2>
+            <h2>Not sure where<br className="desktop-only-br" /><span>to start?</span></h2>
             <p>
-              Tell us about your business in one WhatsApp message.<br />
-              We will tell you exactly which registrations you need - free,<br />
+              Tell us about your business in one WhatsApp message.<br className="desktop-only-br" />
+              We will tell you exactly which registrations you need - free,<br className="desktop-only-br" />
               in minutes, no commitment.
             </p>
             <div className="consultancy-btns">

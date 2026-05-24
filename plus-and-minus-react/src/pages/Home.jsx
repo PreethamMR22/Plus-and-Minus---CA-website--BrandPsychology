@@ -327,7 +327,7 @@ const Home = () => {
           ))}
         </div>
         <div className="services-cta">
-          <Button to="/services" variant="primary">
+          <Button to="/contact" variant="primary">
             Explore Services →
           </Button>
         </div>

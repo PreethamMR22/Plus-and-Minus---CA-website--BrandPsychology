@@ -3,6 +3,11 @@
   padding-top: 0;
 }
 
+/* Utility: Desktop-only line breaks — hidden on mobile */
+.desktop-only-br {
+  display: inline;
+}
+
 /* REGISTRATIONS HERO */
 .registrations-hero {
   min-height: 100vh;
@@ -823,6 +828,18 @@ section.registrations-hero .hero-btns {
   .consultancy-btns {
     justify-content: center;
   }
+
+  /* Tablet: 2-column services grid — prevents cards from squishing at 3 columns */
+  .services-overview-section .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  /* Tablet: center hero stats */
+  .registrations-hero .hero-stats {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 /* Mobile (768px and below) */
@@ -833,21 +850,29 @@ section.registrations-hero .hero-btns {
     padding: 100px 20px 60px;
     text-align: center;
     min-height: auto;
+    justify-content: center;
+    align-items: center;
   }
 
   .registrations-hero .hero-content {
     max-width: 100%;
     margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .registrations-hero .hero-btns {
     flex-direction: column;
     gap: 16px;
+    align-items: center;
+    width: 100%;
   }
 
   .registrations-hero .hero-btns button,
-  .registrations-hero .hero-btns .Button {
+  .registrations-hero .hero-btns .btn {
     width: 100%;
+    max-width: 300px;
   }
 
   .registrations-hero .hero-image {
@@ -874,6 +899,18 @@ section.registrations-hero .hero-btns {
     gap: 20px;
   }
 
+  .card-footer {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .timeline-badge {
+    position: static;
+    margin-top: 0;
+    display: inline-block;
+  }
+
   /* Audience Section */
   .audience-section {
     padding: 60px 20px;
@@ -892,6 +929,11 @@ section.registrations-hero .hero-btns {
     height: 300px;
   }
 
+  /* Fix: stacked images collapse when gallery height becomes auto */
+  .gallery-stacked img {
+    height: 180px;
+  }
+
   /* How It Works */
   .how-it-works-section {
     padding: 60px 20px;
@@ -900,6 +942,11 @@ section.registrations-hero .hero-btns {
   .step-card {
     width: 100%;
     padding: 20px;
+  }
+
+  /* Fix: justify text looks bad on narrow phone screens */
+  .step-card p {
+    text-align: left;
   }
 
   /* FAQ Section */
@@ -920,6 +967,18 @@ section.registrations-hero .hero-btns {
     padding: 60px 20px;
   }
 
+  .consultancy-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .consultancy-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .consultancy-left h2 {
     font-size: 32px;
   }
@@ -927,26 +986,41 @@ section.registrations-hero .hero-btns {
   .consultancy-btns {
     flex-direction: column;
     width: 100%;
+    align-items: center;
   }
 
   .consultancy-btns button,
-  .consultancy-btns .Button {
+  .consultancy-btns .btn {
     width: 100%;
+    max-width: 300px;
   }
 }
 
 /* Extra Small (480px and below) */
 @media (max-width: 480px) {
-  .registrations-hero h1 {
+  .registrations-hero .hero-content h1 {
     font-size: 32px;
   }
 
-  .hero-stats {
-    flex-direction: column;
-    gap: 8px;
+  /* Single-column services grid on phones */
+  .services-overview-section .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
-  .hero-stats .bullet {
+  /* Hero stats: stack vertically and hide bullet separators */
+  .registrations-hero .hero-stats {
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+  }
+
+  .registrations-hero .hero-stats .bullet {
+    display: none;
+  }
+
+  /* Desktop-only line breaks: hide on mobile */
+  .desktop-only-br {
     display: none;
   }
 

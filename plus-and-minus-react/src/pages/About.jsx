@@ -1,174 +1,199 @@
-import { Link } from 'react-router-dom';
-import Button from '../components/Button';
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBullseye, faLightbulb, faHandsClapping, faHandHoldingHeart, faPuzzlePiece, faCrosshairs, faClipboardList } from '@fortawesome/free-solid-svg-icons';
 import './About.css';
+import peopleGrid from '../assets/people-grid-new.png';
+import vidhanaSoudha from '../assets/vidhana-soudha.png';
+import teamPlaceholder from '../assets/team-placeholder.png';
 
 const About = () => {
   const values = [
     {
-      icon: '🎯',
-      title: 'Precision',
-      description: 'Every number matters. We treat your finances with the care and accuracy they deserve.'
+      title: 'Lift each other up',
+      description: 'We succeed as one team by recognizing, inspiring, and motivating each other.',
+      icon: faHandsClapping
     },
     {
-      icon: '❤️',
-      title: 'Human-first',
-      description: 'We work with numbers but for people. Every client is a person with real goals and real challenges.'
+      title: 'Champion our customers',
+      description: 'Our customers are at the center of everything we do.',
+      icon: faHandHoldingHeart
     },
     {
-      icon: '⭐',
-      title: 'Excellence',
-      description: 'Chartered Accountants with deep expertise. We set a high bar — for ourselves, and the results we deliver.'
+      title: 'See the whole picture',
+      description: "We're curious and collaborative, always connecting the dots to create seamless experiences.",
+      icon: faPuzzlePiece
     },
     {
-      icon: '🔍',
-      title: 'Transparency',
-      description: 'Clear pricing, honest advice. No jargon, no surprises — just straightforward, trustworthy guidance.'
+      title: 'Focus on results',
+      description: 'We take ownership of our goals and strive for excellence through innovation and accountability.',
+      icon: faCrosshairs
+    },
+    {
+      title: 'Keep it simple',
+      description: 'We value clear, direct, and inclusive communication to build trust and understanding.',
+      icon: faClipboardList
     }
   ];
 
   const team = [
     {
-      photo: '👨‍💼',
       name: 'Punith Krishna',
-      role: 'Managing Partner · Taxation Expert, FCA'
-    },  
-    {
-      photo: '👨‍💼',
-      name: 'N Raghu Kumar',
-      role: 'Certified Financial Planner (CFP)'
+      role: 'Taxation Expert',
+      photo: teamPlaceholder
     },
     {
-      photo: '👨‍💼',
-      name: 'Shank K Vasudev',
-      role: 'Mentor'
+      name: 'C S Sowjanya Prakash',
+      role: 'Company Secretary',
+      photo: teamPlaceholder
     },
     {
-      photo: '👩‍💼',
       name: 'Harsha Swamy',
-      role: 'Taxation Expert'
+      role: 'Accounting and Bookkeeping Expert',
+      photo: teamPlaceholder
+    },
+    {
+      name: 'Harsha Ganesh',
+      role: 'Compliance Expert',
+      photo: teamPlaceholder
+    },
+    {
+      name: 'N Raghu Kumar, CFP',
+      role: 'Certified Financial Planner and SEBI Registered Investment Advisor',
+      photo: teamPlaceholder
+    },
+    {
+      name: 'Shank K Vasudev',
+      role: 'Mentor and Startup Advisor, Founder and CEO of Plan a wedding and phundo',
+      photo: teamPlaceholder
+    },
+    {
+      name: 'Deepak Anniyappa',
+      role: 'Mentor and Advisor, IIM Alumni, Founder of NxVoy Trips',
+      photo: teamPlaceholder
     }
   ];
 
   return (
     <div className="about-page">
       {/* Hero Section */}
-      <section className="about-hero">
-        <div className="section-content">
-          <div className="section-tag">Who We Are</div>
-          <h1>
-            Innovation with<br />
-            experience on<br />
-            its side.
-          </h1>
-          <p>
-            Plus And Minus Accountants & Advisers — where chartered expertise meets genuine human care. We work with numbers. But for people.
-          </p>
-        </div>
-      </section>
+      <section className="about-hero-fresh">
+        <div className="container">
+          <div className="hero-content-wrapper">
+            <h1 className="hero-title fade-up">
+              Namma Bengaluru. <span className="blue-text">Namma Startups.</span> Namma Taxpayers
+            </h1>
 
-      {/* Our Story */}
-      <section className="section">
-        <div className="two-col">
-          <div>
-            <div className="section-tag">Our Story</div>
-            <h2 className="section-title">
-              We created Plus And Minus to help you reach <span>financial freedom</span>
-            </h2>
-            <p className="section-sub">
-              You only have one life, and it's often filled with long work days and stress about money. It doesn't have to be that way. The reality is, wealth is freedom.
-            </p>
-            <p className="section-sub">
-              We created Plus And Minus to help you reach financial freedom — the moment you can stop working and start living your meaningful life without money stress.
-            </p>
-            <p className="section-sub">
-              In an environment where anyone can call themselves an accountant, we stand apart. Our team of Chartered Accountants provides end-to-end strategic accounting in the Age of AI — with more transparency, better outcomes, and real trust.
-            </p>
-          </div>
-          <div className="col-img">
-            <div className="col-img-placeholder">📋</div>
-          </div>
-        </div>
-      </section>
+            <div className="namma-story-section fade-up" style={{ animationDelay: '0.2s' }}>
+              <h2 className="sub-heading">Namma Story</h2>
 
-      {/* Values */}
-      <section className="section">
-        <div className="section-centered">
-          <div className="section-tag">What Drives Us</div>
-          <h2 className="section-title">Our Values</h2>
-        </div>
-        <div className="values-grid">
-          {values.map((value, index) => (
-            <div key={index} className="value-card">
-              <div className="value-icon">{value.icon}</div>
-              <h3>{value.title}</h3>
-              <p>{value.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Stats Bar */}
-      <section className="stats-bar">
-        <div className="stat-item">
-          <div className="stat-val">500+</div>
-          <div className="stat-label">Happy Clients</div>
-        </div>
-        <div className="stat-item">
-          <div className="stat-val">10+</div>
-          <div className="stat-label">Expert Advisers</div>
-        </div>
-        <div className="stat-item">
-          <div className="stat-val">98%</div>
-          <div className="stat-label">Repeat Engagement</div>
-        </div>
-        <div className="stat-item">
-          <div className="stat-val">100%</div>
-          <div className="stat-label">Satisfaction Rate</div>
-        </div>
-      </section>
-
-      {/* Team */}
-      <section className="section">
-        <div className="section-centered">
-          <div className="section-tag">Our People</div>
-          <h2 className="section-title">Meet the Leadership Team</h2>
-          <p className="section-sub">
-            Experienced professionals dedicated to your success. Each member brings deep expertise and a genuine commitment to every client.
-          </p>
-        </div>
-        <div className="team-grid">
-          {team.map((member, index) => (
-            <div key={index} className="team-card">
-              <div className="team-photo">{member.photo}</div>
-              <div className="team-info">
-                <h3>{member.name}</h3>
-                <p>{member.role}</p>
+              <div className="story-content">
+                <p>Plus & Minus was built in Namma Bengaluru for the people building businesses every day.</p>
+                <p>We started in 2020 with a simple goal - to help small and mid-sized businesses handle accounting, taxes, payroll, and compliance without stress or confusion.</p>
+                <p>As Bengaluru's startup and business culture grew, we grew alongside it - supporting hundreds of businesses with reliable systems, honest guidance, and responsive support.</p>
+                <p>Today, we continue to be a local finance partner that understands your business, picks up the phone when you call, and helps you grow with confidence.</p>
+                <p>Every client we serve is a Bengaluru business we believe in. When you grow, we grow. That is why we show up like your financial partner - not just a service provider.</p>
               </div>
             </div>
-          ))}
+
+            <div className="people-gallery fade-up" style={{ animationDelay: '0.4s' }}>
+              <img src={peopleGrid} alt="Our Community in Bengaluru" className="gallery-img" />
+            </div>
+
+            <div className="stats-section fade-up" style={{ animationDelay: '0.6s' }}>
+              <p className="stats-intro">Each number is backed by years of focused tax expertise and real outcomes.</p>
+              <div className="stats-grid-box">
+                <div className="stat-card">
+                  <h3 className="stat-number">500+</h3>
+                  <p className="stat-label">Happy Client</p>
+                </div>
+                <div className="stat-card">
+                  <h3 className="stat-number">10+</h3>
+                  <p className="stat-label">Team of Experts</p>
+                </div>
+                <div className="stat-card">
+                  <h3 className="stat-number">98%</h3>
+                  <p className="stat-label">Repeat Engagement</p>
+                </div>
+                <div className="stat-card">
+                  <h3 className="stat-number">100%</h3>
+                  <p className="stat-label">Satisfaction</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="dark-section">
-        <div className="section-centered">
-          <h2>Ready to work with Plus And Minus?</h2>
-          <p>Let's talk about how we can help you achieve your financial goals.</p>
-          <Button to="/contact" variant="hero-primary" size="large">
-            Get In Touch →
-          </Button>
+      {/* Mission & Vision Section */}
+      <section className="mission-vision-section section-padding">
+        <div className="container">
+          <h2 className="section-title-large">
+            Built in Bengaluru. <span className="blue-text">For Bengaluru.</span>
+          </h2>
+          <div className="mission-vision-grid">
+            <div className="mission-vision-cards">
+              <div className="mission-card fade-up">
+                <div className="card-header">
+                  <span className="card-icon"><FontAwesomeIcon icon={faBullseye} /></span>
+                  <h3>Namma Mission</h3>
+                </div>
+                <p>To give every Bengaluru business - startup or small, solo or team - the financial clarity and peace of mind they deserve through simple, transparent, and trustworthy tax, accounting, and compliance support.</p>
+              </div>
+              <div className="vision-card fade-up" style={{ animationDelay: '0.2s' }}>
+                <div className="card-header">
+                  <span className="card-icon"><FontAwesomeIcon icon={faLightbulb} /></span>
+                  <h3>Namma Vision</h3>
+                </div>
+                <p>To build a Bengaluru and Karnataka business ecosystem where startups, professionals, and small businesses can grow without fear or confusion around taxes, accounting, and compliance.</p>
+              </div>
+            </div>
+            <div className="mission-vision-image fade-up" style={{ animationDelay: '0.4s' }}>
+              <img src={vidhanaSoudha} alt="Vidhana Soudha Bengaluru" className="landmark-img" />
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Green Section */}
-      <section className="green-section">
-        <div>
-          <h2>Ready to take control of your finances?</h2>
-          <p>Talk to our experts today. No obligation, just clarity.</p>
+      {/* Values Section */}
+      <section className="values-section section-padding">
+        <div className="container">
+          <div className="section-header-centered">
+            <h2 className="section-title-large">Namma <span className="blue-text">Values</span></h2>
+            <p className="section-subtitle">We move fast, think big, and lift each other up - because<br />when we win together, our customers do too.</p>
+          </div>
+          <div className="values-cards-grid">
+            {values.map((v, i) => (
+              <div key={i} className="value-item-card fade-up" style={{ animationDelay: `${i * 0.1}s` }}>
+                <div className="value-icon-circle"><FontAwesomeIcon icon={v.icon} /></div>
+                <h3>{v.title}</h3>
+                <p>{v.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
-        <Button variant="white-rounded" to="/contact">
-          Let's Talk →
-        </Button>
+      </section>
+
+      {/* Team Section */}
+      <section className="team-section-fresh section-padding">
+        <div className="container">
+          <div className="section-header-centered">
+            <h2 className="section-title-large">Namma <span className="blue-text">Team</span></h2>
+            <p className="section-subtitle">Your trusted team for everything from daily operations to long-term planning.</p>
+          </div>
+          <div className="team-grid-fresh">
+            {team.map((m, i) => (
+              <div key={i} className="team-member-card-fresh fade-up" style={{ animationDelay: `${i * 0.1}s` }}>
+                <div className="member-photo-wrapper">
+                  <img src={m.photo} alt={m.name} className="member-photo" />
+                </div>
+                <div className="member-info-fresh">
+                  <h3>{m.name}</h3>
+                  <p>{m.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
     </div>
   );

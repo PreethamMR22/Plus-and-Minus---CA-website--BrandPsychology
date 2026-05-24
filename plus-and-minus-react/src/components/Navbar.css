@@ -228,7 +228,7 @@ nav.scrolled .btn-outline:hover {
 /* More specific selectors to override Button.css */
 nav .btn-primary,
 .nav-actions .btn-primary {
-  padding: 10px 8px !important;
+  padding: 10px 20px !important;
   background: var(--green);
   color: var(--white);
   border: none;
