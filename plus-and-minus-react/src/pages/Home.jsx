@@ -339,7 +339,7 @@ const Home = () => {
 
           <h2 className="section-title animate-slide-up" data-animate="slide-up" style={{ fontSize: 'clamp(24px, 3vw, 36px)' }}>
             We know you're busy growing your business.<br />
-            <span>So, we keep it simple with <span style={{ color: 'white' }}>4</span> easy steps.</span>
+            <span>So, we keep it simple with <span style={{ color: 'black' }}>4</span> easy steps.</span>
           </h2>
           <div className="mission-steps">
             <div className="mission-step animate-scale-up" data-animate="scale-up" style={{ animationDelay: '0.1s' }}>
@@ -416,7 +416,7 @@ const Home = () => {
         <div className="section-content">
           <div className="section-tag animate-fade-in" data-animate="fade-in" style={{ color: 'white' }}>Why we're Different</div>
           <h2 className="section-title animate-slide-up" data-animate="slide-up" style={{ fontSize: 'clamp(28px, 3.5vw, 42px)' }}>
-            <span style={{ color: 'rgb(19, 64, 191)' }}>Faster, Cheaper, Easier</span> is Possible With <span style={{ color: '#1a1a1a' }}>One Platform</span>
+            <span style={{ color: 'black' }}>Faster, Cheaper, Easier</span> is Possible With <span style={{ color: '#1a1a1a' }}>One Platform</span>
           </h2>
           <p className="section-sub animate-fade-in" data-animate="fade-in" style={{ maxWidth: '800px', marginBottom: '40px' }}>
             When your Incorporation, taxes, and accounting are all managed separately, you lose time and money. We bring everything together, so you can focus on what matters.

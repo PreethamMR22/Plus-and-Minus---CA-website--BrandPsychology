@@ -65,8 +65,7 @@ const Startup = () => {
         'Follow-up until issue of Certificate of Incorporation',
         'PAN Application',
         'TAN Application',
-        'Excludes LLP agreement and Form 3 filing',
-        'Excludes Government Fees & Stamp duty'
+        'Excludes LLP agreement and Form 3 filing'
       ],
       idealFor: [
         'Business partners who want to create a formal legal structure',
@@ -169,7 +168,7 @@ const Startup = () => {
         <h3 className="content-section-title">Dream It. File It. Build It.</h3>
         <div className="startup-content-grid">
           <div className="startup-content-left">
-            <p>
+            <p style={{ lineHeight: '1.8', marginBottom: '20px' }}>
               We register your business entity as per your requirement be it a Private Limited Company (PLC), a Limited Liability Partnership (LLP), a One Person Company (OPC) or a Partnership firm.
             </p>
             <div className="entity-buttons">

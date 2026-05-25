@@ -1,7 +1,7 @@
 /* FAQs SECTION */
 .faqs-section {
   padding: 80px 40px;
-  background: #f8f9fa;
+  background: white !important;
 }
 
 .faqs-container {
@@ -33,7 +33,7 @@
 }
 
 .faq-item {
-  background: var(--white);
+  background: rgb(241, 245, 250) !important;
   border: 1px solid #e5e7eb;
   border-radius: 12px;
   overflow: hidden;
@@ -52,10 +52,11 @@
   cursor: pointer;
   user-select: none;
   transition: all 0.3s ease;
+  background: rgb(241, 245, 250) !important;
 }
 
 .faq-question:hover {
-  background: #f8f9fa;
+  background: rgb(241, 245, 250) !important;
 }
 
 .faq-question span:first-child {
@@ -107,6 +108,7 @@
   color: var(--gray);
   line-height: 1.7;
   border-top: 1px solid transparent;
+  background: rgb(241, 245, 250) !important;
 }
 
 .faq-answer.expanded {
