@@ -171,7 +171,7 @@
   .hero {
     flex-direction: column;
     padding: 120px 20px 100px;
-    text-align: center;
+    text-align: left;
   }
   
   .hero-content {
@@ -190,11 +190,13 @@
     font-size: 0.85rem !important;
     max-width: 100%;
     margin-bottom: 30px;
-    line-height: 1.4;
+    line-height: 1.6;
+    word-wrap: break-word;
+    hyphens: auto;
   }
   
   .hero-btns {
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     margin-bottom: 30px;
     display: flex;
@@ -215,7 +217,7 @@
     flex-direction: column;
     gap: 8px;
     font-size: 14px;
-    text-align: center;
+    text-align: left;
     margin-top: 0;
   }
   
@@ -265,7 +267,8 @@
   
   .section-title {
     font-size: clamp(28px, 8vw, 40px);
-    text-align: center;
+    text-align: left;
+    padding-left:20px;
   }
 }
 
@@ -420,6 +423,7 @@
 
 .section-expanded {
   padding: 120px 40px;
+  background: white;
 }
 
 .section-centered {
@@ -820,7 +824,7 @@
 
 /* BLOG SECTION */
 .blog-section {
-  background: var(--white);
+  background: white;
   padding: 60px 166px 40px;
   max-width: none;
   margin: 0;
@@ -1166,7 +1170,7 @@
 
 /* TESTIMONIALS */
 .testimonials-section {
-  background: rgb(10, 22, 40);
+  background: rgb(241, 245, 250);
   padding: 80px 40px;
 }
 
@@ -1183,14 +1187,14 @@
 .testimonials-header h2 {
   font-family: var(--font-head);
   font-size: clamp(32px, 4vw, 48px);
-  color: #ffffff;
+  color: #1a1a1a;
   line-height: 1.2;
   margin-bottom: 16px;
 }
 
 .testimonials-header p {
   font-size: 18px;
-  color: rgba(255, 255, 255, 0.8);
+  color: #64748b;
   line-height: 1.6;
   max-width: 700px;
   margin: 0 auto;
@@ -1206,6 +1210,7 @@
 }
 
 .testimonial-card {
+  background: #ffffff;
   border-radius: 16px;
   padding: 30px 30px 15px;
 }
@@ -1270,15 +1275,14 @@
 .testimonial-text {
   font-size: 15px;
   line-height: 1.6;
-  color: var(--text);
+  color: #1a1a1a;
   margin-bottom: 20px;
-  font-style: italic;
 }
 
 .testimonial-author {
   font-size: 16px;
   font-weight: 600;
-  color: var(--text);
+  color: #1a1a1a;
   margin: 0;
   text-align: right;
 }
@@ -1291,6 +1295,7 @@
   
   .testimonials-header {
     margin-bottom: 40px;
+    text-align: left;
   }
   
   .testimonials-header h2 {
@@ -1344,6 +1349,7 @@
   
   .testimonials-header {
     margin-bottom: 30px;
+    text-align: left;
   }
   
   .testimonial-card {
@@ -1352,6 +1358,11 @@
   
   .testimonial-text {
     font-size: 13px;
+  }
+  
+  .testimonial-author {
+    font-size: 13px;
+    text-align: right;
   }
   
   .testimonial-author {
@@ -1463,6 +1474,7 @@
   padding-left: 20px;
   position: relative;
   line-height: 1.4;
+  white-space: nowrap;
 }
 
 .service-list li::before {
@@ -1482,11 +1494,18 @@
 @media (max-width: 768px) {
   .services-section {
     padding: 60px 20px;
+    text-align: left;
   }
   
   .services-grid {
     grid-template-columns: 1fr;
     gap: 16px;
+  }
+  
+  .services-cta {
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
   }
   
   .services-section .service-card {
@@ -1526,11 +1545,11 @@
 
 /* MISSION SECTION */
 .mission-section {
-  background: rgb(10, 22, 40);
+  background: white;
   padding: 100px 20px;
   position: relative;
   overflow: hidden;
-  color: var(--white);
+  color: #1a1a1a;
 }
 
 .mission-section .section-content {
@@ -1547,7 +1566,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%23081510" width="400" height="300"/><path fill="%231340BF" opacity="0.1" d="M50 150 Q100 100 150 150 T250 150 Q300 100 350 150"/><circle fill="%231340BF" opacity="0.05" cx="320" cy="80" r="40"/><circle fill="%231340BF" opacity="0.03" cx="80" cy="220" r="60"/></svg>') no-repeat center;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%23f1f5fa" width="400" height="300"/><path fill="%231340BF" opacity="0.05" d="M50 150 Q100 100 150 150 T250 150 Q300 100 350 150"/><circle fill="%231340BF" opacity="0.03" cx="320" cy="80" r="40"/><circle fill="%231340BF" opacity="0.02" cx="80" cy="220" r="60"/></svg>') no-repeat center;
   background-size: cover;
   opacity: 0.3;
 }
@@ -1563,7 +1582,7 @@
 }
 
 .mission-section .section-title {
-  color: var(--white);
+  color: #1a1a1a;
   font-size: clamp(32px, 5vw, 48px);
   line-height: 1.2;
   margin-bottom: 24px;
@@ -1575,7 +1594,7 @@
 }
 
 .mission-section .section-sub {
-  color: rgba(255,255,255,0.7);
+  color: #64748b;
   font-size: 16px;
   line-height: 1.8;
   max-width: 800px;
@@ -1592,7 +1611,7 @@
 }
 
 .mission-section .mission-step {
-  background: #ffffff;
+  background: rgb(241, 245, 250);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 16px;
   padding: 24px;
@@ -2048,7 +2067,7 @@
 
 /* STARTUP FINANCE EXPERTS SECTION */
 .startup-finance-experts-section {
-  background: var(--white);
+  background: rgb(241, 245, 250);
   padding: 80px 40px;
 }
 
@@ -2130,7 +2149,7 @@
 
 /* WHY WE'RE DIFFERENT SECTION */
 .why-different-section {
-  background: rgb(241, 245, 250);
+  background: white;
   padding: 100px 40px;
 }
 
@@ -2193,7 +2212,7 @@
 }
 
 .why-different-card {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgb(241, 245, 250);
   border-radius: 16px;
   padding: 20px;
   text-align: left;
@@ -2286,11 +2305,22 @@
   
   .startup-finance-card {
     padding: 30px;
+    text-align: justify;
+  }
+  
+  .startup-finance-card p {
+    line-height: 1.6;
+    word-wrap: break-word;
+    hyphens: auto;
   }
   
   .startup-finance-card h2,
   .who-we-work-with h2 {
     font-size: 24px;
+  }
+  
+  .who-we-work-with {
+    text-align: left;
   }
   
   .why-different-grid {
@@ -2300,6 +2330,16 @@
   
   .why-different-card {
     padding: 25px;
+  }
+  
+  .why-different-section {
+    text-align: left;
+  }
+  
+  .why-different-section .section-sub {
+    max-width: 100%;
+    word-wrap: break-word;
+    hyphens: auto;
   }
   
   .guarantee-section {
@@ -2440,6 +2480,7 @@
 @media (max-width: 1200px) {
   .clients-section {
     padding: 56px 40px 80px;
+    text-align: left;
   }
   
   .clients-grid {
@@ -2448,6 +2489,7 @@
   
   .blog-section {
     padding: 80px 40px 48px;
+    text-align: left;
   }
   
   .blog-grid {

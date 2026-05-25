@@ -160,7 +160,7 @@ const Home = () => {
     {
       icon: <FontAwesomeIcon icon={faBullseye} />,
       title: 'Tax Filing',
-      description: 'Expert tax services for individuals \nand businesses',
+      description: 'Expert tax services for individuals and businesses',
       services: ['Individual tax Filing', 'Business tax Filing', 'Corporate tax returns', 'Tax Audit', 'Notice management']
     },
     {
@@ -171,8 +171,8 @@ const Home = () => {
     },
     {
       icon: <FontAwesomeIcon icon={faUserTag} />,
-      title: 'Goods and Service tax - GST',
-      description: 'Comprehensive financial record management',
+      title: 'GST',
+      description: 'Complete GST registration, filing, and compliance.',
       services: ['GST Registration', 'GST Revocation and Amendment', 'GST Letter of Undertaking', 'GST Monthly filing', 'GST Annual Filing']
     }
   ];
@@ -249,14 +249,14 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
-          <h1 className="animate-slide-up" data-animate="slide-up" style={{ animationDelay: '0.2s' }}>
+          <h1>
             <span><span style={{ color: 'var(--text)' }}>One team for all your</span> accounting <span style={{ color: 'var(--green-bright)' }}>and</span> tax <span style={{ color: 'var(--text)' }}>needs</span></span>
           </h1>
-          <p className="animate-fade-in" data-animate="fade-in" style={{ animationDelay: '0.4s' }}>
-            Namma Bengaluru's accounting, compliance and tax services designed for professionals, startups and small businesses, so<br />
+          <p>
+            Namma Bengaluru's accounting, compliance and tax services designed for professionals, startups and small businesses, so
             you can focus on what matters most.
           </p>
-          <div className="hero-btns animate-slide-up" data-animate="slide-up" style={{ animationDelay: '0.6s' }}>
+          <div className="hero-btns">
             <Button to="/contact" variant="hero-primary" size="large">
               Get Started  {' ->'}
             </Button>
@@ -264,7 +264,7 @@ const Home = () => {
               Let's Talk
             </Button>
           </div>
-          <div className="hero-stats animate-fade-in" data-animate="fade-in" style={{ animationDelay: '0.8s' }}>
+          <div className="hero-stats">
             <span>150+ Google Reviews</span>
             <span className="bullet">•</span>
             <span>Serving Bengaluru since 2020</span>
@@ -387,7 +387,7 @@ const Home = () => {
           <div className="startup-finance-card animate-slide-left" data-animate="slide-left">
             <h2>Startup Finance<br /><span>Experts</span></h2>
             <p>
-              Whether you're bootstrapping or backed<br />by venture capital, we support startups at<br />every stage of growth. From bookkeeping<br />and tax compliance to Audit, we take care<br />of your financial operations so you can focus<br />on building and scaling your business.
+              Whether you're bootstrapping or backed by venture capital, we support startups at every stage of growth. From bookkeeping and tax compliance to Audit, we take care of your financial operations so you can focus on building and scaling your business.
             </p>
             <div className="startup-finance-cta">
               <Button onClick={() => window.open('tel:917204403746', '_self')} variant="primary" size="large">
@@ -419,8 +419,7 @@ const Home = () => {
             <span style={{ color: 'rgb(19, 64, 191)' }}>Faster, Cheaper, Easier</span> is Possible With <span style={{ color: '#1a1a1a' }}>One Platform</span>
           </h2>
           <p className="section-sub animate-fade-in" data-animate="fade-in" style={{ maxWidth: '800px', marginBottom: '40px' }}>
-            When your Incorporation, taxes, and accounting are all managed separately, you lose time and money.<br />
-            We bring everything together, so you can focus on what matters.
+            When your Incorporation, taxes, and accounting are all managed separately, you lose time and money. We bring everything together, so you can focus on what matters.
           </p>
 
           <div className="why-different-grid">
@@ -469,11 +468,6 @@ const Home = () => {
               we provide simple guides, checklists, and clear explanations to keep you on track.
             </p>
           </div>
-          <div className="blog-header-right animate-slide-right" data-animate="slide-right">
-            <Link to="/blog" className="blog-view-all-link">
-              View All →
-            </Link>
-          </div>
         </div>
         <div className="blog-grid">
           {blogData.map((blog, index) => (
@@ -500,20 +494,6 @@ const Home = () => {
       </section>
 
 
-      {/* Final Dark Strip */}
-      <section className="final-cta">
-        <div className="final-cta-content animate-slide-up" data-animate="slide-up">
-          <div className="final-cta-left">
-            <h2>Ready to take control of your finances?</h2>
-            <p>Talk to our experts today. No obligation, just clarity.</p>
-          </div>
-          <div className="final-cta-right">
-            <Button to="/contact" variant="light" className="lets-talk-button">
-              Let's Talk →
-            </Button>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
