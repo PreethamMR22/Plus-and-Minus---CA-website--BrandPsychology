@@ -15,6 +15,7 @@ import IncomeTax from './pages/IncomeTax';
 import Accounting from './pages/Accounting';
 import GST from './pages/GST';
 import Registrations from './pages/Registrations';
+import Learn from './pages/Learn';
 import './styles/globals.css';
 
 // ScrollToTop component
@@ -41,6 +42,7 @@ function App() {
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/careers" element={<Careers />} />
+            <Route path="/learn" element={<Learn />} />
             <Route path="/services" element={<Services />} />
             <Route path="/services/:serviceId" element={<ServiceDetail />} />
             <Route path="/services/startup" element={<Startup />} />

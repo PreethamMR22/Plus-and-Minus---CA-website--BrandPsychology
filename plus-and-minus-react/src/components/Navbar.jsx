@@ -56,6 +56,9 @@ const Navbar = () => {
         <Link to="/about" className={`nav-link ${isActive('/about') ? 'active' : ''}`}>
           About
         </Link>
+        <Link to="/learn" className={`nav-link ${isActive('/learn') ? 'active' : ''}`}>
+          Learn
+        </Link>
         <Link to="/contact" className={`nav-link ${isActive('/contact') ? 'active' : ''}`}>
           Contact
         </Link>
@@ -89,6 +92,9 @@ const Navbar = () => {
           </div>
           <Link to="/about" className={`mobile-nav-link ${isActive('/about') ? 'active' : ''}`} onClick={() => setMobileMenuOpen(false)}>
             About
+          </Link>
+          <Link to="/learn" className={`mobile-nav-link ${isActive('/learn') ? 'active' : ''}`} onClick={() => setMobileMenuOpen(false)}>
+            Learn
           </Link>
           <Link to="/contact" className={`mobile-nav-link ${isActive('/contact') ? 'active' : ''}`} onClick={() => setMobileMenuOpen(false)}>
             Contact
