@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import Button from '../components/Button';
 import BeyondFiling from '../components/BeyondFiling';
 import TaxOverpaySection from '../components/TaxOverpaySection';
-import WhatYouGetSection from '../components/WhatYouGetSection';
 import ImageContentSection from '../components/ImageContentSection';
 import './IncomeTax.css';
 
@@ -59,7 +58,7 @@ const IncomeTax = () => {
       {/* Hero Section */}
       <section className="income-tax-hero">
         <div className="income-tax-hero-content">
-          <h1>Income Tax filing done<br />for you <span>easy</span><span>, </span><span>expert</span><span>, </span><br /><span>online</span><span>.</span></h1>
+          <h1>Income Tax filing done for you <span>easy</span><span>, </span><span>expert</span><span>, </span><span>online</span><span>.</span></h1>
           <p>
             We file your ITR accurately and on time - salaried, freelancer, business, or NRI. 
             You pay only after we're done. Zero upfront.
@@ -104,7 +103,7 @@ const IncomeTax = () => {
       <section className="file-itr-steps">
         <div className="file-itr-steps-content">
           <h2>File your ITR in three easy steps</h2>
-          <p className="subtitle">Pay only after you file. No upfront charges, no surprises.<br/>Just expert guidance at every step.</p>
+          <p className="subtitle">Pay only after you file. No upfront charges, no surprises. Just expert guidance at every step.</p>
           <div className="steps-container">
             <div className="step-card">
               <div style={{display: 'flex', alignItems: 'center', marginBottom: '16px'}}>
@@ -313,7 +312,6 @@ const IncomeTax = () => {
 
       <BeyondFiling />
       <TaxOverpaySection />
-      <WhatYouGetSection />
       <ImageContentSection />
 
       {/* Ee Sala Strip Section */}

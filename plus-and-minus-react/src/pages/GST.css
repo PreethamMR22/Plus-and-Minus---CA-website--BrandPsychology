@@ -262,44 +262,44 @@ section.gst-hero .hero-btns {
   .gst-hero {
     flex-direction: column;
     padding: 100px 20px 80px;
-    text-align: center;
+    text-align: left;
     min-height: auto;
   }
-  
+
   .gst-hero .hero-content {
     max-width: 100%;
     margin-bottom: 40px;
     order: 1;
   }
-  
+
   .gst-hero .hero-content h1 {
     font-size: clamp(32px, 8vw, 42px);
     line-height: 1.2;
     margin-bottom: 24px;
   }
-  
+
   .gst-hero .hero-content p {
     font-size: 16px !important;
     max-width: 100%;
     margin-bottom: 32px;
     line-height: 1.5;
   }
-  
+
   section.gst-hero .hero-features {
     display: grid !important;
     grid-template-columns: 1fr !important;
     gap: 16px !important;
     max-width: 300px !important;
-    margin: 0 auto 40px auto !important;
+    margin: 0 0 40px 0 !important;
     text-align: left !important;
   }
-  
+
   section.gst-hero .hero-btns {
-    justify-content: center !important;
+    justify-content: flex-start !important;
     flex-wrap: wrap;
     margin-bottom: 40px !important;
     display: flex !important;
-    align-items: center !important;
+    align-items: flex-start !important;
     gap: 16px !important;
   }
   

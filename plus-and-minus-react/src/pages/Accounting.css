@@ -957,7 +957,7 @@
   .accounting-hero {
     flex-direction: column;
     padding: 120px 20px 100px;
-    text-align: center;
+    text-align: left;
   }
 
   .accounting-hero-content {
@@ -980,11 +980,11 @@
   }
 
   .accounting-hero .hero-btns {
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     margin-bottom: 30px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 12px;
   }
 

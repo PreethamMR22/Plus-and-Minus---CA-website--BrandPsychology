@@ -109,6 +109,16 @@
   margin-bottom: 10px;
 }
 
+.income-tax-hero-content h1 span:nth-child(4)::after {
+  content: "\A";
+  white-space: pre;
+}
+
+.income-tax-hero-content h1 span:nth-child(6)::after {
+  content: "\A";
+  white-space: pre;
+}
+
 .income-tax-hero-content h2 {
   font-family: var(--font-head);
   font-size: clamp(18px, 3vw, 28px);
@@ -313,6 +323,11 @@
   margin-right: auto;
 }
 
+.file-itr-steps .subtitle::after {
+  content: "\A";
+  white-space: pre;
+}
+
 .steps-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -320,17 +335,20 @@
   margin-bottom: 50px;
 }
 
-.step-card {
-  background: var(--white);
+.file-itr-steps .step-card {
+  background: #ffffff !important;
   padding: 40px 30px;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
 }
 
-.step-card:hover {
+.file-itr-steps .step-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
@@ -352,7 +370,7 @@
   flex-shrink: 0;
 }
 
-.step-card h3 {
+.file-itr-steps .step-card h3 {
   font-family: var(--font-head);
   font-size: 24px;
   color: var(--dark);
@@ -773,26 +791,35 @@
   .income-tax-hero {
     flex-direction: column;
     padding: 120px 40px 100px;
-    text-align: center;
+    text-align: left;
   }
-  
+
+  .income-tax-hero-content h1 span:nth-child(4)::after,
+  .income-tax-hero-content h1 span:nth-child(6)::after {
+    content: none;
+  }
+
+  .file-itr-steps .subtitle::after {
+    content: none;
+  }
+
   .income-tax-hero-content {
     max-width: 100%;
     margin-bottom: 40px;
   }
-  
+
   .income-tax-hero-content p {
     max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
+    margin-right: 0;
   }
-  
+
   .hero-buttons {
-    justify-content: center;
+    justify-content: flex-start;
   }
-  
+
   .hero-features {
-    justify-content: center;
+    justify-content: flex-start;
   }
   
   .income-tax-hero-image {
@@ -931,7 +958,7 @@
   
   .hero-buttons {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 12px;
   }
   
@@ -941,7 +968,7 @@
   }
   
   .hero-features {
-    justify-content: center;
+    justify-content: flex-start;
     gap: 24px;
   }
   
@@ -1213,7 +1240,7 @@
 }
 
 .missed-deadline-card {
-  background: #f5f5f5;
+  background: #f1f5fa;
   padding: 25px 30px;
   border-radius: 16px;
   border: 2px solid #e0e0e0;
