@@ -285,14 +285,14 @@ const Home = () => {
       <section className="section section-expanded">
         <div className="two-col">
           <div className="animate-slide-left" data-animate="slide-left">
-            <h2 className="section-title" style={{ fontSize: 'clamp(32px, 4.5vw, 48px)', color: 'black' }}>
+            <h2 className="section-title" style={{ fontSize: 'clamp(32px, 4.5vw, 48px)', color: 'black', margin: '0', padding: '0' }}>
               Who we are
             </h2>
           </div>
           <div className="col-content animate-slide-right" data-animate="slide-right">
             <p className="section-sub" style={{ marginBottom: '0px' }}>
               A modern accounting and tax firm providing full service to Startups and small businesses.<br /><br />
-             
+
               We are the first point of contact for startups whom we handhold from the day they start their business and at every step of the way throughout their entrepreneurship journey.<br /><br />
               We work with Individuals, Professionals, startups and small businesses, ranging from two founders to hundred-person teams.
             </p>
