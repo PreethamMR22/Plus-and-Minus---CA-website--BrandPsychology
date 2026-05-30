@@ -292,7 +292,7 @@ const Home = () => {
           <div className="col-content animate-slide-right" data-animate="slide-right">
             <p className="section-sub" style={{ marginBottom: '0px' }}>
               A modern accounting and tax firm providing full service to Startups and small businesses.<br /><br />
-              We believe that entrepreneurs are society's problem solvers. They see opportunities in complexities and drive us towards progress. Plus and Minus is the advisor, guide, and facilitator to every entrepreneur looking to start and manage a business in India.<br /><br />
+             
               We are the first point of contact for startups whom we handhold from the day they start their business and at every step of the way throughout their entrepreneurship journey.<br /><br />
               We work with Individuals, Professionals, startups and small businesses, ranging from two founders to hundred-person teams.
             </p>
