@@ -17,15 +17,15 @@
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  
+
   .form-row {
     grid-template-columns: 1fr;
   }
-  
+
   .contact-hero, .green-section {
     padding: 50px 20px;
   }
-  
+
   .contact-grid {
     padding: 50px 20px;
   }
@@ -33,9 +33,17 @@
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
+  .contact-page {
+    padding-top: var(--nav-h);
+  }
+
   .contact-hero {
     margin-top: 0;
     padding: 120px 20px 60px;
+  }
+
+  .hero-title-line {
+    display: block;
   }
   
   .contact-grid {
@@ -74,7 +82,7 @@
 
 @media (max-width: 480px) {
   .contact-hero {
-    padding: 100px 20px 50px;
+    padding: 160px 20px 50px;
   }
   
   .contact-hero h1 {
@@ -111,6 +119,10 @@
   font-size: clamp(36px, 6vw, 64px);
   color: var(--darker);
   margin-bottom: 14px;
+}
+
+.hero-title-line {
+  display: inline;
 }
 
 .contact-hero p {

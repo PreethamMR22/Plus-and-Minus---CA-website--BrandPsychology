@@ -84,7 +84,7 @@ const Contact = () => {
       <section className="contact-hero">
         <div className="section-content">
           <div className="section-tag">Get In Touch</div>
-          <h1>Let's Plus and Minus</h1>
+          <h1><span className="hero-title-line">Let's</span> <span className="hero-title-line">Plus and Minus</span></h1>
           <p>Whether you have a question or need expert advice — we're here to help.</p>
         </div>
       </section>
