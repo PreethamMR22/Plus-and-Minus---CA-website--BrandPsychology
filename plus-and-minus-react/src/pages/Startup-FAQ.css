@@ -122,33 +122,36 @@
   .faqs-section {
     padding: 60px 20px;
   }
-  
+
   .faqs-container h2 {
     font-size: 28px;
+    text-align: left !important;
+    margin-bottom: 30px !important;
   }
-  
+
   .faqs-container h3 {
     font-size: 18px;
     margin-bottom: 40px;
+    text-align: left !important;
   }
-  
+
   .faq-question {
     padding: 16px 20px;
   }
-  
+
   .faq-question span:first-child {
     font-size: 15px;
   }
-  
+
   .faq-toggle {
     width: 28px;
     height: 28px;
   }
-  
+
   .faq-icon {
     font-size: 16px;
   }
-  
+
   .faq-answer.expanded {
     padding: 0 20px 16px 20px;
     font-size: 14px;

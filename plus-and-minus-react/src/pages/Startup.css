@@ -599,6 +599,13 @@
   }
 }
 
+@media (max-width: 768px) {
+  .selection-title {
+    text-align: left !important;
+    margin-bottom: 20px !important;
+  }
+}
+
 /* START YOUR DREAM BUSINESS SECTION */
 .dream-business-section {
   padding: 60px 60px;
@@ -818,6 +825,19 @@
 }
 
 @media (max-width: 768px) {
+  .learn-incorporate-section > div {
+    text-align: left !important;
+  }
+
+  .learn-incorporate-section h2 {
+    text-align: left !important;
+    margin-bottom: 10px !important;
+  }
+
+  .learn-incorporate-section p.subtitle {
+    text-align: left !important;
+  }
+
   .incorporate-card {
     width: 100%;
   }
@@ -901,6 +921,11 @@
 }
 
 @media (max-width: 768px) {
+  .idea-to-entity-section h2 {
+    text-align: left !important;
+    margin-bottom: 40px !important;
+  }
+
   .idea-to-entity-content {
     grid-template-columns: 1fr;
   }
