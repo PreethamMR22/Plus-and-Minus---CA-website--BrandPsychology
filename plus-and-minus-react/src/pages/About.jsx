@@ -105,7 +105,7 @@ const About = () => {
         <div className="container">
           <div className="hero-content-wrapper">
             <h1 className="hero-title fade-up">
-              Namma Bengaluru. <span className="blue-text">Namma Startups.</span> Namma Taxpayers
+              <span className="hero-title-line">Namma Bengaluru.</span> <span className="hero-title-line blue-text">Namma Startups.</span> <span className="hero-title-line">Namma Taxpayers</span>
             </h1>
 
             <div className="namma-story-section fade-up" style={{ animationDelay: '0.2s' }}>
@@ -155,6 +155,7 @@ const About = () => {
           <h2 className="section-title-large">
             Built in Bengaluru. <span className="blue-text">For Bengaluru.</span>
           </h2>
+          <div className="mission-vision-spacing-mobile"></div>
           <div className="mission-vision-grid">
             <div className="mission-vision-cards">
               <div className="mission-card fade-up">
@@ -238,10 +239,6 @@ const About = () => {
                 <p className="testimonial-author">{testimonial.author}</p>
               </div>
             ))}
-          </div>
-          <div className="testimonials-navigation-fresh">
-            <button className="nav-arrow left-arrow"><FontAwesomeIcon icon={faChevronLeft} /></button>
-            <button className="nav-arrow right-arrow"><FontAwesomeIcon icon={faChevronRight} /></button>
           </div>
         </div>
       </section>
