@@ -135,26 +135,45 @@
   .image-content-container {
     grid-template-columns: 1fr;
     gap: 40px;
-    text-align: center;
+    text-align: left !important;
   }
-  
+
   .content-left {
-    align-items: center;
-    text-align: center;
+    align-items: center !important;
+    text-align: left !important;
+  }
+
+  .content-left .section-tag,
+  .content-left .main-title,
+  .content-left .subtitle {
+    align-self: flex-start !important;
+    text-align: left !important;
   }
   
   .main-title {
-    font-size: clamp(24px, 6vw, 36px);
+    font-size: clamp(28px, 7vw, 40px) !important;
   }
   
   .subtitle {
-    font-size: 16px;
-    margin: 0 auto;
+    font-size: 14px !important;
+    margin: 0;
   }
   
   .button-group {
-    justify-content: center;
+    justify-content: center !important;
     flex-wrap: wrap;
+    align-self: center !important;
+    width: 100%;
+    text-align: center !important;
+  }
+
+  .btn.primary,
+  .btn.secondary,
+  .btn.medium {
+    padding: 14px 32px !important;
+    font-size: 16px !important;
+    min-width: 140px !important;
+    max-width: 280px !important;
   }
   
   .section-image {
@@ -173,23 +192,28 @@
   }
   
   .main-title {
-    font-size: clamp(20px, 6vw, 32px);
+    font-size: clamp(24px, 7vw, 36px) !important;
   }
   
   .subtitle {
-    font-size: 15px;
+    font-size: 13px !important;
   }
-  
+
   .button-group {
     flex-direction: column;
-    align-items: center;
+    align-items: center !important;
     gap: 15px;
-  }
-  
-  .primary-button,
-  .secondary-button {
+    text-align: center !important;
     width: 100%;
-    max-width: 300px;
+  }
+
+  .btn.primary,
+  .btn.secondary,
+  .btn.medium {
+    width: 100% !important;
+    max-width: 280px !important;
+    padding: 10px 20px !important;
+    font-size: 14px !important;
   }
   
   .section-image {

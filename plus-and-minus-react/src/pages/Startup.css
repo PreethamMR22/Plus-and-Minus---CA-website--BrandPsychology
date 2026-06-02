@@ -742,6 +742,7 @@
   .dream-business-text-content h2 {
     text-align: center;
     max-width: 100%;
+    margin-bottom: 10px !important;
   }
 
   .dream-business-text-content p {

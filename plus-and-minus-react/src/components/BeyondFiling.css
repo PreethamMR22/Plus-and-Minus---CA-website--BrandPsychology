@@ -153,14 +153,24 @@
   .beyond-filing {
     padding: 60px 20px;
   }
-  
+
+  .section-tag {
+    text-align: left !important;
+    margin-bottom: 0px !important;
+  }
+
   .section-title {
     font-size: clamp(28px, 6vw, 36px);
+    text-align: left !important;
+    margin-bottom: 0px !important;
   }
-  
+
   .section-sub {
     font-size: 16px;
-    margin-bottom: 40px;
+    margin-bottom: 0px !important;
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   
   .features-grid {
@@ -187,6 +197,7 @@
   .action-buttons {
     flex-direction: column;
     align-items: center;
+    justify-content: center !important;
   }
   
   .btn {

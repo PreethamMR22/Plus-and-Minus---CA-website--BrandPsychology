@@ -961,9 +961,15 @@
   }
 
   .accounting-hero-content {
-    max-width: 100%;
+    width: 100%;
     margin-bottom: 30px;
     order: 1;
+    text-align: center;
+  }
+
+  .accounting-hero-content h1,
+  .accounting-hero-content p {
+    text-align: left;
   }
 
   .accounting-hero h1 {
@@ -980,12 +986,13 @@
   }
 
   .accounting-hero .hero-btns {
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 30px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 12px;
+    width: 100%;
   }
 
   .accounting-hero-image {
@@ -1064,6 +1071,15 @@
     padding: 60px 20px;
   }
 
+  .tailor-made-content {
+    text-align: left;
+  }
+
+  .tailor-made-content h2 {
+    margin-bottom: 24px;
+    text-align: left !important;
+  }
+
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
@@ -1097,6 +1113,20 @@
 
   .process-section {
     padding: 60px 20px;
+  }
+
+  .process-header {
+    text-align: left !important;
+  }
+
+  .process-header h2 {
+    margin-bottom: 24px !important;
+    font-size: clamp(28px, 4vw, 40px) !important;
+  }
+
+  .process-header .subtitle {
+    font-size: 15px !important;
+    margin: 0 0 20px 0 !important;
   }
 
   .process-content {
@@ -1136,6 +1166,31 @@
 
   .why-column {
     text-align: center;
+  }
+
+  .whats-included-section {
+    margin-bottom: 60px !important;
+  }
+
+  .target-audience-title {
+    margin-bottom: 20px !important;
+  }
+
+  .whats-included-title {
+    margin-bottom: 20px !important;
+  }
+
+  .startups-simplified-section {
+    padding: 60px 20px !important;
+  }
+
+  .startups-content-wrapper {
+    gap: 30px !important;
+    justify-content: center !important;
+  }
+
+  .startups-text-side {
+    flex: 1 1 200px !important;
   }
 
   .why-column li {

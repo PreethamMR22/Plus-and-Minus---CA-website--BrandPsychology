@@ -42,6 +42,10 @@
     padding: 120px 20px 60px;
   }
 
+  .contact-hero .section-tag {
+    text-align: center !important;
+  }
+
   .hero-title-line {
     display: block;
   }

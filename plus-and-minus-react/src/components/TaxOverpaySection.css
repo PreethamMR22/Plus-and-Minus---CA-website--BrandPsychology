@@ -186,10 +186,17 @@
   }
 
   .tax-overpay-left {
-    text-align: center;
+    text-align: center !important;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center !important;
+  }
+
+  .tax-overpay-left .section-tag,
+  .tax-overpay-left .section-title,
+  .tax-overpay-left .section-sub {
+    text-align: left !important;
+    align-self: flex-start !important;
   }
 
   .tax-overpay-left .section-title {
@@ -237,6 +244,14 @@
 
   .tax-planning-link {
     font-size: 14px;
+    align-self: center !important;
+  }
+
+  .talk-to-advisor-btn {
+    align-self: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
   }
 }
 
