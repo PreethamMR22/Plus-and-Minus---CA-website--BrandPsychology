@@ -868,13 +868,19 @@ section.registrations-hero .hero-btns {
     margin-bottom: 40px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: left;
+  }
+
+  .registrations-hero .hero-content h1,
+  .registrations-hero .hero-content p {
+    text-align: left;
   }
 
   .registrations-hero .hero-btns {
     flex-direction: column;
     gap: 16px;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
   }
 
@@ -882,6 +888,11 @@ section.registrations-hero .hero-btns {
   .registrations-hero .hero-btns .btn {
     width: 100%;
     max-width: 300px;
+  }
+
+  .registrations-hero .hero-stats {
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .registrations-hero .hero-image {
@@ -901,6 +912,19 @@ section.registrations-hero .hero-btns {
   /* Services Grid */
   .services-overview-section {
     padding: 60px 20px;
+  }
+
+  .services-overview-section .section-header {
+    text-align: left;
+    margin-bottom: 60px;
+  }
+
+  .services-overview-section .section-header h2 {
+    margin-bottom: 10px !important;
+  }
+
+  .services-overview-section .section-header p {
+    margin-top: 10px;
   }
 
   .services-grid {
@@ -923,6 +947,18 @@ section.registrations-hero .hero-btns {
   /* Audience Section */
   .audience-section {
     padding: 60px 20px;
+  }
+
+  .audience-section .section-header {
+    text-align: left;
+  }
+
+  .audience-section .section-header h2 {
+    margin-bottom: 10px !important;
+  }
+
+  .audience-section .section-header p {
+    margin-top: 10px;
   }
 
   .audience-gallery {
@@ -948,6 +984,18 @@ section.registrations-hero .hero-btns {
     padding: 60px 20px;
   }
 
+  .how-it-works-section .section-header {
+    text-align: left;
+  }
+
+  .how-it-works-section .section-header h2 {
+    margin-bottom: 10px !important;
+  }
+
+  .how-it-works-section .section-header p {
+    margin-top: 10px;
+  }
+
   .step-card {
     width: 100%;
     padding: 20px;
@@ -961,6 +1009,14 @@ section.registrations-hero .hero-btns {
   /* FAQ Section */
   .faqs-section {
     padding: 60px 20px;
+  }
+
+  .faqs-container {
+    text-align: left;
+  }
+
+  .faq-subtitle {
+    text-align: left;
   }
 
   .faq-question {

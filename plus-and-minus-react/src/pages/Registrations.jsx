@@ -15,7 +15,7 @@ const Registrations = () => {
       {/* Hero Section */}
       <section className="hero registrations-hero">
         <div className="hero-content">
-          <h1>Running a <span>business legally</span><br className="desktop-only-br" />shouldn't be this hard.</h1>
+          <h1>Running a <span>business legally </span><br className="desktop-only-br" />shouldn't be this hard.</h1>
           <p>
             From FSSAI to Trademark, PF to Startup India - we handle every<br className="desktop-only-br" />
             registration and licence your business needs. One team. Zero<br className="desktop-only-br" />
@@ -401,7 +401,7 @@ const Registrations = () => {
       <section className="consultancy-section">
         <div className="consultancy-container">
           <div className="consultancy-left">
-            <h2>Not sure where<br className="desktop-only-br" /><span>to start?</span></h2>
+            <h2>Not sure where<br className="desktop-only-br" /><span> to start?</span></h2>
             <p>
               Tell us about your business in one WhatsApp message.<br className="desktop-only-br" />
               We will tell you exactly which registrations you need - free,<br className="desktop-only-br" />
@@ -415,7 +415,11 @@ const Registrations = () => {
                 onClick={() => window.open('https://wa.me/917204403746', '_blank')} 
                 variant="primary" 
                 size="large"
-                style={{ background: 'rgb(19, 64, 191)' }}
+                style={{ 
+                  background: 'rgba(255, 255, 255, 0.8)',
+                  border: '1px solid black',
+                  color: 'black'
+                }}
               >
                 <i className="fab fa-whatsapp"></i> WhatsApp us now
               </Button>
