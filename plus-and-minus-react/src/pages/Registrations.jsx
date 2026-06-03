@@ -345,7 +345,7 @@ const Registrations = () => {
                 It varies by registration. For most, you'll need your PAN, Aadhaar, business address proof, and bank details. We'll send you a precise checklist for whichever registration you need - no guesswork.
               </div>
             </div>
-
+                                      
             <div className="faq-item">
               <div className="faq-question" onClick={() => toggleFAQ(2)}>
                 <span>What if my application gets rejected?</span>
