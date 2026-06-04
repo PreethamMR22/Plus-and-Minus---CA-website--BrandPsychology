@@ -40,14 +40,14 @@ const Accounting = () => {
       {/* Hero Section */}
       <section className="accounting-hero">
         <div className="accounting-hero-content">
-          <h1 className="animate-slide-up" data-animate="slide-up" style={{ animationDelay: '0.2s' }}>
+          <h1>
             You didn't start a startup <br /> to do <span style={{ color: 'var(--green)' }}>Accounting.</span> <br /> <span style={{ color: 'var(--green)' }}>But we did.</span>
           </h1>
-          <p className="animate-fade-in" data-animate="fade-in" style={{ animationDelay: '0.4s', color: 'var(--darker)' }}>
+          <p style={{ color: 'var(--darker)' }}>
             Accounting for startups and small businesses, done right. <br /> We keep your books clean every month.
             You get one clear report. And peace of mind.
           </p>
-          <div className="hero-btns animate-slide-up" data-animate="slide-up" style={{ animationDelay: '0.6s' }}>
+          <div className="hero-btns">
             <Button to="/contact" variant="hero-primary" size="large">
               Talk to an Expert →
             </Button>
@@ -55,7 +55,7 @@ const Accounting = () => {
               WhatsApp Us Now
             </Button>
           </div>
-          <div className="hero-stats animate-fade-in" data-animate="fade-in" style={{ animationDelay: '0.8s' }}>
+          <div className="hero-stats">
             <span>150+ Google Reviews</span>
             <span className="bullet">•</span>
             <span>Serving Bengaluru since 2020</span>
